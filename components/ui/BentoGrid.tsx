@@ -5,6 +5,7 @@ import { Globe } from "@/components/ui/Globe";
 import { GlobeDemo } from "@/components/ui/GridGlobe";
 import { div } from "three/webgpu";
 import { useState } from "react";
+import { GlowingEffect } from "./glowing-effect";
 
 import Lottie from "react-lottie";
 import MagicButton from "./MagicButton";
@@ -29,6 +30,7 @@ export const BentoGrid = ({
     </div>
   );
 };
+
 export const BentoGridItem = ({
   className,
   title,
@@ -38,6 +40,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  children,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -49,8 +52,9 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  children?: React.ReactNode;
 }) => {
-  const [copied, setCopied] = useState (false);
+  const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText('contact@jsmastery.pro');
     setCopied(true);
@@ -153,17 +157,18 @@ export const BentoGridItem = ({
                   }
                 }}/>
               </div>
-                  <MagicButton
-                  title={copied ? 'Email copied' : 'Copy my email'}
-                  icon={<IoCopyOutline />}
-                  position="left"
-                  otherClasses="!ng-[#161a31]"
-                  handleClick={handleCopy}
-                  />
-                 </div>
+              <MagicButton
+                title={copied ? 'Email copied' : 'Copy my email'}
+                icon={<IoCopyOutline />}
+                position="left"
+                otherClasses="!ng-[#161a31]"
+                handleClick={handleCopy}
+              />
+            </div>
           )}
         </div>
       </div>
+      {children}
     </div>
   );
 };

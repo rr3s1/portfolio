@@ -61,14 +61,15 @@
 
 /* Add custom classes */
 @layer utilities {
-  .text-gradient-crimson-plum {
-    @apply bg-gradient-to-r from-red-400 via-rose-400 to-purple-500 bg-clip-text text-transparent;
-  }
   .text-gradient-magenta {
     @apply bg-gradient-to-r from-magenta via-orange to-yellow bg-clip-text text-transparent;
   }
-  .text-gradient-neon-lagoon {
-    @apply bg-gradient-to-r from-[#00d1ff] via-[#268dff] to-[#4f00ff] bg-clip-text text-transparent;
+  .text-gradient-crimson-plum {
+    @apply bg-gradient-to-r
+           from-red-400      /* bright crimson on the left */
+           via-rose-50     /* rich magenta midway */
+           to-purple-900  /* dark plum on the right */
+           bg-clip-text text-transparent;
   }
   /* Conditional reduced motion */
   @media (prefers-reduced-motion: reduce) {

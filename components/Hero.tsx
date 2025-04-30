@@ -10,12 +10,13 @@ import { motion } from "framer-motion"
 import AnimatedTextCycle from './ui/animated-text-cycle'
 import { SplineSceneBasic } from './ui/spline-demo'
 import { HeroScrollDemo } from './ui/hero-scroll-demo'
-import { GridMotionDemo } from './ui/grid-motion-demo'
+import { BackgroundBeams } from './ui/background-beams'
 
 const Hero = () => {
   return (
     <>
-      <AuroraBackground className="pb-20 pt-36">
+      <AuroraBackground className="pb-20 pt-36 relative">
+        <BackgroundBeams className="absolute inset-0 z-0" />
         <SplashCursor />
         <div> 
           {/* Wrapper div for Aceternity UI elements */}
@@ -23,16 +24,13 @@ const Hero = () => {
           <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="magenta"/>
           <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="cyan"/>
         </div>
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12 relative z-10">
           <SplineSceneBasic />
         </div>
       </AuroraBackground>
       
       {/* Scroll Animation Section */}
       <HeroScrollDemo />
-
-      {/* Grid Motion Section */}
-      <GridMotionDemo />
     </>
   )
 }

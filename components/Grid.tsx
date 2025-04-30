@@ -3,10 +3,13 @@ import { MdDescription } from 'react-icons/md'
 import { BentoGrid } from './ui/BentoGrid'
 import { gridItems } from '@/data'
 import {BentoGridItem} from '@/components/ui/BentoGrid'
+import { GlowingEffect } from './ui/glowing-effect'
+import HeroParallaxDemo from './ui/hero-parallax-demo'
  
 const Grid = () => {
   return (
     <section id="about">
+        <HeroParallaxDemo />
         <BentoGrid>
             {gridItems.map(({id, title, description, className, img, imgClassName, titleClassName,
               spareImg}) => (
@@ -20,10 +23,19 @@ const Grid = () => {
                         imgClassName={imgClassName}
                         titleClassName={titleClassName}
                         spareImg={spareImg}
-                    />
+                    >
+                        <div className="absolute inset-0">
+                            <GlowingEffect
+                                spread={40}
+                                glow={true}
+                                disabled={false}
+                                proximity={64}
+                                inactiveZone={0.01}
+                            />
+                        </div>
+                    </BentoGridItem>
             ))}
         </BentoGrid>
-
     </section>
   )
 }
