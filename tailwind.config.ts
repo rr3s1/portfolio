@@ -57,6 +57,12 @@ const config = {
         gray: {
           400: "#606575",
         },
+        brand: {
+          bg: "#0A0A16",
+          "primary-50": "#4CC9F0",
+          "primary-100": "#7209B7",
+          accent: "#F72585",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -165,6 +171,19 @@ const config = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        gradientText: {
+          to: {
+            backgroundPosition: "200% center"
+          }
+        },
+        tiltBeam: {
+          "0%, 100%": {
+            transform: "translateY(10%) rotate(-1deg)"
+          },
+          "50%": {
+            transform: "translateY(-10%) rotate(1deg)"
+          }
+        },
         scroll: {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
@@ -176,7 +195,9 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
-        aurora: "aurora 60s linear infinite",
+        aurora: "aurora 15s ease-in-out infinite",
+        "gradient-text": "gradientText 3s ease infinite alternate",
+        "tilt-beam": "tiltBeam 10s ease-in-out infinite",
 
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
