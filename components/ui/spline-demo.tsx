@@ -2,10 +2,9 @@
 
 import { SplineScene } from "@/components/ui/spline";
 import { Card } from "@/components/ui/card"
-import { Spotlight } from "@/components/ui/Spotlight"
+
 import AnimatedTextCycle from './animated-text-cycle'
-import MagicButton from "@/components/ui/MagicButton"
-import { FaLocationArrow } from 'react-icons/fa'
+
 import React from 'react'
 
 export function SplineSceneBasic() {
@@ -25,20 +24,20 @@ export function SplineSceneBasic() {
               DEVELOPER
             </h1>
             <div className="max-w-[300px]">
-              <h1 className="text-4xl font-light text-center text-gradient-magenta">
-                Building {' '} <br />
+              <h1 className="text-4xl font-light text-center font-semi-bold  text-sky-400">
+                building  {' '} <br />
                 <AnimatedTextCycle
                   words={[
-                    "apps",
-                    "dashboards",
-                    "platforms",
-                    "interfaces",
-                    "systems",
-                    "features",
-                    "experiences",
+                    "Apps",
+                    "Dashboards",
+                    "Platforms",
+                    "Interfaces",
+                    "Systems",
+                    "Features",
+                    "Experiences",
                   ]}
                   interval={3000}
-                  className={"text-foreground text-gradient-magenta font-semi-bold"}
+                  className={"text-foreground text-[52px] mt-5 text-gradient-magenta font-semi-bold"}
                 />
               </h1>
             </div>
