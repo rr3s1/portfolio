@@ -1,6 +1,5 @@
 "use client";
 import React from 'react'
-import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
@@ -10,20 +9,14 @@ import { motion } from "framer-motion"
 import AnimatedTextCycle from './ui/animated-text-cycle'
 import { SplineSceneBasic } from './ui/spline-demo'
 import { HeroScrollDemo } from './ui/hero-scroll-demo'
-import { BackgroundBeams } from './ui/background-beams'
+import { Spotlight } from './ui/spotlight-new'
 
 const Hero = () => {
   return (
     <>
       <AuroraBackground className="pb-20 pt-36 relative">
-        <BackgroundBeams className="absolute inset-0 z-0" />
+        <Spotlight />
         <SplashCursor />
-        <div> 
-          {/* Wrapper div for Aceternity UI elements */}
-          <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white"/>
-          <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="magenta"/>
-          <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="cyan"/>
-        </div>
         <div className="container mx-auto px-4 py-12 relative z-10">
           <SplineSceneBasic />
         </div>

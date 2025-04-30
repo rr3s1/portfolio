@@ -9,6 +9,8 @@ import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
+import TimelineDemo from "@/components/ui/timeline-demo";
+
 
 export default function Home() {
   return (
@@ -18,11 +20,14 @@ export default function Home() {
       
       <FloatingNav navItems={navItems}/>
       <Hero />
+      <TimelineDemo />
+      <Experience />
       <Grid />
       <RecentProjects />
-      <Clients />
-      <Experience />
+      
+      
       <Approach />
+      <Clients />
       <Footer />
     </div>
   </main>

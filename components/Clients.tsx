@@ -3,7 +3,7 @@ import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
 import {InfiniteLogoSlider} from "@/components/ui/InfiniteLogoSlider";
 import {testimonials, companies} from "@/data";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-import TimelineDemo from "@/components/ui/timeline-demo";
+
 
 const Clients = () => {
     return (
@@ -54,7 +54,7 @@ const Clients = () => {
                       />
                   </div>
             </div>
-            <TimelineDemo />
+            
         </div>
     )
 }
