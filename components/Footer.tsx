@@ -16,22 +16,27 @@ const Footer = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#FF8A38]/20 via-[#14D5FF]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
             </div>
 
-            <div className="flex flex-col items-center z-10 relative">
-                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md">
-                    Ready to take <span className="text-gradient-gold">your </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> digital
-                    presence </span>to the next level?
+            <div className="flex flex-col items-center z-10 relative ">
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md">Ready
+                 <span className="text-gradient-gold"> to </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> elevate your next project
+                     </span>?
                 </h1>
 
-                <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center max-w-xl">
-                    Reach out to me today and let&apos;s discuss how I can help you
-                    achieve your goals.
+                <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center varela-round-regular  max-w-xl">
+           
+                    Whether you need a blazing-fast landing page, a secure full-stack app
+    or a 3-D interactive demo 
                 </p>
+                <p className="varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
+           I can help turn ideas into shipped features.
+                </p>
+                
                 <a href="mailto:raressilviulazar@gmail.com">
                     <MagicButton
-                        title="EMAIL"
+                        title="Let’s talk&nbsp;"
                         icon={<FaLocationArrow />}
                         position="right"
-                        otherClasses="accent-gradient text-white-100 text-base font-bold shadow-neon"
+                        otherClasses=" text-white-100 text-basefont-bold shadow-neon "
                     />
                 </a>
             </div>

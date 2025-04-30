@@ -41,14 +41,14 @@ export function SplineSceneBasic() {
               <h1 className={`text-3xl mt-2 font-light text-center font-semi-bold text-sky-400
                 transition-all duration-1000 ease-in-out
                 ${isVisible ? 'opacity-100 blur-none' : 'opacity-0 blur-[2px] '}`}>
-                crafting  {' '} <br />
+                Designing&nbsp;&amp;&nbsp;building&nbsp;  {' '} <br />
                 <AnimatedTextCycle
                   words={[
                     "Apps",
                     "Dashboards",
                     "Platforms",
                     "Interfaces",
-                    "Systems",
+                    "Animations",
                     "Features",
                     "Experiences",
                   ]}

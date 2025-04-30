@@ -8,10 +8,7 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
     return (
         <>
             <section>
-            <h1 className="heading mb-10">
-                
-                <span className="text-purple ">&</span>
-            </h1>
+        
                 <h1 className="heading ">
                 
                     <span className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold">Core values</span>
@@ -23,7 +20,7 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
 
                     <Card
                     title="Security First"
-                    icon={<AceternityIcon order="Security" />} // Changed order
+                    icon={<AceternityIcon order="Security-First Mindset" />} // Changed order
                     description="Prioritizing robust security measures from the start, implementing best practices to protect your application and user data against threats." // Updated description
                 >
                     <CanvasRevealEffect
