@@ -3,7 +3,6 @@ import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
 import {InfiniteLogoSlider} from "@/components/ui/InfiniteLogoSlider";
 import {testimonials, companies} from "@/data";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-import Image from 'next/image';
 
 
 const Clients = () => {
@@ -38,19 +37,15 @@ const Clients = () => {
                             key={company.id} 
                             className="flex md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30"
                           >
-                            <Image
+                            <img 
                               src={company.img}
                               alt={company.name}
-                              width={100}
-                              height={100}
-                              className="w-full h-full object-contain"
+                              className="md:w-10 w-5"
                             />
-                            <Image
+                            <img 
                               src={company.nameImg}
                               alt={company.name}
-                              width={100}
-                              height={100}
-                              className="w-full h-full object-contain"
+                              className="md:w-24 w-20"
                             />
                           </div>
                         ))}

@@ -8,7 +8,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import React, { useRef, useState } from "react";
-import Image from 'next/image';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -25,8 +24,6 @@ interface NavItemsProps {
   items: {
     name: string;
     link: string;
-    img: string;
-    title: string;
   }[];
   className?: string;
   onItemClick?: () => void;
