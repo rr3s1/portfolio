@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+
+        --radius: 0.5rem;
+        
+        /* Custom color scheme */
+        --navy-900: #060718;
+        --navy-800: #0f132a;
+        --white-100: #ffffff;
+        --white-200: #EAEAF0;
+        --gray-400: #606575;
+        --magenta-500: #ff2aa9;
+        --magenta-400: #ff2d96;
+        --orange-400: #ff9c3b;
+        --orange-300: #ffa73c;
+        --yellow-300: #ffd54f;
+        --yellow-200: #ffe480;
+        --cyan-400: #14d5ff;
+        --cyan-300: #00cfff;
+        
+        /* Gradients */
+        --grad-primary: linear-gradient(90deg, #ff8a38 0%, #14d5ff 100%);
+        --grad-accent: linear-gradient(90deg, #ff9c3b 0%, #ff2aa9 100%);
+        --grad-gold: linear-gradient(90deg, #ffe480 0%, #ffa73c 100%);
+        --grad-magenta: linear-gradient(90deg, #ffe08e 0%, #ff9c3b 50%, #ff2aa9 100%);
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        
+        /* Override dark theme with our custom cosmic theme */
+        --background: var(--navy-900);
+        --foreground: var(--white-100);
+        
+        --card: var(--navy-800);
+        --card-foreground: var(--white-200);
+        
+        --accent: var(--magenta-500);
+        --accent-foreground: var(--white-100);
+        
+        --primary: var(--cyan-400);
+        --primary-foreground: var(--white-100);
+        
+        --secondary: var(--yellow-300);
+        --secondary-foreground: var(--navy-900);
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border !scroll-smooth;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    button {
+        @apply active:outline-none;
+    }
+}
+
+@layer utilities {
+    .heading {
+        @apply font-bold text-4xl md:text-5xl text-center;
+    }
+
+    .black-gradient {
+        background: linear-gradient(90deg, #10152B 0%, #060718 100%);
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(90deg, #FF8A38 0%, #14D5FF 100%);
+    }
+    
+    .accent-gradient {
+        background: linear-gradient(90deg, #FF9C3B 0%, #FF2AA9 100%);
+    }
+    
+    .text-gradient-gold {
+        background: linear-gradient(90deg, #FFE480 0%, #FFA73C 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    .text-gradient-magenta {
+        background: linear-gradient(90deg, #FFE08E 0%, #FF9C3B 50%, #FF2AA9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    .border-gradient {
+        border: 1px solid transparent;
+        background-clip: padding-box;
+        position: relative;
+    }
+    
+    .border-gradient::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(45deg, #FF8A38, #14D5FF);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
