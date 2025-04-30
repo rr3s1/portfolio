@@ -10,7 +10,7 @@
   <h3 align="center">Modern Developer Portfolio</h3>
   <p align="center">
     A learning journey in modern web development, combining efficient code with engaging visuals using
-    <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. Built with community guidance and open-source spirit.
+    <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. Light and Dark theme implementation soon.
   </p>
 </div>
 
@@ -19,17 +19,20 @@
 ![Demo animation](public/demo.gif)
 
 
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGmIlBux3g&#x2F;Xotdo0efj92jozjgBk2iew&#x2F;watch?utm_content=DAGmIlBux3g&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Design</a> by Rares Silviu Lazar
 ## 📦 Table of Contents
 
 1. [Features](#features)  
 2. [Tech Stack](#tech-stack)  
-3. [Getting Started](#getting-started)   
-4. [Acknowledgments](#acknowledgments)  
-5. [License](#license)
+3. [Quick Start](#quick-start)   
+4. [Technical Architecture](#technical-architecture)   
+5. [Strengths & Improvement Areas](#strengths--improvement-areas)   
+6. [Component Highlights](#component-highlights)   
+7. [Core Technologies](#core-technologies)   
+8. [Acknowledgments](#acknowledgments)  
+9. [License](#license)
+10. [Screenshots](#screenshots)
 
 ---
-
 ## 1. 🚀 Features <a id="features"></a>
 
 - **Dynamic 3D Elements**: Interactive Three.js components with graceful fallbacks
@@ -37,22 +40,22 @@
 - **Developer Experience**: Type-safe components, atomic design structure, and reusable hooks
 
 ---
+<br />
 
-## 2. 🛠 Tech Stack <a id="tech-stack"></a>
+## 2. ⚒️ Tech Stack <a id="tech-stack"></a>
 
 | Category         | Technologies                                                                 |
 |------------------|------------------------------------------------------------------------------|
 | **Core**         | Next.js 14 (App Router), React 18, TypeScript                                |
 | **Styling**      | Tailwind CSS, Framer Motion, CSS Modules                                     |
-| **3D Graphics**  | Three.js, @react-three/fiber, @react-three/drei                             |
-| **State**        | Zustand for client state, React Context for theme                           |
+| **3D Graphics**  | Three.js, @react-three/fiber, @react-three/drei                             |                        |
 | **Analytics**    | Vercel Analytics, Google Analytics (opt-in)                                  |
 | **Infrastructure**| Vercel hosting, GitHub Actions CI/CD                                        |
 
 ---
+<br />
 
-
-## 3. 🤸 Quick Start (Local Development)
+## 3. 🤸 Quick Start (Local Development)<a id="quick-start"></a>
 
 ###  Prerequisites
 
@@ -87,8 +90,89 @@ npm run dev
 
 Open http://localhost:3000 in your browser – the app will hot-reload on changes.
 
+<br />
 
-## 4. Acknowledgments <a id="acknowledgments"></a>
+## 4. 🔍 Core Technologies<a id="core-technologies"></a>
+
+**Frontend Framework & Runtime**
+
+- Next.js 14.2.5, React 18, TypeScript
+
+**Styling & UI**
+
+- Tailwind CSS, Framer Motion, Lucide React, Tabler Icons React, React Icons
+
+**3D & Graphics**
+
+- Three.js, React Three Fiber, Three-Globe, Spline Tool, Lottie Files
+
+**State Management & Utilities**
+
+- Zustand, React Context, Tailwind Merge, Simplex Noise
+
+**Monitoring & Error Tracking**
+
+-Sentry, Custom error boundaries
+<br />
+<br />  
+## 5.  🧱 Technical Architecture<a id="technical-architecture"></a>
+
+**Component-Based Architecture:** Modular, reusable components
+
+**Advanced Animation:** Framer Motion, interactive elements
+
+**Responsive & Accessible Design:** Tailwind CSS, semantic HTML
+
+**Optimized Performance:** Image optimization, lazy loading, proper asset management
+<br />
+<br />
+## 6. 🎯 Strengths & Improvement Areas<a id="strengths--improvement-areas"></a>
+
+**✅ Strengths**
+
+- Modern technologies
+
+- Rich visual interactions
+
+- Strong performance optimization
+
+**⚒️ Potential Improvements**
+
+- Enhance state management
+
+- Implement testing (Jest/React Testing Library)
+
+- Comprehensive documentation and Storybook
+
+- Advanced build optimizations
+<br />
+<br />
+## 7.  🧩 Component Highlights<a id="component-highlights"></a>
+
+**Hero Component**
+
+- Interactive landing with AuroraBackground, Spotlight, SplashCursor, SplineSceneBasic, HeroScrollDemo
+
+**Experience Component**
+
+- Professional timeline, gradient effects, detailed role descriptions
+
+**Approach Component**
+
+- Methodology visualization, interactive hover effects
+
+**Recent Projects Component**
+
+- Portfolio showcase, dynamic 3D pin effects, responsive interactions
+
+**UI Components**
+
+- Reusable animations, consistent styling, responsiveness
+
+**Built with care, passion, and the open-source spirit. ✨**
+<br />
+<br />
+## 8. 🙏Acknowledgments <a id="acknowledgments"></a>
 
 Built primarily by me, but inspired by:
 
@@ -97,6 +181,21 @@ Built primarily by me, but inspired by:
 - The Next.js community for endless resources
 
 - Open-source contributors who share their knowledge freely
-
-## 5. License📜  <a id="license"></a>
+<br />
+<br />
+## 9. License📜  <a id="license"></a>
 MIT License - see LICENSE.md for details.
+<br />
+<br />
+## 10. Screenshots <a id="screenshots"></a>
+
+![Screenshot 1](public/screenshot1.png)
+![Screenshot 2](public/screenshot2.png)
+![Screenshot 3](public/screenshot3.png)
+![Screenshot 4](public/screenshot4.png)
+![Screenshot 5](public/screenshot5.png)
+![Screenshot 6](public/screenshot6.png)
+![Screenshot 7](public/screenshot7.png)
+![Screenshot 8](public/screenshot8.png)
+![Screenshot 9](public/screenshot9.png)
+![Screenshot 10](public/screenshot10.png)
