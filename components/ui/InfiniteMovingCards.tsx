@@ -74,21 +74,21 @@ export const InfiniteMovingCards = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20  w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller varela-round-regular relative z-20  w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
                 className
             )}
         >
             <ul
                 ref={scrollerRef}
                 className={cn(
-                    " flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+                    " flex  varela-round-regular min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
                     start && "animate-scroll ",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
                 {items?.map((item, idx) => (
                     <li
-                        className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
+                        className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
                         style={{
                             background: "rgb(4,7,29)",
                             backgroundColor:
@@ -99,9 +99,9 @@ export const InfiniteMovingCards = ({
                         <blockquote>
                             <div
                                 aria-hidden="true"
-                                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                                className="user-select-none varela-round-regular -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
                             ></div>
-                            <span className=" relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
+                            <span className=" varela-round-regular relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
                 {item.quote}
               </span>
                             <div className="relative z-20 mt-6 flex flex-row items-center">

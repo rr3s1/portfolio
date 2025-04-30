@@ -145,6 +145,18 @@
     }
 }
 
+/* Varela Round regular */
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Example usage: apply to paragraphs */
+p.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+}
+
 @layer utilities {
     .heading {
         @apply font-bold text-4xl md:text-5xl text-center;

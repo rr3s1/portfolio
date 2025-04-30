@@ -6,9 +6,9 @@ export default function TimelineDemo() {
     {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">Modern Next.js Portfolio</span>,
       content: (
-        <div className="bg-transparent">
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            Portfolio crafted with unique skills using Next.js, Three.js, Framer Motion, and TailwindCSS to create a lasting impact
+        <div className="bg-transparent varela-round-regular">
+          <p className="mb-8 text-xs varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            Portfolio Landing Page crafted using Next.js, Three.js, Framer Motion and TailwindCSS
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -48,8 +48,8 @@ export default function TimelineDemo() {
 
       content: (
         <div>
-         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard.
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            SaaS Landing Page developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -89,8 +89,8 @@ export default function TimelineDemo() {
       
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            Minimalistic 3D portfolio built with React.js, Three.js, and TailwindCSS to demonstrate developer skills uniquely.
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            Minimalistic 3D portfolio landing page built with React.js, Three.js and TailwindCSS to demonstrate developer skills.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -130,8 +130,8 @@ export default function TimelineDemo() {
       
       content: (
         <div>
-         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications.
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            A full stack healthcare patient management application that allows patients to register, book and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -171,8 +171,8 @@ export default function TimelineDemo() {
     
       content: (
         <div>
-         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            Visually captivating website inspired by Zentry, featuring scroll-triggered animations, geometric transitions, and engaging video storytelling.
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            Visually captivating website inspired by Zentry, featuring scroll-triggered animations, geometric transitions and engaging video storytelling.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -212,7 +212,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">File Management Platform</span>,
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className=" varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -223,20 +223,7 @@ export default function TimelineDemo() {
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
-            <img
-              src="https://github.com/user-attachments/assets/f2d35f68-20ff-4da3-a3d6-1b4a66bee29e"
-              alt="File Management"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://github.com/user-attachments/assets/8269c903-557c-4c57-b981-072b266ea403"
-              alt="File Management"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
+          
             <img
               src="https://github.com/user-attachments/assets/0af54ee2-c9a6-4f83-9943-9348677ddefe"
               alt="File Management"
@@ -253,7 +240,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">3D iPhone Landing Page Clone</span>,
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -294,8 +281,8 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">University Library Management System</span>,
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
-            Built with Next.js, TypeScript and Postgres, the University Library Management System is a production-grade platform featuring a public-facing app and an admin interface.
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+            Full stack University Library Management System built with Next.js, TypeScript and Postgres. Production-grade platform featuring a public-facing app and an admin interface.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img

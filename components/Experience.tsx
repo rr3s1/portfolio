@@ -9,7 +9,7 @@ const Experience = () => {
       <div className="w-full max-w-4xl mx-auto flex flex-col gap-10 px-4">
         {/* HSBC UK HQ */}
         <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold text-yellow-300">Software Support | HSBC UK HQ</h2>
+          <h2 className="varela-round-regular text-2xl font-bold text-yellow-300">Software Support | HSBC </h2>
           <div className="text-sm text-neutral-400 mb-2">Jan 2025 – Apr 2025</div>
           <ul className="list-disc pl-5 space-y-1">
             <li>Provided technical support for physical security management software systems.</li>
@@ -20,7 +20,7 @@ const Experience = () => {
         </div>
         {/* Greystar */}
         <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold text-pink-300">IT Support Analyst | Greystar</h2>
+          <h2 className="text-2xl  varela-round-regular font-bold text-pink-300">IT Support Analyst | Greystar</h2>
           <div className="text-sm text-neutral-400 mb-2">Jan 2024 – Aug 2024</div>
           <ul className="list-disc pl-5 space-y-1">
             <li>Provided onsite and remote 1st/2nd line support for hardware, software, and networking issues for over 200 end-users across multiple sites.</li>
@@ -33,7 +33,7 @@ const Experience = () => {
         </div>
         {/* Bournemouth University */}
         <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold text-purple-300">Software Licensing Administrator | Bournemouth University</h2>
+          <h2 className="text-2xl varela-round-regular font-bold text-purple-300">Software Licensing Administrator | Bournemouth University</h2>
           <div className="text-sm text-neutral-400 mb-2">Oct 2022 – Oct 2023</div>
           <ul className="list-disc pl-5 space-y-1">
             <li>Delivered 1st and 2nd line deskside and remote support, collaborating effectively with Service Desk and 3rd line engineers.</li>
@@ -43,7 +43,7 @@ const Experience = () => {
         </div>
         {/* Orange */}
         <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold text-orange-300">IT Administrator & Deskside Support Engineer | Orange</h2>
+          <h2 className="text-2xl varela-round-regular font-bold text-orange-300">IT Administrator & Deskside Support Engineer | Orange</h2>
           <div className="text-sm text-neutral-400 mb-2">Sep 2020 – Oct 2022</div>
           <ul className="list-disc pl-5 space-y-1">
             <li>Delivered 1st and 2nd line deskside and remote support, collaborating effectively with Service Desk and 3rd line engineers.</li>
