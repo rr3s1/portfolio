@@ -333,7 +333,7 @@ export default function TimelineDemo() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full h-full overflow-clip">
       <Timeline data={data} />
     </div>
   );

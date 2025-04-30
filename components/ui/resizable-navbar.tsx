@@ -236,8 +236,8 @@ export const NavbarLogo = () => {
       <img
         src="/RS_logo.svg"
         alt="logo"
-        width={60}
-        height={60}
+        width={70}
+        height={70}
       />
       
     </a>

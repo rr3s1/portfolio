@@ -4,13 +4,16 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import { Globe } from "@/components/ui/Globe";
 import { GlobeDemo } from "@/components/ui/GridGlobe";
 import { div } from "three/webgpu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GlowingEffect } from "./glowing-effect";
 
-import Lottie from "react-lottie";
+import dynamic from 'next/dynamic';
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from '@/data/confetti.json';
+
+// Dynamically import Lottie to avoid SSR issues
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -55,9 +58,17 @@ export const BentoGridItem = ({
   children?: React.ReactNode;
 }) => {
   const [copied, setCopied] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const handleCopy = () => {
-    navigator.clipboard.writeText('contact@jsmastery.pro');
-    setCopied(true);
+    if (isClient && navigator.clipboard) {
+      navigator.clipboard.writeText('contact@jsmastery.pro');
+      setCopied(true);
+    }
   }
 
   // Special rendering for full-bleed CTA ("Hire Me") band
@@ -65,7 +76,7 @@ export const BentoGridItem = ({
     return (
       <div className="col-span-full">
         <a 
-          href="mailto:contact@jsmastery.pro"
+          href="mailto:raressilviulazar@jsmastery.pro"
           className="block w-full text-center py-6 px-8 rounded-3xl 
             bg-gradient-to-r from-neonPink via-neonCyan to-neonGold 
             text-white text-2xl font-bold tracking-wider 

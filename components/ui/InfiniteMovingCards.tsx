@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
-                                        items,
+                                        items = [],
                                         direction = "left",
                                         speed = "fast",
                                         pauseOnHover = true,
@@ -12,8 +12,9 @@ export const InfiniteMovingCards = ({
                                     }: {
     items: {
         quote: string;
-        name: string;
+        icon?: string;
         title: string;
+        name: string;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -85,7 +86,7 @@ export const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items.map((item, idx) => (
+                {items?.map((item, idx) => (
                     <li
                         className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
                         style={{

@@ -2,7 +2,13 @@ import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['ui.aceternity.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ui.aceternity.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

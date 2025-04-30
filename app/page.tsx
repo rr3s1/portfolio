@@ -11,7 +11,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
-
+import Story from "@/components/Story";
 
 export default function Home() {
   return (
@@ -23,10 +23,10 @@ export default function Home() {
       <Hero />
       <TimelineDemo />
       <HeroParallaxDemo />
-      {/* <Grid /> */}
+      <Story />
       <Experience />
       {/* <RecentProjects /> */}
-      
+      <Grid />
       
       {/* <Approach /> */}
       <Clients />
