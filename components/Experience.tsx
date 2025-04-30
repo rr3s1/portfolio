@@ -38,6 +38,15 @@ const Experience = () => {
           <ul className="list-disc pl-5 space-y-1">
             
           </ul>
+        
+        </div>
+        <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
+        <h2 className="text-2xl varela-round-regular font-bold text-sky-600">Service Desk Analyst | Capgemini</h2>
+          <div className="text-sm text-neutral-400 mb-2">Oct 2015 – Jul 2017</div>
+          <ul className="list-disc pl-5 space-y-1">
+            
+          </ul>
+        
         </div>
       </div>
     </div>

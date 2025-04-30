@@ -5,7 +5,7 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import Image from "next/image";
 import { FaHome } from "react-icons/fa";
-import Clients from "@/components/Clients";
+import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 
 import Footer from "@/components/Footer";
@@ -33,7 +33,7 @@ export default function Home() {
       {/* <Grid /> */}
       
       
-      <Clients />
+      <TechStack />
       <Footer />
     </div>
   </main>

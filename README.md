@@ -15,8 +15,11 @@
 </div>
 
 > **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
-> Questions or issues? Feel free to [open an issue](https://github.com/your-username/portfolio/issues) or [start a discussion](https://github.com/your-username/portfolio/discussions).
 
+![Demo animation](public/demo.gif)
+
+
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGmIlBux3g&#x2F;Xotdo0efj92jozjgBk2iew&#x2F;watch?utm_content=DAGmIlBux3g&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Design</a> by Rares Silviu Lazar
 ## 📦 Table of Contents
 
 1. [Features](#features)  
