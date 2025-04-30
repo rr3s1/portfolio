@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Manrope:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -64,8 +64,8 @@
         --chart-5: 27 87% 67%;
 
         /* Font families */
-        --font-title: 'Space Grotesk', Arial, sans-serif;
-        --font-body: 'Inter', Arial, sans-serif;
+        --font-title: 'Bebas Neue', Arial, sans-serif;
+        --font-body: 'Manrope', Arial, sans-serif;
     }
 
     .dark {
@@ -134,8 +134,9 @@
     }
     h1, h2, h3, h4, h5, h6, .heading {
         font-family: var(--font-title);
-        font-weight: 700;
-        letter-spacing: -0.01em;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
     p, li, span, a, input, textarea {
         font-family: var(--font-body);
