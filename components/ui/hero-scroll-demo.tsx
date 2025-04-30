@@ -12,7 +12,7 @@ export function HeroScrollDemo() {
             <h1 className="text-4xl font-semibold text-black dark:text-white">
               Got your wand?<br /><br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-              Here's your wand..<br /><br />
+              Here&#39;s your wand..<br /><br />
               </span>
             </h1>
           </>

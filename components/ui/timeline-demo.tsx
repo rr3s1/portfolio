@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 export default function TimelineDemo() {
   const data = [
     {
-      title: "Modern Next.js Portfolio",
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">Modern Next.js Portfolio</span>,
       content: (
         <div className="bg-transparent">
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -44,7 +44,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "SaaS Xora Modern UI/UX",
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">SaaS Xora Modern UI/UX</span>,
+
       content: (
         <div>
          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -84,7 +85,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "3D Portfolio",
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">3D Portfolio</span>,
+      
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -124,7 +126,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "Healthcare Management",
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">Healthcare Management</span>,
+      
       content: (
         <div>
          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -164,7 +167,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "Awwwards Zentry Clone",
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">Awwwards Zentry Clone</span>,
+    
       content: (
         <div>
          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -204,7 +208,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "File Management Platform",
+    
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">File Management Platform</span>,
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -244,7 +249,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "3D iPhone Landing Page Clone",
+    
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">3D iPhone Landing Page Clone</span>,
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
@@ -284,7 +290,8 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "University Library Management System",
+    
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">University Library Management System</span>,
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
