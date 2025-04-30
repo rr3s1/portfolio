@@ -3,29 +3,39 @@ import { GridMotion } from "@/components/ui/grid-motion"
 export function GridMotionDemo() {
   const items = [
     'Item 1',
-    <div key='jsx-item-1'>Custom JSX Content</div>,
+    <div key='jsx-item-1' className="text-center">
+      <h3 className="text-lg font-bold">Custom Content</h3>
+      <p className="text-sm">With rich formatting</p>
+    </div>,
     'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'Item 2',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
     'Item 4',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
-    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'Item 5',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
-    'Item 7',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
+    <div key='jsx-item-2' className="text-center">
+      <h3 className="text-lg font-bold">Another Custom</h3>
+      <p className="text-sm">With different style</p>
+    </div>,
+    'Item 6',
+    <div key='jsx-item-3' className="text-center">
+      <h3 className="text-lg font-bold">Third Custom</h3>
+      <p className="text-sm">With unique content</p>
+    </div>,
     'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'Item 8',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
+    <div key='jsx-item-4' className="text-center">
+      <h3 className="text-lg font-bold">Fourth Custom</h3>
+      <p className="text-sm">With special layout</p>
+    </div>,
     'Item 10',
-    <div key='jsx-item-3'>Custom JSX Content</div>,
+    <div key='jsx-item-5' className="text-center">
+      <h3 className="text-lg font-bold">Fifth Custom</h3>
+      <p className="text-sm">With custom design</p>
+    </div>,
     'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'Item 11',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
     'Item 13',
-    <div key='jsx-item-4'>Custom JSX Content</div>,
-    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'Item 14',
+    <div key='jsx-item-6' className="text-center">
+      <h3 className="text-lg font-bold">Sixth Custom</h3>
+      <p className="text-sm">With final touch</p>
+    </div>,
+    'Item 14'
   ];
 
   return (
