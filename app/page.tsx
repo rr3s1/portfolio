@@ -7,7 +7,7 @@ import Image from "next/image";
 import { FaHome } from "react-icons/fa";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
-import Approach from "@/components/Approach";
+
 import Footer from "@/components/Footer";
 import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";

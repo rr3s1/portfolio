@@ -30,20 +30,17 @@ export const FloatingNav = ({
       {/* Desktop Navigation */}
       <NavBody>
         <NavbarLogo />
-        <NavItems items={navItems} />
-        {/* <div className="flex items-center gap-4">
-          {navItems.map((item, idx) => (
-            <NavbarButton
-              key={`nav-btn-${idx}`}
-              asChild
-              variant="secondary"
-              className="capitalize"
-            >
-              <a href={item.link}>{item.name}</a>
-            </NavbarButton>
-          ))}
-          
-        </div> */}
+        <NavItems className="text-xl text-white-100" items={navItems} />
+        <div className="flex items-center gap-4">
+          <NavbarButton variant="secondary">Login</NavbarButton>
+          <NavbarButton
+            as="a"
+            href="mailto:raressilviulazar@gmail.com?subject=Book%20a%20Call"
+            variant="primary"
+          >
+            Book a call
+          </NavbarButton>
+        </div>
       </NavBody>
 
       {/* Mobile Navigation */}
@@ -70,7 +67,24 @@ export const FloatingNav = ({
               <span className="block">{item.name}</span>
             </a>
           ))}
-          
+          <div className="flex w-full flex-col gap-4">
+            <NavbarButton
+              onClick={() => setIsMobileMenuOpen(false)}
+              variant="primary"
+              className="w-full"
+            >
+              Login
+            </NavbarButton>
+            <NavbarButton
+              onClick={() => setIsMobileMenuOpen(false)}
+              as="a"
+              href="mailto:raressilviulazar@gmail.com?subject=Book%20a%20Call"
+              variant="primary"
+              className="w-full"
+            >
+              Book a call
+            </NavbarButton>
+          </div>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>

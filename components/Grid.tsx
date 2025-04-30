@@ -4,12 +4,12 @@ import { BentoGrid } from './ui/BentoGrid'
 import { gridItems } from '@/data'
 import {BentoGridItem} from '@/components/ui/BentoGrid'
 import { GlowingEffect } from './ui/glowing-effect'
-import HeroParallaxDemo from './ui/hero-parallax-demo'
+
  
 const Grid = () => {
   return (
     <section id="about">
-        <HeroParallaxDemo />
+        
         <BentoGrid>
             {gridItems.map(({id, title, description, className, img, imgClassName, titleClassName,
               spareImg}) => (
