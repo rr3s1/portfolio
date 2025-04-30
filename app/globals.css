@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -59,6 +62,10 @@
         --chart-3: 197 37% 24%;
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
+
+        /* Font families */
+        --font-title: 'Space Grotesk', Arial, sans-serif;
+        --font-body: 'Inter', Arial, sans-serif;
     }
 
     .dark {
@@ -116,12 +123,22 @@
 @layer base {
     * {
         @apply border-border !scroll-smooth;
+        font-family: var(--font-body);
     }
     body {
         @apply bg-background text-foreground;
+        font-family: var(--font-body);
     }
     button {
         @apply active:outline-none;
+    }
+    h1, h2, h3, h4, h5, h6, .heading {
+        font-family: var(--font-title);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+    }
+    p, li, span, a, input, textarea {
+        font-family: var(--font-body);
     }
 }
 
@@ -177,8 +194,6 @@
         mask-composite: exclude;
     }
 }
-
-
 
 @layer base {
   * {

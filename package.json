@@ -19,7 +19,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
-    "gsap": "^3.12.7",
     "lucide-react": "^0.503.0",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.9.2",
@@ -37,7 +36,6 @@
     "three-globe": "^2.31.1"
   },
   "devDependencies": {
-    "@types/gsap": "^1.20.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
