@@ -36,20 +36,20 @@ export const products = [
     title: " ",
     link: "https://editrix.ai",
     thumbnail:
-      "/care.png",
+      "/gymOra.png",
   },
   {
     title: " ",
-    link: "https://app.pixelperfect.quest",
+    link: "/",
     thumbnail:
-      "/care.png",
+      "/gymOra.png",
   },
 
   {
     title: "",
     link: "https://algochurn.com",
     thumbnail:
-      "/red.png",
+      "/oryy.png",
   },
   {
     title: " ",
@@ -80,7 +80,7 @@ export const products = [
     title: " ",
     link: "https://cremedigital.com",
     thumbnail:
-      "/oryy.png",
+      "/red.png",
   },
   {
     title: "  ",

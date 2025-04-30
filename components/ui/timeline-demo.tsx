@@ -92,28 +92,28 @@ export default function TimelineDemo() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://github.com/user-attachments/assets/a16beb68-8bfe-47c2-90cd-ae1f1e426a2f"
+              src="https://github.com/user-attachments/assets/cd28a634-f16f-4f37-8bef-e8359b9a9551"
               alt="3D Portfolio"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <img
-              src="https://github.com/user-attachments/assets/fd28399a-5917-4913-b427-dae54b19401f"
+              src="https://github.com/user-attachments/assets/3259bdfa-6422-4c14-bf84-a9c56f1d3635"
               alt="3D Portfolio"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <img
-              src="https://github.com/user-attachments/assets/c97b1607-218e-451e-a6f6-e03e5d12a9cc"
+              src="https://github.com/user-attachments/assets/5a4cce2c-14ee-4e51-98ff-fd421ca6f1e9"
               alt="3D Portfolio"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <img
-              src="https://github.com/user-attachments/assets/3b1e3633-23c3-49da-a346-69f397a7d7eb"
+              src="https://github.com/user-attachments/assets/ff053505-b5d1-4070-b612-cc1f0154ff3d"
               alt="3D Portfolio"
               width={500}
               height={500}
@@ -292,12 +292,34 @@ export default function TimelineDemo() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://github.com/user-attachments/assets/7cff0964-6c02-4af5-aa0c-964b349cc9aa"
+              src="https://github.com/user-attachments/assets/70421f92-6ce6-4a13-8c91-14932e286d40"
               alt="Library System"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
+            <img
+              src="https://github.com/user-attachments/assets/6bc6654b-f195-4375-9d0b-02ba2a613ade"
+              alt="Library System"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://github.com/user-attachments/assets/4eefe733-04ab-41bc-b204-8ae7a62c474f"
+              alt="Library System"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://github.com/user-attachments/assets/079cf308-3db5-4566-aa08-4b41304520a0"
+              alt="Library System"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            
           </div>
         </div>
       ),
