@@ -1,4 +1,5 @@
 
+ <img src="https://github.com/user-attachments/assets/94e154db-3b28-4d3b-85ce-2304a00095dc" /> <br/>  
 <div align="center">
 
 
@@ -9,14 +10,15 @@
 
   <h3 align="center">Modern Developer Portfolio</h3>
   <p align="center">
-    A learning journey in modern web development, combining efficient code with engaging visuals using
-    <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. Light and Dark theme implementation soon.
+    A Modern Portfolio Landnig Page developed by combining efficient code with engaging visuals using
+    <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. 
   </p>
 </div>
 
-> **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
-
 ![Demo animation](public/demo.gif)
+
+
+> **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
 
 
 ## 📦 Table of Contents
@@ -192,7 +194,7 @@ MIT License - see LICENSE.md for details.
 
 ## 10. Screenshots <a id="screenshots"></a>
 
-![Hero](https://github.com/user-attachments/assets/79d69412-865f-44a0-90cc-eac9d3038436)
+![Hero](https://github.com/user-attachments/assets/aa5ab4fe-fe86-423f-918a-0da890f4ca96)
 ![Core](https://github.com/user-attachments/assets/5bffda05-6031-4199-9de3-c8e0f16610b1)
 ![image](https://github.com/user-attachments/assets/1df84138-1fb2-4dbc-9800-ea0132ab1051)
 ![image](https://github.com/user-attachments/assets/47318a47-55d9-4af9-ba3d-2065683939fe)
