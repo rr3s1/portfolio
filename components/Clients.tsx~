@@ -1,10 +1,10 @@
 import React from 'react'
 import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
-import {testimonials, companies} from "@/data";
+import {techstack, companies} from "@/data";
 
-const Clients = () => {
+const Techstack = () => {
     return (
-        <div className="py-80" id="testimonials">
+        <div className="py-80" id="techstack">
             <h1 className="heading text-white-300">
                 Kind words from
                 <span className="text-purple"> satisfied clients</span>
@@ -12,7 +12,7 @@ const Clients = () => {
             <div className="flex flex-col items-center max-lg:mt-10 mt-20">
 
                   <InfiniteMovingCards
-                      items={testimonials}
+                      items={techstack}
                       direction="right"
                       speed="slow"
                   />

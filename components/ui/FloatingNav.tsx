@@ -32,14 +32,16 @@ export const FloatingNav = ({
         <NavbarLogo />
         <NavItems className="text-xl text-white-100" items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton variant="secondary">Login</NavbarButton>
+        
           <NavbarButton
             as="a"
             href="mailto:raressilviulazar@gmail.com?subject=Book%20a%20Call"
             variant="primary"
+            // className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
           >
-            Book a call
+            CONTACT
           </NavbarButton>
+          
         </div>
       </NavBody>
 

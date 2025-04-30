@@ -4,9 +4,9 @@ import { Timeline } from "@/components/ui/timeline";
 export default function TimelineDemo() {
   const data = [
     {
-      title: <span className="text-gradient-magenta bg-clip-text text-transparent">Modern Next.js Portfolio</span>,
+      title: <span className="text-gradient-magenta  bg-clip-text text-transparent" id="projects">Modern Next.js Portfolio</span>,
       content: (
-        <div className="bg-transparent varela-round-regular">
+        <div className="bg-transparent varela-round-regular" >
           <p className="mb-8 varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Portfolio Landing Page crafted using Next.js, Three.js, Framer Motion and TailwindCSS
           </p>

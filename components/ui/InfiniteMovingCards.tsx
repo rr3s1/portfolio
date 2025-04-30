@@ -107,15 +107,17 @@ export const InfiniteMovingCards = ({
                             <div className="relative z-20 mt-6 flex flex-row items-center">
                 <div className="flex flex-col">
                     <span className="flex flex-col gap-1">
-                    <div className="me-3">
-                        <img src="/profile.svg" alt="profile"/>
-                    </div>
+                    {/* <img
+    src={item.icon ?? "/public/22.png"}
+    alt={item.name}
+    className="h-8 w-8 object-contain"
+  /> */}
                   <span className="text-xl leading-[1.6] text-white font-bold ">
 
                     {item.name}
                   </span>
                 </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  <span className=" text-sm leading-[1.6] bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-normal">
                     {item.title}
                   </span>
                 </div>

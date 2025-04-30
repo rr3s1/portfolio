@@ -28,10 +28,10 @@ const Footer = () => {
                 </p>
                 <a href="mailto:raressilviulazar@gmail.com">
                     <MagicButton
-                        title="HIRE ME"
+                        title="EMAIL"
                         icon={<FaLocationArrow />}
                         position="right"
-                        otherClasses="accent-gradient text-white-100 font-bold shadow-neon"
+                        otherClasses="accent-gradient text-white-100 text-base font-bold shadow-neon"
                     />
                 </a>
             </div>

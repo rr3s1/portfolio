@@ -181,6 +181,9 @@ p.varela-round-regular {
         background-clip: text;
         text-fill-color: transparent;
     }
+    .bg-main-gradient {
+        @apply bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-md;
+      }
     
     .text-gradient-magenta {
         background: linear-gradient(90deg, #FFE08E 0%, #FF9C3B 50%, #FF2AA9 100%);
