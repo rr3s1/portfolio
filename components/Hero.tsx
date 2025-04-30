@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex justify-center relative my-2- z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
         
-            <h2 className="uppercase tracking-widest text-[33px] text-center text-pink-200 max-w-120 font-black">
+            <h2 className="uppercase tracking-widest text-[27px] text-center text-pink-200 max-w-120 font-black">
               FULL STACK
             </h2>
             <br></br>

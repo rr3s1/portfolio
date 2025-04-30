@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.13.4",
     "@react-three/drei": "^9.111.1",
     "@react-three/fiber": "^8.17.5",
     "@sentry/nextjs": "^8.26.0",
