@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import AnimatedTextCycle from './ui/animated-text-cycle'
 import { SplineSceneBasic } from './ui/spline-demo'
 import { HeroScrollDemo } from './ui/hero-scroll-demo'
+import { GridMotionDemo } from './ui/grid-motion-demo'
 
 const Hero = () => {
   return (
@@ -29,6 +30,9 @@ const Hero = () => {
       
       {/* Scroll Animation Section */}
       <HeroScrollDemo />
+
+      {/* Grid Motion Section */}
+      <GridMotionDemo />
     </>
   )
 }
