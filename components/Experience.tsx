@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/MovingBorder"
 
 const Experience = () => {
   return (
-    <div className="py-20 bg-[#0b0c1a] text-white" id="experience">
+    <div className="py-20  text-white" id="experience">
       <h1 className="text-center text-4xl font-bold mb-10">
         My <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
           work experience

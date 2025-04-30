@@ -9,7 +9,8 @@ import React from 'react'
 
 export function SplineSceneBasic() {
   return (
-    <Card className="w-full h-[600px] relative overflow-hidden">
+    <Card className="w-full h-[1000px] relative overflow-hidden
+             border-0 bg-transparent shadow-none">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
       
       <div className="flex h-full">
@@ -19,7 +20,6 @@ export function SplineSceneBasic() {
             <h2 className="uppercase tracking-widest text-[27px] text-center text-pink-200 max-w-120 font-black">
               FULL STACK
             </h2>
-            <br></br>
             <h1 className="text-gradient-magenta text-center text-[33px] md:text-5xl lg:text-6xl font-bold mb-4">
               DEVELOPER
             </h1>
@@ -37,7 +37,7 @@ export function SplineSceneBasic() {
                     "Experiences",
                   ]}
                   interval={3000}
-                  className={"text-foreground text-[52px] mt-5 text-gradient-magenta font-semi-bold"}
+                  className={" text-[52px] mt-5 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"}
                 />
               </h1>
             </div>
