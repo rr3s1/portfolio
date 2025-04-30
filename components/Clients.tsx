@@ -1,5 +1,6 @@
 import React from 'react'
 import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
+import {InfiniteLogoSlider} from "@/components/ui/InfiniteLogoSlider";
 import {testimonials, companies} from "@/data";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
@@ -18,33 +19,38 @@ const Clients = () => {
                       speed="slow"
                   />
                 
-                  <div className="relative flex flex-wrap items-center justify-center gap-14 md:16 max-lg:mt-10 mt-20 w-full">
+                  <div className="relative w-full max-lg:mt-10 mt-20">
                       {/* Add ProgressiveBlur as a sibling instead of a parent */}
                       <ProgressiveBlur 
                         direction="bottom" 
                         blurLayers={4} 
-                        blurIntensity={1.0}
+                        blurIntensity={0.2}
                         className="absolute inset-0 z-0"
                       />
                       
-                      {/* Company logos on top of the blur effect */}
-                      {companies.map(({id, img, name, nameImg}) => (
-                        <div 
-                          key={id} 
-                          className="flex md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-10"
-                        >
-                          <img 
-                            src={img}
-                            alt={name}
-                            className="md:w-10 w-5"
-                          />
-                          <img 
-                            src={nameImg}
-                            alt={name}
-                            className="md:w-24 w-20"
-                          />
-                        </div>
-                      ))}
+                      {/* Company logos with InfiniteLogoSlider */}
+                      <InfiniteLogoSlider
+                        items={companies.map(company => (
+                          <div 
+                            key={company.id} 
+                            className="flex md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30"
+                          >
+                            <img 
+                              src={company.img}
+                              alt={company.name}
+                              className="md:w-10 w-5"
+                            />
+                            <img 
+                              src={company.nameImg}
+                              alt={company.name}
+                              className="md:w-24 w-20"
+                            />
+                          </div>
+                        ))}
+                        direction="left"
+                        speed="fast"
+                        className="py-4"
+                      />
                   </div>
             </div>
         </div>
