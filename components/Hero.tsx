@@ -9,6 +9,7 @@ import { AuroraBackground } from './ui/aurora-background'
 import { motion } from "framer-motion"
 import AnimatedTextCycle from './ui/animated-text-cycle'
 import { SplineSceneBasic } from './ui/spline-demo'
+import { HeroScrollDemo } from './ui/hero-scroll-demo'
 
 const Hero = () => {
   return (
@@ -22,13 +23,12 @@ const Hero = () => {
           <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="cyan"/>
         </div>
         <div className="container mx-auto px-4 py-12">
-        <SplineSceneBasic />
-      </div>
-       
+          <SplineSceneBasic />
+        </div>
       </AuroraBackground>
       
-      {/* Spline 3D Scene Section */}
-     
+      {/* Scroll Animation Section */}
+      <HeroScrollDemo />
     </>
   )
 }
