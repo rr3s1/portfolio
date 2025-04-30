@@ -120,6 +120,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
+      style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
     >
       {items.map((item, idx) => (
         <a
@@ -128,6 +129,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
+          style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
         >
           {hovered === idx && (
             <motion.div
@@ -135,7 +137,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
             />
           )}
-          <span className="relative z-20">{item.name}</span>
+          <span className="relative z-20" style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}>{item.name}</span>
         </a>
       ))}
     </motion.div>
@@ -282,4 +284,4 @@ export const NavbarButton = ({
       {children}
     </Tag>
   );
-}; 
+};

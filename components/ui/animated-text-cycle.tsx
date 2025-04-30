@@ -74,7 +74,7 @@ export default function AnimatedTextCycle({
         style={{ visibility: "hidden" }}
       >
         {words.map((word, i) => (
-          <span key={i} className={`font-bold ${className}`}>
+          <span key={i} className={`font-bold merienda-title ${className}`} style={{fontFamily: "var(--font-title)", fontWeight: 900}}>
             {word}
           </span>
         ))}
@@ -96,12 +96,12 @@ export default function AnimatedTextCycle({
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={currentIndex}
-            className={`inline-block font-bold ${className}`}
+            className={`inline-block font-bold merienda-title ${className}`}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            style={{ whiteSpace: "nowrap" }}
+            style={{ whiteSpace: "nowrap", fontFamily: "var(--font-title)", fontWeight: 800 }}
           >
             {words[currentIndex]}
           </motion.span>
@@ -109,4 +109,4 @@ export default function AnimatedTextCycle({
       </motion.span>
     </>
   );
-} 
+}
