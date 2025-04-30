@@ -8,7 +8,7 @@ import BackgroundBeamsDemo from "./ui/background-beams-demo";
 const Footer = () => {
     return (
         <footer
-            className="relative w-full overflow-hidden px-4 py-10 mt-24 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
+            className="relative w-full overflow-hidden px-4 py-10 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
             id="contact"
         >
             {/* Aurora/gradient overlay for extra depth */}
@@ -17,12 +17,12 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-center z-10 relative">
-                <h1 className="heading lg:max-w-[45vw] text-white drop-shadow-md">
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md">
                     Ready to take <span className="text-gradient-gold">your </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> digital
                     presence </span>to the next level?
                 </h1>
 
-                <p className="text-sky-300 md:mt-10 my-5 text-center max-w-xl">
+                <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center max-w-xl">
                     Reach out to me today and let&apos;s discuss how I can help you
                     achieve your goals.
                 </p>

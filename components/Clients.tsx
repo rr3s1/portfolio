@@ -9,7 +9,7 @@ const Clients = () => {
     return (
         <div className="py-20" id="testimonials">
            
-            <h1 className="text-center text-6xl font-bold mb-10">
+            <h1 className="text-center text-5xl font-bold mb-10">
         Kind words  <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> from happy clients </span> 
       </h1>
 
@@ -51,7 +51,7 @@ const Clients = () => {
                         ))}
                         direction="left"
                         speed="fast"
-                        className="py-4"
+                        className="pt-4"
                       />
                   </div>
             </div>

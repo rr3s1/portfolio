@@ -23,7 +23,7 @@ const Hero = () => {
       </AuroraBackground>
       
       {/* Scroll Animation Section */}
-      <HeroScrollDemo />
+      
     </>
   )
 }

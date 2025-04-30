@@ -11,6 +11,8 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
+import Approach from "@/components/Approach";
+import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
 
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
       
       <FloatingNav navItems={navItems}/>
       <Hero />
+      <HeroScrollDemo />
+      <Approach />
       <TimelineDemo />
       <HeroParallaxDemo />
       
@@ -28,7 +32,7 @@ export default function Home() {
       {/* <RecentProjects /> */}
       <Grid />
       
-      {/* <Approach /> */}
+      
       <Clients />
       <Footer />
     </div>
