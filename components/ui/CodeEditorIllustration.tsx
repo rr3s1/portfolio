@@ -95,7 +95,7 @@ const CodeEditorIllustration = () => {
               <span className="text-white">=</span>
               <span className="text-[#98c379]">"hero-title"</span>
               <span className="text-[#e06c75]">{'>'}</span>
-              <span className="text-white">Hello, I'm a Developer</span>
+              <span className="text-white">Hello, I&apos;m a Developer</span>
               <span className="text-[#e06c75]">{'</h1>'}</span>
             </div>
             <div className="flex mt-1">
@@ -115,16 +115,16 @@ const CodeEditorIllustration = () => {
                 <span className="text-[#d19a66]"> onClick</span>
                 <span className="text-white">=</span>
                 <span className="text-[#d19a66]">{'{'}</span>
-                <span className="text-white">() =></span>
+                <span className="text-white">() =&gt;</span>
                 <span className="text-[#61afef]"> alert</span>
                 <span className="text-white">(</span>
-                <span className="text-[#98c379]">'Hello World!'</span>
+                <span className="text-[#98c379]">&apos;Hello World!&apos;</span>
                 <span className="text-white">)</span>
                 <span className="text-[#d19a66]">{'}'}</span>
-                <span className="text-[#e06c75]">{'>'}</span>
+                <span className="text-[#e06c75]">{'&gt;'}</span>
                 <span className="text-white">Click me</span>
+                {/* Blinking cursor illustration, not part of the code string */}
                 {blinking && <span className="absolute inline-block w-2 h-4 bg-brand-primary-50 ml-1"></span>}
-                <span className="text-[#e06c75]">{'</button>'}</span>
               </span>
             </div>
             <div className="flex mt-1">

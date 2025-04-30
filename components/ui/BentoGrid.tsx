@@ -6,6 +6,7 @@ import { GlobeDemo } from "@/components/ui/GridGlobe";
 import { div } from "three/webgpu";
 import { useState } from "react";
 import { GlowingEffect } from "./glowing-effect";
+import Image from 'next/image';
 
 import Lottie from "react-lottie";
 import MagicButton from "./MagicButton";
@@ -97,10 +98,12 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && 'flex justify-center'} h-full relative z-10`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]")}
+              width={500}
+              height={500}
+              className="absolute inset-0 w-full h-full object-cover"
             />
           )}
         </div>
@@ -110,13 +113,12 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
-              className={cn(
-                imgClassName,
-                "object-cover object-center w-full h-full opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]"
-              )}
+              width={500}
+              height={500}
+              className="absolute inset-0 w-full h-full object-cover"
             />
           )}
         </div>
