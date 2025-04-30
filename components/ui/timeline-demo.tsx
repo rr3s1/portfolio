@@ -7,7 +7,7 @@ export default function TimelineDemo() {
       title: "Modern Next.js Portfolio",
       content: (
         <div className="bg-transparent">
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Portfolio crafted with unique skills using Next.js, Three.js, Framer Motion, and TailwindCSS to create a lasting impact
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -47,7 +47,7 @@ export default function TimelineDemo() {
       title: "SaaS Xora Modern UI/UX",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -87,7 +87,7 @@ export default function TimelineDemo() {
       title: "3D Portfolio",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Minimalistic 3D portfolio built with React.js, Three.js, and TailwindCSS to demonstrate developer skills uniquely.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -127,7 +127,7 @@ export default function TimelineDemo() {
       title: "Healthcare Management",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -167,7 +167,7 @@ export default function TimelineDemo() {
       title: "Awwwards Zentry Clone",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Visually captivating website inspired by Zentry, featuring scroll-triggered animations, geometric transitions, and engaging video storytelling.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -207,7 +207,7 @@ export default function TimelineDemo() {
       title: "File Management Platform",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -247,7 +247,7 @@ export default function TimelineDemo() {
       title: "3D iPhone Landing Page Clone",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -287,7 +287,7 @@ export default function TimelineDemo() {
       title: "University Library Management System",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
             Built with Next.js, TypeScript and Postgres, the University Library Management System is a production-grade platform featuring a public-facing app and an admin interface.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -330,4 +330,4 @@ export default function TimelineDemo() {
       <Timeline data={data} />
     </div>
   );
-} 
+}
