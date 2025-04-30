@@ -141,7 +141,19 @@ export const ProductCard = ({
     "from-blue-400 to-indigo-500",
     "from-green-400 to-emerald-500",
   ];
+  const neonShadows = [
+    "shadow-[0_0_30px_5px_rgba(147,51,234,0.4)]",   // purple
+    "shadow-[0_0_30px_5px_rgba(251,191,36,0.4)]",   // orange/yellow
+    "shadow-[0_0_30px_5px_rgba(236,72,153,0.4)]",   // pink
+    "shadow-[0_0_30px_5px_rgba(34,211,238,0.4)]",   // cyan/blue
+    "shadow-[0_0_30px_5px_rgba(132,204,22,0.4)]",   // green
+    "shadow-[0_0_30px_5px_rgba(232,121,249,0.4)]",  // fuchsia/pink
+    "shadow-[0_0_30px_5px_rgba(251,191,36,0.4)]",   // yellow/orange
+    "shadow-[0_0_30px_5px_rgba(59,130,246,0.4)]",   // blue/indigo
+    "shadow-[0_0_30px_5px_rgba(16,185,129,0.4)]",   // emerald/green
+  ];
   const gradient = gradients[index % gradients.length];
+  const neonShadow = neonShadows[index % neonShadows.length];
 
   return (
     <motion.div
@@ -154,7 +166,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0"
     >
-      <div className={`p-[4px] rounded-xl bg-gradient-to-r ${gradient} shadow-lg h-full w-full`}>
+      <div className={`p-[6px] rounded-xl bg-gradient-to-r ${gradient} ${neonShadow} h-full w-full`}>
         <a
           href={product.link}
           className="block group-hover/product:shadow-2xl rounded-xl bg-black overflow-hidden h-full w-full"
