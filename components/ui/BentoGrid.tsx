@@ -60,25 +60,47 @@ export const BentoGridItem = ({
     setCopied(true);
   }
 
+  // Special rendering for full-bleed CTA ("Hire Me") band
+  if (id === 6) {
+    return (
+      <div className="col-span-full">
+        <a 
+          href="mailto:contact@jsmastery.pro"
+          className="block w-full text-center py-6 px-8 rounded-3xl 
+            bg-gradient-to-r from-neonPink via-neonCyan to-neonGold 
+            text-white text-2xl font-bold tracking-wider 
+            shadow-neon hover:shadow-neonHover 
+            animate-gradient-x
+            transition-all duration-300
+            hover:-translate-y-1"
+        >
+          {title}
+        </a>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0% rgba(12,14,35,1) 100%",
+        background: "rgb(24,23,39)",
+        backgroundColor: "linear-gradient(90deg, rgba(24,23,39,1) 0%, rgba(24,23,39,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && 'flex justify-center'} h-full`}>
+      {/* Outer neon gradient border */}
+      <div className="absolute inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" />
+      
+      <div className={`${id === 6 && 'flex justify-center'} h-full relative z-10`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover, object-center")}
+              className={cn(imgClassName, "object-cover object-center opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]")}
             />
           )}
         </div>
@@ -93,14 +115,14 @@ export const BentoGridItem = ({
               alt={spareImg}
               className={cn(
                 imgClassName,
-                "object-cover, object-center w-full h-full"
+                "object-cover object-center w-full h-full opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]"
               )}
             />
           )}
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold " />
+            <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
           </BackgroundGradientAnimation>
         )}
         <div
@@ -112,7 +134,7 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-white">
             {title}
           </div>
 
@@ -121,10 +143,10 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-5 lg:gap-5 w-fit absolute -right-3 lg-right-2">
               <div className="flex flex-col gap-3 lg:gap-8">
-                {["React.js", "Next.js", "TypeScript"].map((item) => (
+                {["React.js", "Next.js", "TypeScript", "Tailwind"].map((item) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-neonCyan"
                   >
                     {item}
                   </span>
@@ -136,7 +158,7 @@ export const BentoGridItem = ({
                 {["Vue.js", "AWS", "MongoDB"].map((item) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-neonPink"
                   >
                     {item}
                   </span>
@@ -161,7 +183,7 @@ export const BentoGridItem = ({
                 title={copied ? 'Email copied' : 'Copy my email'}
                 icon={<IoCopyOutline />}
                 position="left"
-                otherClasses="!ng-[#161a31]"
+                otherClasses="!bg-[#161a31]"
                 handleClick={handleCopy}
               />
             </div>

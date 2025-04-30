@@ -27,15 +27,17 @@ const config = {
   	},
   	extend: {
 		boxShadow: {
-			neon: '0 0 15px #f472b6',
+			neon: '0 0 8px rgba(222,60,191,0.6), 0 0 16px rgba(83,191,200,0.5)',
+			neonHover: '0 0 8px rgba(222,60,191,0.8), 0 0 16px rgba(83,191,200,0.7), 0 0 24px rgba(228,173,104,0.6)',
 			neonCard: '0 0 10px rgba(139, 92, 246, 0.6)',
 		  },
   		colors: {
-			neonPink: '#f472b6',
+			neonPink: '#DE3CBF',
 			neonOrange: '#f97316',
 			neonPurple: '#8b5cf6',
 			neonBlue: '#3b82f6',
-			
+			neonCyan: '#53BFC8',
+			neonGold: '#E4AD68',
   			black: {
   				'100': '#060718',
   				'200': '#0f132a',
@@ -111,7 +113,8 @@ const config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			darkBg: '#181727',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -134,6 +137,10 @@ const config = {
   				to: {
   					height: '0'
   				}
+  			},
+  			'gradient-x': {
+  				'0%, 100%': { backgroundPosition: '0% 50%' },
+  				'50%': { backgroundPosition: '100% 50%' },
   			},
   			spotlight: {
   				'0%': {
@@ -226,7 +233,8 @@ const config = {
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',
-  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+  			'gradient-x': 'gradient-x 6s ease-in-out infinite',
   		}
   	}
   },

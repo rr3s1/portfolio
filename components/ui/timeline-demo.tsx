@@ -6,7 +6,7 @@ export default function TimelineDemo() {
     {
       title: "2024",
       content: (
-        <div>
+        <div className="bg-transparent">
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>

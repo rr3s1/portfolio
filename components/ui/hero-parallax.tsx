@@ -68,29 +68,32 @@ export const HeroParallax = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
+          {firstRow.map((product, idx) => (
             <ProductCard
               product={product}
               translate={translateX}
               key={product.title}
+              index={idx}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row mb-20 space-x-20">
-          {secondRow.map((product) => (
+          {secondRow.map((product, idx) => (
             <ProductCard
               product={product}
               translate={translateXReverse}
               key={product.title}
+              index={idx + 5}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
+          {thirdRow.map((product, idx) => (
             <ProductCard
               product={product}
               translate={translateX}
               key={product.title}
+              index={idx + 10}
             />
           ))}
         </motion.div>
@@ -117,6 +120,7 @@ export const Header = () => {
 export const ProductCard = ({
   product,
   translate,
+  index,
 }: {
   product: {
     title: string;
@@ -124,7 +128,21 @@ export const ProductCard = ({
     thumbnail: string;
   };
   translate: MotionValue<number>;
+  index: number;
 }) => {
+  const gradients = [
+    "from-purple-500 to-blue-500",
+    "from-orange-400 to-yellow-500",
+    "from-pink-500 to-red-500",
+    "from-cyan-400 to-blue-500",
+    "from-green-400 to-lime-500",
+    "from-fuchsia-500 to-pink-500",
+    "from-yellow-400 to-orange-500",
+    "from-blue-400 to-indigo-500",
+    "from-green-400 to-emerald-500",
+  ];
+  const gradient = gradients[index % gradients.length];
+
   return (
     <motion.div
       style={{
@@ -136,19 +154,21 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0"
     >
-      <a
-        href={product.link}
-        className="block group-hover/product:shadow-2xl"
-      >
-        <img
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
-      </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      <div className={`p-[4px] rounded-xl bg-gradient-to-r ${gradient} shadow-lg h-full w-full`}>
+        <a
+          href={product.link}
+          className="block group-hover/product:shadow-2xl rounded-xl bg-black overflow-hidden h-full w-full"
+        >
+          <img
+            src={product.thumbnail}
+            height="600"
+            width="600"
+            className="object-cover object-left-top h-full w-full"
+            alt={product.title}
+          />
+        </a>
+      </div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-xl"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>
