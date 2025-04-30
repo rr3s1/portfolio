@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.111.1",
     "@react-three/fiber": "^8.17.5",
     "@sentry/nextjs": "^8.26.0",
+    "@splinetool/react-spline": "^4.0.0",
     "@types/react-lottie": "^1.2.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
