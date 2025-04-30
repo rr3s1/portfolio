@@ -38,10 +38,10 @@ export function SplineSceneBasic() {
               DEVELOPER
             </h1>
             <div className="max-w-[300px]">
-              <h1 className={`text-4xl font-light text-center font-semi-bold text-sky-400
+              <h1 className={`text-3xl mt-2 font-light text-center font-semi-bold text-sky-400
                 transition-all duration-1000 ease-in-out
-                ${isVisible ? 'opacity-100 blur-none' : 'opacity-0 blur-[2px]'}`}>
-                building  {' '} <br />
+                ${isVisible ? 'opacity-100 blur-none' : 'opacity-0 blur-[2px] '}`}>
+                crafting  {' '} <br />
                 <AnimatedTextCycle
                   words={[
                     "Apps",
@@ -53,7 +53,7 @@ export function SplineSceneBasic() {
                     "Experiences",
                   ]}
                   interval={3000}
-                  className={" text-[52px]  mt-5 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"}
+                  className={" text-[40px]  mt-5 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"}
                 />
               </h1>
             </div>

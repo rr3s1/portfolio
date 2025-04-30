@@ -70,7 +70,7 @@ export default function AnimatedTextCycle({
       <div 
         ref={measureRef} 
         aria-hidden="true"
-        className="absolute opacity-0 pointer-events-none"
+        className="absolute opacity-0 pointer-events-none min-h-10"
         style={{ visibility: "hidden" }}
       >
         {words.map((word, i) => (
@@ -94,15 +94,23 @@ export default function AnimatedTextCycle({
         }}
       >
         <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={currentIndex}
-            className={`inline-block font-bold merienda-title ${className}`}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            style={{ whiteSpace: "nowrap", fontFamily: "var(--font-title)", fontWeight: 800 }}
-          >
+        <motion.span
+  key={currentIndex}
+  className={`inline-block font-bold merienda-title ${className}`}
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
+  exit="exit"
+  style={{
+    whiteSpace: "nowrap",
+    fontFamily: "var(--font-title)",
+    fontWeight: 800,
+    lineHeight: "1.2",
+    paddingTop: "2px",
+    display: "inline-block"
+  }}
+>
+
             {words[currentIndex]}
           </motion.span>
         </AnimatePresence>
