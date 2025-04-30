@@ -8,9 +8,13 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
     return (
         <>
             <section>
-                <h1 className="heading">
-                    My
-                    <span className="text-purple"> approach</span>
+            <h1 className="heading mb-10">
+                
+                <span className="text-purple ">&</span>
+            </h1>
+                <h1 className="heading ">
+                
+                    <span className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold">Core values</span>
                 </h1>
                 <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
                     {/*<Card*/}
@@ -18,47 +22,47 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
                     {/*    icon={<AceternityIcon order="Phase 1"/>}/>*/}
 
                     <Card
-                        title="Planning & Strategy"
-                        icon={<AceternityIcon
-                            order="Phase 1"/>}
-                        description=" Once we agree on the plan, I cue my lofi playlist and dive into coding.
-                          From initial sketeches to publish code, I keep you updated every step of the way. "
-                    >
+                    title="Security First"
+                    icon={<AceternityIcon order="Security" />} // Changed order
+                    description="Prioritizing robust security measures from the start, implementing best practices to protect your application and user data against threats." // Updated description
+                >
                     <CanvasRevealEffect
-                        animationSpeed={5.1}
-                        containerClassName="bg-emerald-900"
+                        animationSpeed={3} // Re-using Phase 2 speed
+                        containerClassName="bg-red-600" // Re-using Phase 2 color (can represent stopping threats)
+                        colors={[
+                            [150, 72, 100],
+                            [70, 70, 70],
+                        ]}
+                        dotSize={4}
                     />
-                    </Card>
+                    {/* Radial gradient for the cute fade */}
+                    <div
+                        className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90"
+                    />
+                </Card>
                     <Card
-                        title="Development and progress update"
-                             icon={<AceternityIcon
-                            order="Phase 2"/>}
-                          description=" Once we agree on the plan, I cue my lofi playlist and dive into coding.
-                          From initial sketeches to publish code, I keep you updated every step of the way. "
-                    >
+                    title="User-Centric Design"
+                    icon={<AceternityIcon order="Design" />} // Changed order
+                    description="Crafting engaging and intuitive user interfaces that are not only visually appealing but also easy to navigate, ensuring a seamless user experience." // Updated description
+                >
+                    <CanvasRevealEffect
+                        animationSpeed={3} // Re-using Phase 3 speed
+                        containerClassName="bg-sky-600" // Re-using Phase 3 color (often associated with creativity/design)
+                        colors={[[125, 211, 252]]}
+                    />
+                </Card>
 
-                        <CanvasRevealEffect
-                            animationSpeed={3}
-                            containerClassName="bg-black"
-                            colors={[
-                                [236, 72, 153],
-                                [232, 121, 249],
-                            ]}
-                            dotSize={2}
-                        />
-                        {/* Radial gradient for the cute fade */}
-                        <div
-                            className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90"/>
-                    </Card>
-                    <Card title="Development and launch" icon={<AceternityIcon order="Phase 3"/>}
-                          description="This is where the magic happens! Based on the approved design, I will launch your project. I'll give you a live demo and get you on the road to success. "
-                    >
-                        <CanvasRevealEffect
-                            animationSpeed={3}
-                            containerClassName="bg-sky-600"
-                            colors={[[125, 211, 252]]}
-                        />
-                    </Card>
+
+                    <Card
+                    title="Performance & Efficiency"
+                    icon={<AceternityIcon order="Efficiency" />} // Changed order
+                    description="Building performant applications with clean, optimized code and efficient architecture, ensuring fast load times and smooth operation." // Updated description
+                >
+                    <CanvasRevealEffect
+                        animationSpeed={5.1} // Re-using Phase 1 speed
+                        containerClassName="bg-emerald-900" // Re-using Phase 1 color (green often associated with efficiency/go)
+                    />
+                </Card>
                 </div>
             </section>
         </>

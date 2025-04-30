@@ -7,7 +7,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">Modern Next.js Portfolio</span>,
       content: (
         <div className="bg-transparent varela-round-regular">
-          <p className="mb-8 text-xs varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className="mb-8 varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Portfolio Landing Page crafted using Next.js, Three.js, Framer Motion and TailwindCSS
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -48,7 +48,7 @@ export default function TimelineDemo() {
 
       content: (
         <div>
-         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             SaaS Landing Page developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -89,7 +89,7 @@ export default function TimelineDemo() {
       
       content: (
         <div>
-          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Minimalistic 3D portfolio landing page built with React.js, Three.js and TailwindCSS to demonstrate developer skills.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -130,7 +130,7 @@ export default function TimelineDemo() {
       
       content: (
         <div>
-         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             A full stack healthcare patient management application that allows patients to register, book and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -171,7 +171,7 @@ export default function TimelineDemo() {
     
       content: (
         <div>
-         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+         <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Visually captivating website inspired by Zentry, featuring scroll-triggered animations, geometric transitions and engaging video storytelling.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -212,7 +212,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">File Management Platform</span>,
       content: (
         <div>
-          <p className=" varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className=" varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -240,7 +240,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">3D iPhone Landing Page Clone</span>,
       content: (
         <div>
-          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -281,7 +281,7 @@ export default function TimelineDemo() {
       title: <span className="text-gradient-magenta bg-clip-text text-transparent">University Library Management System</span>,
       content: (
         <div>
-          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-2xl dark:text-neutral-200">
+          <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
             Full stack University Library Management System built with Next.js, TypeScript and Postgres. Production-grade platform featuring a public-facing app and an admin interface.
           </p>
           <div className="grid grid-cols-2 gap-4">
