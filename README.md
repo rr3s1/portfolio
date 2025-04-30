@@ -197,8 +197,4 @@ MIT License - see LICENSE.md for details.
 ![image](https://github.com/user-attachments/assets/89e4a933-c54e-4701-bc0a-291fd4788747)
 ![image](https://github.com/user-attachments/assets/1a37fe7f-e705-4896-a2f1-365797b97197)
 ![image](https://github.com/user-attachments/assets/9f121bbd-015f-4ed2-bf45-354c4b8a157d)
-<<<<<<< HEAD
 ![image](https://github.com/user-attachments/assets/328a13ce-9b4d-4332-91e0-130e3742d542)
-=======
-![image](https://github.com/user-attachments/assets/328a13ce-9b4d-4332-91e0-130e3742d542)
->>>>>>> 18b375930b2e2fe21c763949152b1e71b73895cb
