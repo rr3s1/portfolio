@@ -24,7 +24,7 @@
 1. [Features](#features)  
 2. [Tech Stack](#tech-stack)  
 3. [Quick Start](#quick-start)   
-4. [Technical Architecture](#technical-architecture)   
+4. [Architecture](#architecture)   
 5. [Strengths & Improvement Areas](#strengths--improvement-areas)   
 6. [Component Highlights](#component-highlights)   
 7. [Core Technologies](#core-technologies)   
@@ -115,7 +115,7 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 -Sentry, Custom error boundaries
 <br />
 <br />  
-## 5.  🧱 Technical Architecture<a id="technical-architecture"></a>
+## 5.  🧱 Architecture<a id="architecture"></a>
 
 **Component-Based Architecture:** Modular, reusable components
 
@@ -189,13 +189,12 @@ MIT License - see LICENSE.md for details.
 <br />
 ## 10. Screenshots <a id="screenshots"></a>
 
-![Screenshot 1](public/screenshot1.png)
-![Screenshot 2](public/screenshot2.png)
-![Screenshot 3](public/screenshot3.png)
-![Screenshot 4](public/screenshot4.png)
-![Screenshot 5](public/screenshot5.png)
-![Screenshot 6](public/screenshot6.png)
-![Screenshot 7](public/screenshot7.png)
-![Screenshot 8](public/screenshot8.png)
-![Screenshot 9](public/screenshot9.png)
-![Screenshot 10](public/screenshot10.png)
+![Hero](https://github.com/user-attachments/assets/79d69412-865f-44a0-90cc-eac9d3038436)
+![Core](https://github.com/user-attachments/assets/5bffda05-6031-4199-9de3-c8e0f16610b1)
+![image](https://github.com/user-attachments/assets/1df84138-1fb2-4dbc-9800-ea0132ab1051)
+![image](https://github.com/user-attachments/assets/47318a47-55d9-4af9-ba3d-2065683939fe)
+![image](https://github.com/user-attachments/assets/1a87d481-537d-4b8a-be2a-ccdcc29a14f2)
+![image](https://github.com/user-attachments/assets/89e4a933-c54e-4701-bc0a-291fd4788747)
+![image](https://github.com/user-attachments/assets/1a37fe7f-e705-4896-a2f1-365797b97197)
+![image](https://github.com/user-attachments/assets/9f121bbd-015f-4ed2-bf45-354c4b8a157d)
+![image](https://github.com/user-attachments/assets/328a13ce-9b4d-4332-91e0-130e3742d542)
