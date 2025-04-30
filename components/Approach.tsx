@@ -18,9 +18,22 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
                     {/*    title="Planning & Strategy"*/}
                     {/*    icon={<AceternityIcon order="Phase 1"/>}/>*/}
 
+                    
                     <Card
-                    title="Security First"
-                    icon={<AceternityIcon order="Security-First Mindset" />} // Changed order
+                    title="User-Centric Design"
+                    icon={<AceternityIcon order="Design" />} // Changed order
+                    description="Crafting engaging and intuitive user interfaces that are not only visually appealing but also easy to navigate, ensuring a seamless user experience." // Updated description
+                >
+                    <CanvasRevealEffect
+                        animationSpeed={3} // Re-using Phase 3 speed
+                        containerClassName="bg-sky-600" // Re-using Phase 3 color (often associated with creativity/design)
+                        colors={[[125, 211, 252]]}
+                    />
+                </Card>
+
+                <Card
+                    title="Security"
+                    icon={<AceternityIcon order="Security" />} // Changed order
                     description="Prioritizing robust security measures from the start, implementing best practices to protect your application and user data against threats." // Updated description
                 >
                     <CanvasRevealEffect
@@ -38,20 +51,7 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
                     />
                 </Card>
                     <Card
-                    title="User-Centric Design"
-                    icon={<AceternityIcon order="Design" />} // Changed order
-                    description="Crafting engaging and intuitive user interfaces that are not only visually appealing but also easy to navigate, ensuring a seamless user experience." // Updated description
-                >
-                    <CanvasRevealEffect
-                        animationSpeed={3} // Re-using Phase 3 speed
-                        containerClassName="bg-sky-600" // Re-using Phase 3 color (often associated with creativity/design)
-                        colors={[[125, 211, 252]]}
-                    />
-                </Card>
-
-
-                    <Card
-                    title="Performance & Efficiency"
+                    title="Efficiency"
                     icon={<AceternityIcon order="Efficiency" />} // Changed order
                     description="Building performant applications with clean, optimized code and efficient architecture, ensuring fast load times and smooth operation." // Updated description
                 >

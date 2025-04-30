@@ -24,8 +24,8 @@ const Footer = () => {
 
                 <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center varela-round-regular  max-w-xl">
            
-                    Whether you need a blazing-fast landing page, a secure full-stack app
-    or a 3-D interactive demo 
+                    Whether you need a blazing-fast landing page,<br /> a secure full-stack app
+    or a 3D interactive demo 
                 </p>
                 <p className="varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
            I can help turn ideas into shipped features.

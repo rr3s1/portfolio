@@ -1,182 +1,99 @@
+
 <div align="center">
-  <br />
-    <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
-      <img src="https://github.com/adrianhajdin/portfolio/assets/151519281/c6ca3c03-6cb7-4f67-a9b9-a73da5bfa0d8" alt="Project Banner">
-    </a>
-  <br />
 
-  <div>
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
-    <img src="https://img.shields.io/badge/-Framer-black?style=for-the-badge&logoColor=white&logo=framer&color=0055FF" alt="framer" />
-    <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-  </div>
 
-<h3 align="center">A Modern Next.js Portfolio</h3>
+  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
+  <img src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=white" alt="Framer" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 
-   <div align="center">
-     Build this project step by step with Adrian's detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
+  <h3 align="center">Modern Developer Portfolio</h3>
+  <p align="center">
+    A learning journey in modern web development, combining efficient code with engaging visuals using
+    <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. Built with community guidance and open-source spirit.
+  </p>
 </div>
 
-# Coding Along with Adrian (JavaScript Mastery)
+> **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
+> Questions or issues? Feel free to [open an issue](https://github.com/your-username/portfolio/issues) or [start a discussion](https://github.com/your-username/portfolio/discussions).
 
-Welcome to my coding journey! In this repository, I am following along with Adrian from [JavaScript Mastery](https://www.youtube.com/watch?v=ukiGFmZ32YA&t=336s&ab_channel=JavaScriptMastery). As an aspiring software developer, I'm using this project to learn best practices and improve my skills.
+## 📦 Table of Contents
 
-https://github.com/adrianhajdin
+1. [Features](#features)  
+2. [Tech Stack](#tech-stack)  
+3. [Getting Started](#getting-started)   
+4. [Acknowledgments](#acknowledgments)  
+5. [License](#license)
+
+---
+
+## 1. 🚀 Features <a id="features"></a>
+
+- **Dynamic 3D Elements**: Interactive Three.js components with graceful fallbacks
+- **Motion-Responsive UI**: Framer-powered animations that respect user preferences
+- **Developer Experience**: Type-safe components, atomic design structure, and reusable hooks
+
+---
+
+## 2. 🛠 Tech Stack <a id="tech-stack"></a>
+
+| Category         | Technologies                                                                 |
+|------------------|------------------------------------------------------------------------------|
+| **Core**         | Next.js 14 (App Router), React 18, TypeScript                                |
+| **Styling**      | Tailwind CSS, Framer Motion, CSS Modules                                     |
+| **3D Graphics**  | Three.js, @react-three/fiber, @react-three/drei                             |
+| **State**        | Zustand for client state, React Context for theme                           |
+| **Analytics**    | Vercel Analytics, Google Analytics (opt-in)                                  |
+| **Infrastructure**| Vercel hosting, GitHub Actions CI/CD                                        |
+
+---
 
 
-## 📚 Project Overview
+## 3. 🤸 Quick Start (Local Development)
 
-This project is based on a tutorial where Adrian guides viewers through the development of an amazing developer portfolio using Next.js, Three.js, Framer Motion, and Tailwind CSS. While I am not the original developer of this application, I am documenting my progress and any challenges I face while coding along.
+###  Prerequisites
 
-## 🎥 Video Reference
+Make sure you have the following installed:
 
-You can watch the tutorial here: [JavaScript Mastery Tutorial](https://www.youtube.com/watch?v=FTH6Dn3AyIQ&t=6761s&ab_channel=JavaScriptMastery
-).
+| Tool | Tested Version | Notes |
+|------|----------------|-------|
+| **Node.js** | ≥ 18.x | <https://nodejs.org/> |
+| **Npm**  | any | <https://docs.npmjs.com/> |
+| **Git** | any | <https://git-scm.com/> |
 
+> Using **pnpm** is recommended for its speed and disk-space savings, but npm or yarn will work too.
 
-## 🛠️ **Technologies Used**
-
-**Next.js:**
-A React framework for production-level applications with built-in SSR and SSG.
-
-**React.js**
-A JavaScript library for building user interfaces.
-
-**Tailwind CSS:**
-A utility-first CSS framework for rapidly building modern websites and applications.
-
-**Framer Motion:** 
-A production-ready motion library for React to power animations.
-
-**Three.js:** 
-A JavaScript library that makes creating 3D graphics in the browser easier.
-
-
-# 🚀 Features
-
-👉 **Stunning Sections**: Includes hero, features, pricing (monthly/yearly), FAQ, testimonials, and download software
-sections.
-
-👉 **Smooth Animations**: Complex CSS for fluid animations and eye-catching effects.
-
-👉 **Cool CSS Gradients**: Beautiful gradient effects using CSS `before` and `after` pseudo-elements.
-
-👉 **Seamless Navigation**: Offers a smooth user experience with intuitive navigation and scrolling.
-
-👉 **Optimized Performance**: Built for fast loading and an optimized experience.
-
-👉 **Pixel Perfect Design**: Ensures flawless responsiveness across all devices and screen sizes.
-
-👉 **Hero**: Captivating introduction featuring a spotlight effect and dynamic background.
-
-👉 **Bento Grid**: Modern layout presenting personal information using cutting-edge CSS design techniques.
-
-👉 **3D Elements**:  Interactive 3D design elements, such as a GitHub-style globe and card hover effects, adding depth and engagement.
-
-👉 **Testimonials**: Dynamic testimonials area with scrolling or animated content for enhanced engagement.
-
-👉 **Work Experience**: Prominent display of professional background for emphasis and credibility.
-
-👉 **Canvas Effect**: Innovative use of HTML5 canvas to create visually striking effects in the "approaches" section.
-
-👉 **Responsiveness**: Seamless adaptability across all devices, ensuring optimal viewing experience for every user.
-
-and many more, including code architecture and reusability
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
+###  Clone the Repo
 
 ```bash
-git clone https://github.com/TBC
+git clone https://github.com/rr3s1/portfolio.git
 cd portfolio
 ```
 
-**Installation**
-
-Install the project dependencies using npm:
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-**Running the Project**
+### Run the Dev Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+Open http://localhost:3000 in your browser – the app will hot-reload on changes.
 
 
+## 4. Acknowledgments <a id="acknowledgments"></a>
 
+Built primarily by me, but inspired by:
 
+- Adrian Hajdin's JavaScript Mastery community [JavaScript Mastery](https://www.youtube.com/c/JavaScriptMastery)
 
-## 💡 What I Learned
+- The Next.js community for endless resources
 
-As this is my third major project, I gained valuable experience in multiple areas of modern web development.
+- Open-source contributors who share their knowledge freely
 
-##### **Next.js Development**
-
-- Optimized Images
-- API Routes
-- Server-Side Rendering (SSR) and Static Site Generation (SSG)
-- File-based routing system (dynamic routes)
-- Data Fetching Methods
-- SEO Optimization
-- Deployment
-
-##### **Framer Motion**
-
-- Animating React Components
-- Advanced Animations
-- Variants and Animation States
-- SVG Animations
-- Performance Considerations
-
-
-##### **Tailwind CSS**
-
-- Utility-First CSS Approach
-- Responsive Design
-- Customization and Theming
-- Advanced Layout Techniques
-- Pseudo-Classes and States
-
-##### **Three.js**
-
-- 3D Rendering Basics
-- Scene, Camera, Renderer
-- Lighting and Shadows
-- Loading and Displaying 3D Models
-- Materials and Textures
-
-##### **Version Control with Git**
-
-- Committing changes and managing branches.
-- Collaborating and tracking progress over time.
-- Maintained clear documentation and code comments.
-
-
-## 🤝 Acknowledgments
-
-Adrian Hajdin: For the comprehensive tutorial and
-guidance. [JavaScript Mastery](https://www.youtube.com/watch?v=FTH6Dn3AyIQ&t=6761s&ab_channel=JavaScriptMastery).
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-Note: This project is for educational purposes and is free to use under the terms of the MIT License.
+## 5. License📜  <a id="license"></a>
+MIT License - see LICENSE.md for details.
