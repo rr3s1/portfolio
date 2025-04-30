@@ -147,6 +147,7 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 - Advanced build optimizations
 <br />
 <br />
+
 ## 7.  🧩 Component Highlights<a id="component-highlights"></a>
 
 **Hero Component**
@@ -183,10 +184,12 @@ Built primarily by me, but inspired by:
 - Open-source contributors who share their knowledge freely
 <br />
 <br />
-## 9. License📜  <a id="license"></a>
+
+## 9.  📜License <a id="license"></a>
 MIT License - see LICENSE.md for details.
 <br />
 <br />
+
 ## 10. Screenshots <a id="screenshots"></a>
 
 ![Hero](https://github.com/user-attachments/assets/79d69412-865f-44a0-90cc-eac9d3038436)
