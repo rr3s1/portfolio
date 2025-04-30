@@ -10,6 +10,7 @@ import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 import TimelineDemo from "@/components/ui/timeline-demo";
+import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
 
 
 export default function Home() {
@@ -20,13 +21,14 @@ export default function Home() {
       
       <FloatingNav navItems={navItems}/>
       <Hero />
-      <TimelineDemo />   
-      <Grid />
+      <TimelineDemo />
+      <HeroParallaxDemo />
+      {/* <Grid /> */}
       <Experience />
-      <RecentProjects />
+      {/* <RecentProjects /> */}
       
       
-      <Approach />
+      {/* <Approach /> */}
       <Clients />
       <Footer />
     </div>

@@ -8,10 +8,11 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 const Clients = () => {
     return (
         <div className="py-20" id="testimonials">
-            <h1 className="heading text-white-300">
-                Kind words from
-                <span className="text-purple"> satisfied clients</span>
-            </h1>
+           
+            <h1 className="text-center text-6xl font-bold mb-10">
+         <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">Kind words</span> from happy clients
+      </h1>
+
             <div className="flex flex-col items-center max-lg:mt-10 mt-20">
 
                   <InfiniteMovingCards

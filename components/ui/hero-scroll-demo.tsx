@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export function HeroScrollDemo() {
   return (
-    <div className="flex flex-col overflow-hidden pb-[500px] pt-[10px]">
+    <div className="flex flex-col overflow-hidden  pt-[10px]">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Got your wand?<br /><br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-              Here's your wand..<br /><br />
+            <h1 className="text-4xl font-semibold  text-sky-400">
+              Driven by<br /><br />
+              <span className="text-8xl font-bold mt-1 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent leading-none ">
+              Concepts<br /><br />
               </span>
             </h1>
           </>
