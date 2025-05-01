@@ -27,12 +27,9 @@ export default function Home() {
       <Approach />
       <TimelineDemo />
       <HeroParallaxDemo />
-      
       <Experience />
       {/* <RecentProjects /> */}
       {/* <Grid /> */}
-      
-      
       <TechStack />
       <Footer />
     </div>

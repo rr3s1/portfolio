@@ -49,10 +49,10 @@
 
 | Category         | Technologies                                                                 |
 |------------------|------------------------------------------------------------------------------|
-| **Core**         | Next.js 14 (App Router), React 18, TypeScript                                |
-| **Styling**      | Tailwind CSS, Framer Motion, CSS Modules                                     |
+| **Core**         | Next.js, React, TypeScript                                |
+| **Styling**      | Tailwind CSS, Framer Motion, GSAP                                    |
 | **3D Graphics**  | Three.js, @react-three/fiber, @react-three/drei                             |                        |
-| **Analytics**    | Vercel Analytics, Google Analytics (opt-in)                                  |
+| **Analytics**    | Sentry                                  |
 | **Infrastructure**| Vercel hosting, GitHub Actions CI/CD                                        |
 
 ---
@@ -99,19 +99,16 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 
 **Frontend Framework & Runtime**
 
-- Next.js 14.2.5, React 18, TypeScript
+- Next.js, React, TypeScript
 
 **Styling & UI**
 
-- Tailwind CSS, Framer Motion, Lucide React, Tabler Icons React, React Icons
+- Tailwind CSS, GSAP, Framer Motion
 
 **3D & Graphics**
 
 - Three.js, React Three Fiber, Three-Globe, Spline Tool, Lottie Files
 
-**State Management & Utilities**
-
-- Zustand, React Context, Tailwind Merge, Simplex Noise
 
 **Monitoring & Error Tracking**
 
@@ -126,7 +123,7 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 
 **Responsive & Accessible Design:** Tailwind CSS, semantic HTML
 
-**Optimized Performance:** Image optimization, lazy loading, proper asset management
+
 <br />
 <br />
 ## 6. 🎯 Strengths & Improvement Areas<a id="strengths--improvement-areas"></a>
@@ -137,7 +134,6 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 
 - Rich visual interactions
 
-- Strong performance optimization
 
 **⚒️ Potential Improvements**
 
