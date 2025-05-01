@@ -8,8 +8,8 @@
   <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
    <img src="https://img.shields.io/badge/-Framer-black?style=for-the-badge&logoColor=white&logo=framer&color=0055FF" alt="framer" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-
-  <h3 align="center">Modern Developer Portfolio</h3>
+<br/>  <br/>  
+  <h1 align="center">Modern Developer Portfolio</h1><br/>  
   <p align="center">
     A Modern Portfolio Landnig Page developed by combining efficient code with engaging visuals using
     <b>Next.js 14</b>, <b>Three.js</b>, and <b>Framer Motion</b>. 
