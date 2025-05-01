@@ -51,7 +51,7 @@
 |------------------|------------------------------------------------------------------------------|
 | **Core**         | Next.js, React, TypeScript                                |
 | **Styling**      | Tailwind CSS, Framer Motion, GSAP                                    |
-| **3D Graphics**  | Three.js, @react-three/fiber, @react-three/drei                             |                        |
+| **3D Graphics**  | Spline, Three.js, @react-three/fiber, @react-three/drei                             |                        |
 | **Analytics**    | Sentry                                  |
 | **Infrastructure**| Vercel hosting, GitHub Actions CI/CD                                        |
 

@@ -11,7 +11,7 @@ export function HeroScrollDemo() {
           <>
             <h1 className="text-4xl font-semibold  text-sky-400">
               <br /><br />
-              <span className="text-8xl font-bold mt-1 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent leading-none ">
+              <span className="text-2xl md:text-6xl font-bold mt-1 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent leading-none ">
               Driven by<br /><br />
               </span>
             </h1>
