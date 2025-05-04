@@ -82,12 +82,12 @@ export const BentoGridItem = ({
         <a 
           href="mailto:raressilviulazar@jsmastery.pro"
           className="block w-full text-center py-6 px-8 rounded-3xl 
-            bg-gradient-to-r from-neonPink via-neonCyan to-neonGold 
-            text-white text-2xl font-bold tracking-wider 
-            shadow-neon hover:shadow-neonHover 
-            animate-gradient-x
-            transition-all duration-300
-            hover:-translate-y-1"
+           bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 
+           text-white text-2xl font-bold tracking-wider 
+           shadow-neon hover:shadow-neonHover 
+           animate-gradient-x
+           transition-all duration-300
+           hover:-translate-y-1"
         >
           {title}
         </a>
@@ -106,9 +106,11 @@ export const BentoGridItem = ({
       }}
     >
       {/* Outer neon gradient border */}
-      <div className="absolute  inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 style={{
-        background: `linear-gradient(to right, ${from}, ${to})`
-      }}" />
+      {id !== 1 && (
+        <div className="absolute  inset-0 p-[2px] rounded-3xl bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 style={{
+          background: `linear-gradient(to right, ${from}, ${to})`
+        }}" />
+      )}
       
       <div className={`${id === 6 && 'flex justify-center'} h-full relative z-10`}>
         <div className="w-full h-full absolute">
