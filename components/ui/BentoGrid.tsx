@@ -44,6 +44,8 @@ export const BentoGridItem = ({
   titleClassName,
   spareImg,
   children,
+  from = "#DE3CBF", // neonPink default
+  to = "#53BFC8",   // neonCyan default
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -56,6 +58,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
   children?: React.ReactNode;
+  from?: string;
+  to?: string;
 }) => {
   const [copied, setCopied] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -98,12 +102,13 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(24,23,39)",
-        backgroundColor: "linear-gradient(90deg, rgba(24,23,39,1) 0%, rgba(24,23,39,1) 100%)",
+        background: `linear-gradient(to right, #0c1225, #0c243e, #0b3557)`
       }}
     >
       {/* Outer neon gradient border */}
-      <div className="absolute inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" />
+      <div className="absolute  inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 style={{
+        background: `linear-gradient(to right, ${from}, ${to})`
+      }}" />
       
       <div className={`${id === 6 && 'flex justify-center'} h-full relative z-10`}>
         <div className="w-full h-full absolute">
