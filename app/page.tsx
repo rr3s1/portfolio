@@ -8,7 +8,7 @@ import { FaHome } from "react-icons/fa";
 import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 import Story from "@/components/Story";
-
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
@@ -25,6 +25,7 @@ export default function Home() {
       <FloatingNav navItems={navItems}/>
       <Hero />
       <Story />
+      <About />
       <HeroScrollDemo />
       <Approach />
       <TimelineDemo />

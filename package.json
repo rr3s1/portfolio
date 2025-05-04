@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@lottiefiles/dotlottie-react": "^0.13.4",
     "@react-three/drei": "^9.111.1",
     "@react-three/fiber": "^8.17.5",
