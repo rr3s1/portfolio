@@ -156,7 +156,15 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 1 && <GlobeDemo />}
+          { id === 1 && (
+  <div className="flex items-center justify-center w-full h-full">
+    {/* square on phones, fills parent on md+, max 700 px so it never explodes */}
+    <div className="w-full max-w-[700px] aspect-square md:aspect-auto md:w-full md:h-full">
+      <GlobeDemo />
+    </div>
+  </div>
+)}
+
 
           {id === 3 && (
             <div className="flex gap-5 lg:gap-5 w-fit absolute -right-3 lg-right-2">
