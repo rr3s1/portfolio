@@ -2,7 +2,6 @@ import React from 'react'
 import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
 import {InfiniteLogoSlider} from "@/components/ui/InfiniteLogoSlider";
 import {techstack, companies} from "@/data";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 
 const Techstack = () => {
@@ -22,14 +21,7 @@ const Techstack = () => {
                   />
                 
                   <div className="relative w-full max-lg:mt-10 mt-20 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-                      {/* 
-                      <ProgressiveBlur 
-                        direction="bottom" 
-                        blurLayers={4} 
-                        blurIntensity={0.2}
-                        className="absolute inset-0 z-0"
-                        />
-                      */}
+                     
                       
                       {/* Company logos with InfiniteLogoSlider */}
                       <InfiniteLogoSlider
