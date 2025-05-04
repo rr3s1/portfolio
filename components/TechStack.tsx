@@ -12,7 +12,7 @@ const Techstack = () => {
         Tech <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
       </h1>
 
-            <div className="flex flex-col items-center max-lg:mt-10 mt-20">
+            <div className="flex flex-col items-center max-lg:mt-10 mt-20 linear-gradient(to right, #0c1225, #0c243e, #0b3557)">
 
                   <InfiniteMovingCards
                       items={techstack}
@@ -28,17 +28,18 @@ const Techstack = () => {
                         items={companies.map(company => (
                           <div 
                             key={company.id} 
-                            className="flex varela-round-regular md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30"
+                            className="flex varela-round-regular md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30 rounded-2xl border border-slate-800"
+                            style={{ background: 'linear-gradient(to right, #0c1225, #0c243e, #0b3557)' }}
                           >
                             <img 
                               src={company.img}
                               alt={company.name}
-                              className="md:w-10 w-5"
+                              className="w-12 h-12 object-contain" // set fixed size for all icons
                             />
                             <img 
                               src={company.nameImg}
                               alt={company.name}
-                              className="md:w-24 w-20"
+                              className="w-24 h-12 object-contain" // set fixed size for all name images
                             />
                           </div>
                         ))}

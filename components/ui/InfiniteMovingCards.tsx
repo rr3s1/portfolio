@@ -96,12 +96,11 @@ export const InfiniteMovingCards = ({
                 )}
             >
                 {items?.map((item, idx) => {
-                    const { from, to } = cosmicNeonStyles[idx % cosmicNeonStyles.length];
                     return (
                         <li
                             className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
                             style={{
-                                background: `linear-gradient(to right, ${from}, ${to})`
+                                background: "linear-gradient(to right, #0c1225, #0c243e, #0b3557)"
                             }}
                             key={idx}
                         >
