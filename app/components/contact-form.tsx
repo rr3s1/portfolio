@@ -26,7 +26,7 @@ export function ContactForm() {
 
   return (
     <form action={handleSubmit} className="space-y-12">
-      <div className="space-y-4">
+      <div className="space-y-4 mt-10">
         <label htmlFor="email" className="block text-xl text-gray-400">
           Email address
         </label>
@@ -54,10 +54,10 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-        <SubmitButton />
-        
-      </div>
+      <div className="flex w-full justify-center sm:flex-row items-center space-y-4 sm:space-y-0">
+  <SubmitButton />
+</div>
+
     </form>
   )
 }

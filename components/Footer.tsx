@@ -1,93 +1,61 @@
-import React from "react";
-import Link from "next/link";
-import { Github, Linkedin, Send } from "lucide-react";
+import * as React from "react";
+import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
-// shadcn/ui Button – make sure you have installed shadcn/ui or swap with your own button component
-import { Button } from "@/components/ui/button";
-
+import MagicButton from "../components/ui/MagicButton";
+import BackgroundBeamsDemo from "./ui/background-beams-demo";
 import { ContactForm } from "@/app/components/contact-form";
 
-/**
- * Improved Footer component
- * - Expanded max width for large screens
- * - Stronger visual hierarchy and balanced spacing
- * - Gradient text with Tailwind “text-transparent bg-clip-text”
- * - Single CTA button linking to the form section
- * - Accessible focus states & aria‑labels
- * - Lucide icons instead of static SVGs for consistency and theming
- */
 const Footer = () => {
-  const year = new Date().getFullYear();
-
-  return (
-    <footer
-      id="contact"
-      className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-black via-neutral-900 to-black/80 px-6 py-14 shadow-2xl backdrop-blur-lg"
-    >
-      {/* Decorative gradients */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="size-full animate-pulse-slow bg-[radial-gradient(circle_at_50%_100%,rgba(255,42,169,0.35)_0,transparent_70%)]" />
-        <div className="size-full bg-[radial-gradient(ellipse_at_top_left,rgba(20,213,255,0.15)_0,transparent_70%)]" />
-      </div>
-
-      {/* Headline & sub‑copy */}
-      <div className="flex flex-col items-center gap-8 text-center">
-        <h2 className="text-balance bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-500 bg-clip-text text-4xl font-extrabold leading-tight text-transparent md:text-5xl">
-          Ready to elevate your next project?
-        </h2>
-
-        <p className="max-w-2xl text-pretty font-medium text-sky-300 md:text-lg">
-          Whether you need a blazing‑fast landing page, a secure full‑stack application, or a captivating 3D interactive experience — I can help turn ideas into shipped features.
-        </p>
-
-        {/* CTA */}
-        <Button
-          asChild
-          size="lg"
-          className="group gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg hover:brightness-110 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-500/50"
+    return (
+        <footer
+            className="relative w-full overflow-hidden px-4 py-10 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
+            id="contact"
         >
-          <Link href="#talk" aria-label="Jump to contact form">
-            Let’s talk
-            <Send className="size-4 -rotate-45 transition-all group-hover:translate-x-0.5" />
-          </Link>
-        </Button>
-      </div>
+            {/* Aurora/gradient overlay for extra depth */}
+            <div className="pointer-events-none absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#FF8A38]/20 via-[#14D5FF]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
+            </div>
 
-      {/* Contact form */}
-      <div className="mt-14">
-        <ContactForm />
-      </div>
+            <div className="flex flex-col items-center z-10 relative ">
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md">Ready
+                 <span className="text-gradient-gold"> to </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> elevate your next project
+                     </span>?
+                </h1>
 
-      {/* Social & copyright */}
-      <div className="mt-16 flex flex-col items-center gap-6">
-        <div className="flex gap-5">
-          <Link
-            href="https://github.com/rr3s1"
-            aria-label="GitHub profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-white/10 p-3 transition hover:scale-105 hover:shadow-neon focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-500/50"
-          >
-            <Github className="size-6 drop-shadow" />
-          </Link>
+                <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center varela-round-regular  max-w-xl">
+           
+                    Whether you need a blazing-fast landing page,<br /> a secure full-stack app
+    or a 3D interactive demo 
+                </p>
+                <p className="varela-round-regular font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
+           I can help turn ideas into shipped features.
+                </p>
+                
+            
+            </div>
+            
+            <ContactForm/>
 
-          <Link
-            href="https://www.linkedin.com/in/raressilviulazar/"
-            aria-label="LinkedIn profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-white/10 p-3 transition hover:scale-105 hover:shadow-neon focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-500/50"
-          >
-            <Linkedin className="size-6 drop-shadow" />
-          </Link>
-        </div>
-
-        <p className="text-xs font-light tracking-wider text-neutral-400">
-          © {year} Rares Silviu. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  );
+            <div className="flex flex-col items-center mt-16 z-10 relative">
+                <div className="flex items-center gap-6 mb-4">
+                    {/* GitHub */}
+                    <a href="https://github.com/rr3s1" target="_blank" rel="noopener noreferrer"
+                        className="w-10 h-10 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
+                        <Image src="/git.svg" alt="GitHub" width={20} height={20} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
+                    </a>
+                    {/* LinkedIn */}
+                    <a href="https://www.linkedin.com/in/raressilviulazar/" target="_blank" rel="noopener noreferrer"
+                        className="w-10 h-10 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
+                        <Image src="/link.svg" alt="LinkedIn" width={20} height={20} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
+                    </a>
+                </div>
+                <p className="text-xs text-white-200 font-light text-center tracking-wide">
+                    Copyright © {new Date().getFullYear()} Rares Silviu
+                </p>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
