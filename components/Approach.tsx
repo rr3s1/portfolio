@@ -9,7 +9,7 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
         <>
             <section>
         
-                <h1 className="heading ">
+                <h1 className="heading mt-20">
                 
                     <span className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold">Core values</span>
                 </h1>

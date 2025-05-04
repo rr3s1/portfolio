@@ -66,6 +66,13 @@
         /* Font families */
         --font-title: 'Merienda', cursive;
         --font-body: 'Manrope', Arial, sans-serif;
+        
+        --color-1: 330 100% 40%; /* Dark Neon Pink */
+        --color-2: 140 100% 55%; /* Bright Electric Green */
+        --color-3: 210 100% 30%; /* Deep Neon Blue */
+        --color-4: 60 100% 70%;  /* Light Neon Yellow */
+        --color-5: 295 100% 45%; /* Dark Neon Purple */
+        --brand: 50 100% 50%;    /* Bright, punchy yellow */
     }
 
     .dark {
@@ -117,6 +124,13 @@
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+        
+        --color-1: 330 100% 40%; /* Dark Neon Pink */
+        --color-2: 140 100% 55%; /* Bright Electric Green */
+        --color-3: 210 100% 30%; /* Deep Neon Blue */
+        --color-4: 60 100% 70%;  /* Light Neon Yellow */
+        --color-5: 295 100% 45%; /* Dark Neon Purple */
+        --brand: 50 100% 50%;    /* Bright, punchy yellow */
     }
 }
 

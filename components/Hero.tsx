@@ -10,15 +10,18 @@ import AnimatedTextCycle from './ui/animated-text-cycle'
 import { SplineSceneBasic } from './ui/spline-demo'
 import { HeroScrollDemo } from './ui/hero-scroll-demo'
 import { Spotlight } from './ui/spotlight-new'
+import { GradientText } from "./ui/gradient-text";
 
 const Hero = () => {
   return (
     <>
-      <AuroraBackground className="pb-20 pt-36 relative">
+      <AuroraBackground className=" pt-36 relative">
         <Spotlight />
         <SplashCursor />
-        <div className="container h-[1700px] mx-auto  relative z-10">
+        
+        <div className="container mx-auto  relative z-10">
           <SplineSceneBasic />
+         
         </div>
       </AuroraBackground>
       

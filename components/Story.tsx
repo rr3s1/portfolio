@@ -40,8 +40,8 @@ const Story = () => {
   };
 
   return (
-    <div id="story" className="container mx-auto w-full h-[900px] bg-background text-blue-50">
-      <div className="flex w-full h-1/2 flex-col items-center pt-10 ">
+    <div id="story" className="container mx-auto w-full h-full bg-background text-blue-50 ">
+      <div className="flex w-full h-full flex-col items-center pt-10 ">
         
         <div className="relative size-full">
       
@@ -88,12 +88,12 @@ const Story = () => {
             </svg>
           </div>
         </div>
-        <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+        {/* <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
             
         
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
