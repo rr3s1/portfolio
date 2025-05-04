@@ -36,7 +36,7 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-auto md:h-[80rem] flex items-center justify-center relative p-2 "
+      className=" md:h-[80rem] flex items-center justify-center relative p-2 "
       ref={containerRef}
     >
       <div

@@ -17,8 +17,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "TECH STACK",
-    description: "React, Next.js, TypeScript, Tailwind CSS",
+    title: "AVAILABLE",
+    description: "Worldwide 24/7",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",

@@ -19,7 +19,7 @@ export function SplineSceneBasic() {
   }, []);
 
   return (
-    <Card className="w-full h-[1000px] relative overflow-hidden
+    <Card className="w-full h-[750px] relative overflow-hidden
              border-0 bg-transparent shadow-none">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
       
