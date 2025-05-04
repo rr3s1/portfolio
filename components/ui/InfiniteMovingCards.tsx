@@ -70,6 +70,31 @@ export const InfiniteMovingCards = ({
             }
         }
     };
+
+    // Cosmic Neon gradients & shadows (copied from BentoGridItem)
+    const cosmicNeonStyles = [
+        {
+            from: "#0C1023",
+            to: "#062A4C",
+        },
+        {
+            from: "#0C1023",
+            to: "#0B3A5E",
+        },
+        {
+            from: "#0C1023",
+            to: "#0E4971",
+        },
+        {
+            from: "#0C1023",
+            to: "#0F5785",
+        },
+        {
+            from: "#0C1023",
+            to: "#11679A",
+        },
+    ];
+
     return (
         <div
             ref={containerRef}
@@ -86,45 +111,42 @@ export const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items?.map((item, idx) => (
-                    <li
-                        className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
-                        style={{
-                            background: "rgb(4,7,29)",
-                            backgroundColor:
-                                "linear-gradient(90deg, rgba(4,7,29,1) 0% rgba(12,14,35,1) 100%",
-                        }}
-                        key={idx}
-                    >
-                        <blockquote>
-                            <div
-                                aria-hidden="true"
-                                className="user-select-none varela-round-regular -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <span className=" varela-round-regular relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
-                {item.quote}
-              </span>
-                            <div className="relative z-20 mt-6 flex flex-row items-center">
-                <div className="flex flex-col">
-                    <span className="flex flex-col gap-1">
-                    {/* <img
-    src={item.icon ?? "/public/22.png"}
-    alt={item.name}
-    className="h-8 w-8 object-contain"
-  /> */}
-                  <span className="text-xl leading-[1.6] text-white font-bold ">
-
-                    {item.name}
-                  </span>
-                </span>
-                  <span className=" text-sm leading-[1.6] bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-normal">
-                    {item.title}
-                  </span>
-                </div>
-                            </div>
-                        </blockquote>
-                    </li>
-                ))}
+                {items?.map((item, idx) => {
+                    const styleIdx = idx % cosmicNeonStyles.length;
+                    const { from, to } = cosmicNeonStyles[styleIdx];
+                    return (
+                        <li
+                            className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh] bg-gradient-to-r from-[var(--from)] to-[var(--to)]"
+                            style={{
+                                '--from': from,
+                                '--to': to,
+                            } as React.CSSProperties}
+                            key={idx}
+                        >
+                            <blockquote>
+                                <div
+                                    aria-hidden="true"
+                                    className="user-select-none varela-round-regular -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                                ></div>
+                                <span className=" varela-round-regular relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
+                                    {item.quote}
+                                </span>
+                                <div className="relative z-20 mt-6 flex flex-row items-center">
+                                    <div className="flex flex-col">
+                                        <span className="flex flex-col gap-1">
+                                            <span className="text-xl leading-[1.6] text-white font-bold ">
+                                                {item.name}
+                                            </span>
+                                        </span>
+                                        <span className=" text-sm leading-[1.6] bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-normal">
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );
