@@ -21,9 +21,9 @@ export function SplineSceneBasic() {
     <Card className="w-full h-[750px] relative overflow-hidden border-0 bg-transparent shadow-none">
       <div className="absolute h-full pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]" />
 
-      <div className="flex h-full">
+      <div className="flex flex-col md:flex-row h-full relative">
         {/* Left content - 50% width */}
-        <div className="w-1/3 p-8 relative z-10 flex flex-col justify-center">
+        <div className="absolute md:static top-0 left-0 w-full md:w-1/2 lg:w-1/3 p-8 z-10 flex flex-col justify-center bg-transparent backdrop-blur-sm">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
             <h2
               className={`uppercase tracking-widest text-[27px] text-center text-white-100 max-w-120 font-black transition-all duration-1000 ease-in-out ${
@@ -64,7 +64,7 @@ export function SplineSceneBasic() {
         </div>
 
         {/* Right content - 50% width */}
-        <div className="w-2/3 relative">
+        <div className="w-1/2 relative sm:w-full">
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"

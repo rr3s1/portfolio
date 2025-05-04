@@ -25,28 +25,27 @@ const Techstack = () => {
                       
                       {/* Company logos with InfiniteLogoSlider */}
                       <InfiniteLogoSlider
-                        items={companies.map(company => (
-                          <div 
-                            key={company.id} 
-                            className="flex varela-round-regular md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30 rounded-2xl border border-slate-800"
-                            style={{ background: 'linear-gradient(to right, #0c1225, #0c243e, #0b3557)' }}
-                          >
-                            <img 
-                              src={company.img}
-                              alt={company.name}
-                              className="w-12 h-12 object-contain" // set fixed size for all icons
-                            />
-                            <img 
-                              src={company.nameImg}
-                              alt={company.name}
-                              className="w-24 h-12 object-contain" // set fixed size for all name images
-                            />
-                          </div>
-                        ))}
-                        direction="left"
-                        speed="fast"
-                        className="pt-4"
-                      />
+  items={companies.map(company => (
+    <div 
+      key={company.id} 
+      className="flex flex-col items-center justify-center md:flex-row md:max-w-60 max-w-40 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30 rounded-2xl border border-slate-800 bg-gradient-to-r from-[#0c1225] via-[#0c243e] to-[#0b3557]"
+    >
+      <img 
+        src={company.img}
+        alt={company.name}
+        className="w-10 h-10 md:w-12 md:h-12 object-contain"
+      />
+      <img 
+        src={company.nameImg}
+        alt={company.name}
+        className="h-10 w-20 md:h-8 object-contain max-w-[6rem]"
+      />
+    </div>
+  ))}
+  direction="left"
+  speed="fast"
+  className="pt-4"
+/>
                   </div>
             </div>
             

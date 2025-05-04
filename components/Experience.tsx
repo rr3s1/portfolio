@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <div className="py-20 text-white" id="experience">
       <h1 className="text-center text-6xl font-bold mb-10">
-        My <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">Work Experience</span>
+      Work<span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Experience</span>
       </h1>
       <div className="w-full max-w-4xl mx-auto flex flex-col gap-10 px-4">
         {/* HSBC */}
