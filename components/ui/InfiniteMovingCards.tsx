@@ -71,28 +71,12 @@ export const InfiniteMovingCards = ({
         }
     };
 
-    // Cosmic Neon gradients & shadows (copied from BentoGridItem)
     const cosmicNeonStyles = [
-        {
-            from: "#0C1023",
-            to: "#062A4C",
-        },
-        {
-            from: "#0C1023",
-            to: "#0B3A5E",
-        },
-        {
-            from: "#0C1023",
-            to: "#0E4971",
-        },
-        {
-            from: "#0C1023",
-            to: "#0F5785",
-        },
-        {
-            from: "#0C1023",
-            to: "#11679A",
-        },
+        { from: "#0C1023", to: "#062A4C" },
+        { from: "#0C1023", to: "#0B3A5E" },
+        { from: "#0C1023", to: "#0E4971" },
+        { from: "#0C1023", to: "#0F5785" },
+        { from: "#0C1023", to: "#11679A" },
     ];
 
     return (
@@ -112,15 +96,13 @@ export const InfiniteMovingCards = ({
                 )}
             >
                 {items?.map((item, idx) => {
-                    const styleIdx = idx % cosmicNeonStyles.length;
-                    const { from, to } = cosmicNeonStyles[styleIdx];
+                    const { from, to } = cosmicNeonStyles[idx % cosmicNeonStyles.length];
                     return (
                         <li
-                            className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh] bg-gradient-to-r from-[var(--from)] to-[var(--to)]"
+                            className="w-[90vw] max-w-full varela-round-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
                             style={{
-                                '--from': from,
-                                '--to': to,
-                            } as React.CSSProperties}
+                                background: `linear-gradient(to right, ${from}, ${to})`
+                            }}
                             key={idx}
                         >
                             <blockquote>

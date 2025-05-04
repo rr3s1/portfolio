@@ -138,14 +138,6 @@ const config = {
   					height: '0'
   				}
   			},
-  			highlight: {
-          '0%': { backgroundColor: 'transparent' },
-          '100%': { backgroundColor: 'var(--highlight)' }
-        },
-        flash: {
-          '0%, 100%': { backgroundColor: 'transparent' },
-          '50%': { backgroundColor: 'hsla(var(--card)/0.1)' }
-        },
   			'gradient-x': {
   				'0%, 100%': { backgroundPosition: '0% 50%' },
   				'50%': { backgroundPosition: '100% 50%' },
@@ -231,14 +223,18 @@ const config = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			shimmer: "shimmer 2s linear infinite",
-  			highlight: 'highlight 5s ease-out infinite',
-  			flash: 'flash 5s ease-in-out infinite',
-  			gradient: 'gradient-x 3s ease infinite',
-  			spotlight: "spotlight 2s ease .75s 1 forwards",
-  			moveHorizontal: "moveHorizontal 20s linear infinite",
-  			moveInCircle: "moveInCircle 20s linear infinite",
-  			moveVertical: "moveVertical 20s linear infinite",
+  			spotlight: 'spotlight 2s ease .75s 1 forwards',
+  			shimmer: 'shimmer 2s linear infinite',
+  			aurora: 'aurora 15s ease-in-out infinite',
+  			'gradient-text': 'gradientText 3s ease infinite alternate',
+  			'tilt-beam': 'tiltBeam 10s ease-in-out infinite',
+  			first: 'moveVertical 30s ease infinite',
+  			second: 'moveInCircle 20s reverse infinite',
+  			third: 'moveInCircle 40s linear infinite',
+  			fourth: 'moveHorizontal 40s ease infinite',
+  			fifth: 'moveInCircle 20s ease infinite',
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+  			'gradient-x': 'gradient-x 6s ease-in-out infinite',
   		}
   	}
   },

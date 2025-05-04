@@ -13,7 +13,7 @@ const Techstack = () => {
         Tech <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
       </h1>
 
-            <div className=" cosmic flex flex-col items-center max-lg:mt-10 mt-20">
+            <div className="flex flex-col items-center max-lg:mt-10 mt-20">
 
                   <InfiniteMovingCards
                       items={techstack}
