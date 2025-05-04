@@ -29,7 +29,7 @@ export default function Home() {
       <HeroParallaxDemo />
       <Experience />
       {/* <RecentProjects /> */}
-      {/* <Grid /> */}
+      <Grid />
       <TechStack />
       <Footer />
     </div>

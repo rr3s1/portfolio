@@ -17,11 +17,12 @@ const Hero = () => {
       <AuroraBackground className="pb-20 pt-36 relative">
         <Spotlight />
         <SplashCursor />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 py-12 relative z-10">
           <SplineSceneBasic />
         </div>
       </AuroraBackground>
       
+      {/* Scroll Animation Section */}
       
     </>
   )

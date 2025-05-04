@@ -94,7 +94,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl h-full transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -117,7 +117,7 @@ export const BentoGridItem = ({
         </div>
         <div
           className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full h-full opacity-80"
+            id === 5 && "w-full h-1/2 opacity-80"
           }`}
         >
           {spareImg && (
@@ -142,14 +142,14 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 py-0">
+          <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 py-0 group-hover/bento:text-black font-bold transition-colors duration-400">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-white">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-white group-hover/bento:text-black font-bold transition-colors duration-200">
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
+          {id === 1 && <GlobeDemo />}
 
           {id === 3 && (
             <div className="flex gap-5 lg:gap-5 w-fit absolute -right-3 lg-right-2">
