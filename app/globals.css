@@ -222,3 +222,51 @@ p.varela-round-regular {
     }
 }
 
+/* Add custom keyframes */
+@keyframes highlight {
+  0% { background-color: transparent; }
+  100% { background-color: var(--highlight); }
+}
+
+@keyframes flash {
+  0%, 100% { background-color: transparent; }
+  /* Using a card-based transparent color for flash */
+  50% { background-color: hsla(var(--card) / 0.1); }
+}
+
+@keyframes cosmicShift {
+  0%   { filter: hue-rotate(0deg);   }
+  100% { filter: hue-rotate(30deg); }
+}
+
+@keyframes push-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes push-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(12px);
+  }
+}
+
+.push-up {
+  animation: push-up 1.2s ease-in-out infinite alternate;
+}
+.push-down {
+  animation: push-down 1.2s ease-in-out infinite alternate;
+}
+
+@layer components {
+  .card.cosmic {
+    @apply rounded-2xl p-6 text-slate-100 relative overflow-hidden;
+    background: linear-gradient(135deg, var(--from), var(--to));
+    animation: cosmicShift 12s ease-in-out infinite alternate;
+  }
+}
