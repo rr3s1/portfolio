@@ -16,7 +16,7 @@ export function GlobeDemo() {
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
-    shininess: 0.9,
+    shininess: 0.4,
     polygonColor: "rgba(255,255,255,0.7)",
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
@@ -396,12 +396,12 @@ export function GlobeDemo() {
 
   return (
     <div className="flex items-center justify-center absolute w-full h-5/6 mb-20">
-      <div className="max-w-7xl mr-20 w-full relative overflow-hidden px-4 h-full">
+      <div className=" mr-20 w-[780px] relative overflow-hidden px-4 h-[780px]">
         
-        <div className="absolute w-full bottom-0 inset-x-0 h-35" />
-        <div className="absolute w-full h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+        <div className="absolute w-full bottom-0 inset-x-0" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square w-full h-full z-10">
+  <World data={sampleArcs} globeConfig={globeConfig} />
+</div>
       </div>
     </div>
   );

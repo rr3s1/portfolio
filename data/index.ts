@@ -7,9 +7,9 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "FULL STACK DEVELOPER",
+    title: "ABOUT ME",
     description: "Building modern web applications with cutting-edge technologies",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] ",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "",
@@ -17,8 +17,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "TECH STACK",
-    description: "React, Next.js, TypeScript, Tailwind CSS",
+    title: "AVAILABLE ON",  
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -68,7 +68,6 @@ export const gridItems = [
 ];
 
 export const techstack = [
-  // ——— existing testimonials ———
   {
     quote:
       "Leveraging its component-based architecture and Virtual DOM for building highly interactive, performant, and scalable user interfaces. Its declarative nature simplifies UI logic, while hooks provide powerful state management and lifecycle features. The vast ecosystem, including libraries like React Router and state-management solutions (Redux, Zustand), combined with strong community support, makes it ideal for developing complex single-page applications (SPAs).",

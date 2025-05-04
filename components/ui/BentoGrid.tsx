@@ -137,8 +137,10 @@ export const BentoGridItem = ({
         '--to': to,
       } as React.CSSProperties}
     >
-      {/* Outer neon gradient border */}
-      <div className="absolute inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" />
+      {/* Outer neon gradient border - only for cards except id 1 and 2 */}
+      {id !== 1 && id !== 2 && (
+        <div className="absolute text-white-200 inset-0 p-[2px] rounded-3xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" />
+      )}
 
       <div
         className={`${id === 6 && "flex justify-center"} h-full relative z-10`}
@@ -190,29 +192,40 @@ export const BentoGridItem = ({
           </div>
 
           {id === 1 && <GlobeDemo />}
-          {id === 2 && <CommitsGridDemo />}
+          {id === 2 && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <CommitsGridDemo />
+              {/* <MagicButton
+                title={copied ? "Email copied" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                position="centred"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handleCopy}
+              /> */}
+            </div>
+          )}
           {id === 3 && (
             <div className="flex gap-5 lg:gap-5 w-fit absolute -right-3 lg-right-2">
-
-<div className="flex flex-col gap-3 lg:gap-8">
+              <div className="flex flex-col gap-3 lg:gap-8">
                 {["React.js", "Next.js", "TypeScript", "Tailwind"].map((item, idx) => (
-  <span
-    key={item}
-    className={`py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-neonCyan ${
-      idx === 0 ? "push-up" : idx === 1 ? "push-down" : ""
-    }`}
-  >
-    {item}
-  </span>
-))}
+                  <span
+                    key={item}
+                    className={`py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-neonCyan ${
+                      idx % 2 === 0 ? "zoom-in" : "zoom-out"
+                    }`}
+                  >
+                    {item}
+                  </span>
+                ))}
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
               </div>
-              <div className="flex flex-col gap-3 lg:gap-8"> <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+              <div className="flex flex-col gap-3 lg:gap-8">
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
                 {["GSAP", "AWS", "MongoDB", "Framer"].map((item, idx) => (
                   <span
                     key={item}
                     className={`py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-neonPink ${
-                      idx === 0 ? "push-up" : idx === 1 ? "push-down" : ""
+                      idx % 2 === 0 ? "zoom-in" : "zoom-out"
                     }`}
                   >
                     {item}
@@ -236,13 +249,7 @@ export const BentoGridItem = ({
                   }}
                 />
               
-              <MagicButton
-                title={copied ? "Email copied" : "Copy my email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                otherClasses="!bg-[#161a31]"
-                handleClick={handleCopy}
-              />
+              
               </div>
             </div>
           )}

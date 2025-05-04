@@ -23,13 +23,14 @@ export default function Home() {
       
       <FloatingNav navItems={navItems}/>
       <Hero />
+      <Grid />
       <HeroScrollDemo />
       <Approach />
       <TimelineDemo />
       <HeroParallaxDemo />
       <Experience />
       {/* <RecentProjects /> */}
-      <Grid />
+     
       <TechStack />
       <Footer />
     </div>
