@@ -14,6 +14,7 @@ import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
 import Approach from "@/components/Approach";
 import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
+import { ContactForm } from "./components/contact-form";
 
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
       {/* <RecentProjects /> */}
       
       <TechStack />
+      
       <Footer />
     </div>
   </main>
