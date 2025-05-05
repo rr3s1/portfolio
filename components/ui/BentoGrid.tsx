@@ -70,7 +70,7 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     if (isClient && navigator.clipboard) {
-      navigator.clipboard.writeText('contact@jsmastery.pro');
+      navigator.clipboard.writeText('raressilviulazar@gmail.com');
       setCopied(true);
     }
   }
@@ -80,7 +80,7 @@ export const BentoGridItem = ({
     return (
       <div className="col-span-full">
         <a 
-          href="mailto:raressilviulazar@jsmastery.pro"
+          href="mailto:raressilviulazar@gmail.com"
           className="block w-full text-center py-6 px-8 rounded-3xl 
            bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 
            text-white text-2xl font-bold tracking-wider 
