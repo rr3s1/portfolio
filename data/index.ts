@@ -18,12 +18,12 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "AVAILABLE",
-    description: "Worldwide 24/7",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
+    title: "ABOUT ME",
+    description: "My name is Rares, I have specialized in developing apps by using Next.js, React, React Native and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high-performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl ",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
+    titleClassName: "justify-start text-justify-start font-bold text-xl",
+    img: "/22.png",
     spareImg: "",
   },
   {
