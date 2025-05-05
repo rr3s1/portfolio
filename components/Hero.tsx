@@ -1,16 +1,13 @@
 "use client";
 import React from 'react'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
+
 import { SplashCursor } from './ui/SplashCursor'
 import { AuroraBackground } from './ui/aurora-background'
-import { motion } from "framer-motion"
-import AnimatedTextCycle from './ui/animated-text-cycle'
+
 import { SplineSceneBasic } from './ui/spline-demo'
-import { HeroScrollDemo } from './ui/hero-scroll-demo'
+
 import { Spotlight } from './ui/spotlight-new'
-import { GradientText } from "./ui/gradient-text";
+
 
 const Hero = () => {
   return (
@@ -24,8 +21,7 @@ const Hero = () => {
          
         </div>
       </AuroraBackground>
-      
-      {/* Scroll Animation Section */}
+ 
       
     </>
   )

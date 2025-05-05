@@ -106,13 +106,13 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl text-gradient-magenta md:text-7xl font-bold dark:text-white">
-         Always searching 
+         Continual Design  
       </h1>
       <h1 className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent ">
-        for the next design
+        Exploration
       </h1>
       <p className="max-w-2xl text-3xl font-bold mt-8 dark:text-sky-600">
-       By compiling style explorations in <br/> Figma & Awwwards
+      To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations
       </p>
     </div>
   );
