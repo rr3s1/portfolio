@@ -79,18 +79,20 @@ export const BentoGridItem = ({
   if (id === 6) {
     return (
       <div className="col-span-full">
-        <a 
-          href="mailto:raressilviulazar@gmail.com"
-          className="block w-full text-center py-6 px-8 rounded-3xl 
-           bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 
-           text-white text-2xl font-bold tracking-wider 
-           shadow-neon hover:shadow-neonHover 
-           animate-gradient-x
-           transition-all duration-300
-           hover:-translate-y-1"
-        >
-          {title}
-        </a>
+        <a  
+  href="https://github.com/rr3s1"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full text-center py-6 px-8 rounded-3xl 
+   bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 
+   text-white text-2xl font-bold tracking-wider 
+   shadow-neon hover:shadow-neonHover 
+   animate-gradient-x
+   transition-all duration-300
+   hover:-translate-y-1"
+>
+  {title}
+</a>
       </div>
     );
   }

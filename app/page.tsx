@@ -20,18 +20,15 @@ export default function Home() {
       
       <FloatingNav navItems={navItems}/>
       <Hero />
-     
       <Grid />
       <Story />
-      {/* <HeroScrollDemo /> */}
       <Approach />
-      <TimelineDemo />
+      {/* <HeroScrollDemo /> */}
       <HeroParallaxDemo />
+      <TimelineDemo />
       <Experience />
       {/* <RecentProjects /> */}
-      
       <TechStack />
-      
       <Footer />
     </div>
   </main>

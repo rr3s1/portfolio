@@ -19,7 +19,7 @@ export const gridItems = [
   {
     id: 2,
     title: "ABOUT ME",
-    description: "Hi there! My name is Rares, I have specialized in developing web apps by using Next.js, Node.js and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high-performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
+    description: "Hi there! My name is Rares Silviu Lazar,in recent years I have specialized in developing web apps by using Next.js, Node.js and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high-performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl ",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
     titleClassName: "justify-start text-justify-start font-bold text-xl",
@@ -39,7 +39,7 @@ export const gridItems = [
   {
     id: 4,
     title: "PROJECTS",
-    description: "Check out my latest work",
+    description: "A collection of my work, showcasing a chronological timeline of my projects.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -58,7 +58,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "EMAIL ME",
+    title: "MY GITHUB",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
