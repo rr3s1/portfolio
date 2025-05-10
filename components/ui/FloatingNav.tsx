@@ -28,7 +28,9 @@ export const FloatingNav = ({
   return (
     <Navbar className={className}>
       {/* Desktop Navigation */}
+     
       <NavBody>
+     
         <NavbarLogo />
         <NavItems className="text-xl text-white-100" items={navItems} />
         <div className="flex items-center gap-4">

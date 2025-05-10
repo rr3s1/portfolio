@@ -8,7 +8,7 @@
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
+        --background: 206 96% 7.6%; 
         --foreground: 0 0% 3.9%;
 
         --card: 0 0% 100%;
@@ -77,7 +77,7 @@
     }
 
     .dark {
-        --background: 0 0% 3.9%;
+        --background: 206 96% 7.6%;
         --foreground: 0 0% 98%;
 
         --card: 0 0% 3.9%;
@@ -86,7 +86,7 @@
         --popover: 0 0% 3.9%;
         --popover-foreground: 0 0% 98%;
 
-        --primary: 0 0% 98%;
+        --primary: 0 0% 98%;    
         --primary-foreground: 0 0% 9%;
 
         --secondary: 0 0% 14.9%;
@@ -106,7 +106,7 @@
         --ring: 0 0% 83.1%;
         
         /* Override dark theme with our custom cosmic theme */
-        --background: var(--navy-900);
+        --background: 207 74.4% 4%;
         --foreground: var(--white-100);
         
         --card: var(--navy-800);
@@ -171,7 +171,18 @@
 p.varela-round-regular {
   font-family: "Varela Round", sans-serif;
 }
-
+.fade-circle{
+    /* Make the video the mask’s “source” */
+    mask-image: radial-gradient(
+        circle at 50% 50%,          /* centre */
+        rgba(0,0,0,1)   0%,         /* fully visible in the centre   */
+        rgba(0,0,0,1)  40%,         /* stay visible for a bit        */
+        rgba(0,0,0,0)  75%          /* fade to transparent by edge   */
+    );
+    mask-mode: alpha;               /* use the alpha channel         */
+    -webkit-mask-image: radial-gradient(circle at 50% 50%,
+        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 75%);
+  }
 @layer utilities {
     .heading {
         @apply font-bold text-4xl md:text-5xl text-center;

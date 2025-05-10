@@ -26,10 +26,9 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <StarsCanvas /> */}
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          forcedTheme="dark"     
+          enableSystem={false} 
           >
             {children}
           </ThemeProvider>
