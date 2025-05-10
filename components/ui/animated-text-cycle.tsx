@@ -71,7 +71,7 @@ export default function AnimatedTextCycle({
         ref={measureRef} 
         aria-hidden="true"
         className="absolute opacity-0 pointer-events-none min-h-10"
-        style={{ visibility: "hidden" }}
+        style={{ visibility: "hidden",  }}
       >
         {words.map((word, i) => (
           <span key={i} className={`font-bold merienda-title ${className}`} style={{fontFamily: "var(--font-title)", fontWeight: 900}}>

@@ -104,19 +104,24 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({ techItems, radius = 3, rot
 const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) => {
   return (
     <div style={{ width: '100%', height: '60vh', minHeight: '400px', maxHeight:'700px', touchAction: 'none' }}>
-      <Canvas camera={{ position: [0, 0, radius * 2.5], fov: 50 }}>
+      <Canvas
+        className="pointer-events-none select-none"   // disable clicks / drags
+        camera={{ position: [0, 0, radius * 2.5], fov: 50 }}
+      >
         <ambientLight intensity={Math.PI / 1.5} />
         <pointLight position={[10, 10, 10]} decay={0} intensity={Math.PI} />
+
         <Suspense fallback={null}>
           <TechItemsSphere techItems={techItems} radius={radius} />
         </Suspense>
-        <OrbitControls 
-          enableZoom={true} 
-          enablePan={false} 
-          minDistance={radius * 1.5} 
-          maxDistance={radius * 4}
-          autoRotate // You can enable this instead of manual rotation in useFrame
-          autoRotateSpeed={0.5} // Adjust speed if using OrbitControls autoRotate
+
+        {/* keep the visual auto-rotation but stop the user from changing it */}
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          enableRotate={false}  // no drag rotation either
+          autoRotate
+          autoRotateSpeed={0.5}
         />
       </Canvas>
     </div>

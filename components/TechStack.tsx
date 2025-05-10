@@ -11,12 +11,12 @@ import TechSphereCanvas from '@/components/TechSphere'; // Adjust path if needed
 const Techstack = () => {
     return (
         <div className="py-20" id="techstack">
-            <h1 className="text-center text-5xl font-bold mb-10">
+            <h1 className="text-center text-5xl font-bold mb-10 ">
                 Tech <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span>
             </h1>
 
             {/* Section for the 3D Tech Sphere */}
-            <div className="flex flex-col items-center w-full max-lg:mt-10 mt-10 mb-20">
+            <div className="flex flex-col items-center w-full max-lg:mt-10 mt-10 mb-20 pointer-events-none">
                 {/* Ensure techstack data is passed correctly */}
                 <TechSphereCanvas techItems={techstack.map(item => ({ name: item.name, logo: item.logo }))} />
             </div>
