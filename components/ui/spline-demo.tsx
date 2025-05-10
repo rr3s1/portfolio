@@ -36,7 +36,7 @@ export function SplineSceneBasic() {
         autoPlay
         muted
         loop
-        className="rotate-90 absolute fade-circle   w-4.5/5 h-4.5/5 object-cover left-1 opacity-100 transition-all duration-[1200ms] ease-in-out -z-10"
+        className="rotate-90 absolute fade-circle   w-4.5/5 h-4.5/5 object-cover left-1 opacity-100 transition-all  ease-in-out -z-10"
       >
         <source src="/videos/vibedark.mp4" type="video/mp4" />
       </video>

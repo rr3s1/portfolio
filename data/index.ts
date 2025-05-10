@@ -31,10 +31,10 @@ export const gridItems = [
     title: "BACK-END",
     description: "Node.js, AWS, Appwrite, Firebase", // UPDATED
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
+    imgClassName: "absolute right-0 bottom-0 opacity-30 blur-sm contrast-75",
     titleClassName: "justify-start", // UPDATED
     img: "",
-    spareImg: "",
+    spareImg: "/public/22.png",
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ export const gridItems = [
     className: "lg:col-span-6 md:col-span-6 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center items-center w-full h-full text-center",
-    img: "",
+    img: "", // Existing image
     spareImg: "",
   },
 ];

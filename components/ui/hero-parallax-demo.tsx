@@ -36,13 +36,13 @@ export const products = [
     title: "",
     link: "https://github.com/rr3s1",
     thumbnail:
-      "/gymOra.png",
+      "/DataRef.png",
   },
   {
     title: " ",
     link: "https://github.com/rr3s1",
     thumbnail:
-      "/gymOra.png",
+      "/DataRef.png",
   },
 
   {
