@@ -198,7 +198,7 @@ export const BentoGridItem = ({
                 onClick={handleCopy}
                 // Increased size (2x height, 2x max-width, 2x rounding, ~2x text size)
                 // Centered by its parent div and the overall grid item structure
-                className="h-28 w-full max-w-[75rem] rounded-3xl !bg-background text-2xl font-medium"
+                className="h-28 w-full max-w-[75rem] rounded-3xl !bg-background text-xl md:text-2xl font-medium"
               >
                 <span className="flex items-center justify-center gap-6 h-full"> {/* Increased gap */}
                   <IoCopyOutline size={44} /> {/* Increased icon size */}
