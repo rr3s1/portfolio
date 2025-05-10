@@ -17,6 +17,7 @@
     "@react-three/postprocessing": "^3.0.4",
     "@sentry/nextjs": "^8.26.0",
     "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.92",
     "@tabler/icons-react": "^3.31.0",
     "@types/react-lottie": "^1.2.10",
     "class-variance-authority": "^0.7.1",
