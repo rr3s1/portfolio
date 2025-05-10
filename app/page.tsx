@@ -9,18 +9,21 @@ import TimelineDemo from "@/components/ui/timeline-demo";
 import HeroParallaxDemo from "@/components/ui/hero-parallax-demo";
 import Approach from "@/components/Approach";
 import type { Metadata } from "next";
-
-
 import { StarsCanvas } from "@/components/main/star-background";
 import CosmicFilaments from "@/components/CosmicFilaments";
-
 import Techstack from "@/components/TechStack";
+
+
+
 
 export const metadata: Metadata = {
   title: "RS Portfolio",
-  keywords: ["Portfolio", "Web Development", "3D Visualization", "Next.js", "React"],
+  keywords: ["Portfolio", "Web Development", "3D Visualization", "Next.js", "React", "Tailwind CSS", "Three.js",],
   description: "Interactive portfolio showcasing web development and 3D visualization skills.",
 };
+
+
+
 
 export default function Home() {
 
@@ -31,22 +34,15 @@ export default function Home() {
       <StarsCanvas /> {/* This is likely position: fixed or absolute, acting as a general background */}
      
       <div className="max-w-7xl w-full">
-        
         <FloatingNav navItems={navItems}/>
-        
         <Hero />
-        {/* This section will now take up its defined height in the document flow */}
-        <CosmicFilaments /> 
-       
+        <CosmicFilaments />
         <Approach />
-        {/* <HeroScrollDemo /> */}
         <HeroParallaxDemo />
         <TimelineDemo />
         <Grid />
         <Story />
         <Experience />
-        {/* <RecentProjects /> */}
-    
         <Techstack />
         <Footer />
       </div>

@@ -1,8 +1,6 @@
 "use client";
 import gsap from "gsap";
 import { useRef } from "react";
-import Button from "./ui/Button";
-import AnimatedTitle from "./ui/AnimatedTitle";
 
 const Story = () => {
   const frameRef = useRef<HTMLImageElement>(null);
