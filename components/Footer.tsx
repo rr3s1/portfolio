@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import MagicButton from "../components/ui/MagicButton";
 import BackgroundBeamsDemo from "./ui/background-beams-demo";
-import { ContactForm } from "@/app/components/contact-form";
+import { ContactForm } from "@/components/ui/contact-form";
 
 const Footer = () => {
     return (

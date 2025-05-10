@@ -17,7 +17,7 @@ const Hero = () => {
       
         <Spotlight />
         
-        <SplashCursor />
+        {/* <SplashCursor /> */}
 
 
         

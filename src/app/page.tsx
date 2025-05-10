@@ -1,4 +1,4 @@
-import { ContactForm } from "./components/contact-form"
+import { ContactForm } from "@/components/ui/contact-form";
 import { Toaster } from "@/components/ui/toaster"
 
 export default function ContactPage() {
