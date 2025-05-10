@@ -401,7 +401,7 @@ const CosmicFilaments: React.FC = () => {
         className={`${styles.container} ${styles.fadeCircle}`}
       >
         <div className={styles.instructions}>
-          Tap / click to morph
+          Tap / click to morph the cosmic filaments
         </div>
       </div>
     </>

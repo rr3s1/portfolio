@@ -7,7 +7,7 @@ import {CanvasRevealEffect} from "@/components/ui/CanvasRevealEffect";
  const Approach = () => {
     return (
         <>
-            <section className="container mx-auto h-[100vh] ">
+            <section>
         
                 <h1 className="heading mt-20">
                 

@@ -15,7 +15,6 @@ import { StarsCanvas } from "@/components/main/star-background";
 import CosmicFilaments from "@/components/CosmicFilaments";
 
 import Techstack from "@/components/TechStack";
-import CircularGallery from "@/components/CircularGallery";
 export const metadata: Metadata = {
   title: "RS Portfolio",
   keywords: ["Portfolio", "Web Development", "3D Visualization", "Next.js", "React"],
@@ -46,7 +45,7 @@ export default function Home() {
         <Story />
         <Experience />
         {/* <RecentProjects /> */}
-        <CircularGallery />
+        
         <Techstack />
         <Footer />
       </div>

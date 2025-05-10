@@ -105,27 +105,16 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-    {/*
-      SM (default):
-        h1: text-4xl (2.25rem / 36px)
-        p:  text-lg  (1.125rem / 18px)
-        Ratio: 2.25 / 1.125 = 2x
-
-      MD (& LG, as md cascades up):
-        h1: md:text-5xl (3rem / 48px)
-        p:  md:text-2xl (1.5rem / 24px)
-        Ratio: 3 / 1.5 = 2x
-    */}
-    <h1 className="text-4xl md:text-5xl font-bold text-gradient-magenta dark:text-white">
-       Continual Design
-    </h1>
-    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent">
-      Exploration
-    </h1>
-    <p className="max-w-2xl text-lg md:text-2xl font-bold mt-8 dark:text-sky-400">
+      <h1 className="text-2xl text-gradient-magenta md:text-7xl font-bold dark:text-white">
+         Continual Design  
+      </h1>
+      <h1 className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent ">
+        Exploration
+      </h1>
+      <p className="max-w-2xl text-3xl font-bold mt-8 dark:text-sky-400">
       To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations
-    </p>
-  </div>
+      </p>
+    </div>
   );
 };
 

@@ -139,9 +139,6 @@
     * {
         @apply border-border !scroll-smooth;
         font-family: var(--font-body);
-        margin: 0;
-        padding: 0; /* Added basic reset */
-        box-sizing: border-box; /* Good practice */
     }
     body {
         @apply bg-background text-foreground;
@@ -251,55 +248,3 @@ p.varela-round-regular {
     }
 }
 
-/* 
-  IMPORTANT:
-  The following styles are crucial for the scroll-driven animation to work.
-  They target `html` and `body` directly.
-  `--n-items` will be set by the CircularGallery component on the <html> element via JavaScript.
-  `--k` is a custom property animated by scrolling the body.
-*/
-
-html {
-    /* --n-items will be set by the component: e.g., html[style="--n-items: 18;"] */
-    height: calc(var(--n-items, 10) * 100vh); /* Default to 10 items if --n-items not set, adjust as needed */
-    scrollbar-width: none; /* Firefox */
-    font-family: saira, sans-serif; /* Base font from original body */
-  }
-  
-  html::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-  
-  body {
-    /* --k is animated from -1 to 1 over the entire scroll length of the body */
-    /* This --k is then inherited by elements inside the CircularGallery component */
-    animation: global_k_animation 1s linear; /* Renamed to avoid conflicts */
-    animation-timeline: scroll(root); /* scroll() refers to the document's scrollbar */
-    
-    /* Other body styles from original if they are truly global */
-    /* Note: Most body styles from original are now in .galleryWrapper */
-    /* Ensure body allows for fixed positioning of the component to take over */
-    position: relative; /* Or ensure it's the scroll container */
-    background-color: #000; /* Fallback background */
-  }
-  
-  @keyframes global_k_animation {
-    to {
-      --k: 1;
-    }
-  }
-  
-@property --k {
-	syntax: '<number>';
-	initial-value: -1;
-	inherits: true;
-}
-
-@property --ang {
-	syntax: '<angle>';
-	initial-value: 0deg;
-	inherits: false;
-}
-
-  /* If you have other global font imports, e.g., Saira, Caveat, Ubuntu */
-  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Saira:wght@400;700&family=Ubuntu+Mono&family=Ubuntu:wght@400;700&display=swap');
