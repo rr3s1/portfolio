@@ -111,7 +111,7 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent ">
         Exploration
       </h1>
-      <p className="max-w-2xl text-3xl font-bold mt-8 dark:text-sky-600">
+      <p className="max-w-2xl text-3xl font-bold mt-8 dark:text-sky-400">
       To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations
       </p>
     </div>

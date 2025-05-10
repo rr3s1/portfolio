@@ -34,14 +34,15 @@ export default function Home() {
         <Hero />
         {/* This section will now take up its defined height in the document flow */}
         <CosmicFilaments /> 
-        <Grid />
-        <Story />
+       
         <Approach />
         {/* <HeroScrollDemo /> */}
         <HeroParallaxDemo />
         <TimelineDemo />
         <Experience />
         {/* <RecentProjects /> */}
+        <Grid />
+        <Story />
         <TechStack />
         <Footer />
       </div>
