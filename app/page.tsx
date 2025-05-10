@@ -46,7 +46,7 @@ export default function Home() {
         <Experience />
         {/* <RecentProjects /> */}
         
-        <AHoleComponent />
+       
         <TechStack />
         <Footer />
       </div>

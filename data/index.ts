@@ -11,62 +11,63 @@ export const gridItems = [
     description: "",
 
     className: "row-span-3 sm:row-span-3 md:row-span-4  lg:col-span-3 md:col-span-6  min-h-[45vh] sm:min-h-[50vh] md:min-h-[35vh] lg:min-h-[60vh]",
-    imgClassName: "w-full h-full opacity-100 ",
+    imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "",
     spareImg: "",
   },
   {
     id: 2,
-    title: "",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2", // Removed text alignment classes from here
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-100 blur-sm contrast-75", // Example: Reduced opacity if kept with video
-    titleClassName: "justify-center text-center", // UPDATED for centered text over video
-    img: "", // Keep, remove, or adjust based on visual preference with video
+    title: "ABOUT ME",
+    description: "Hi there! My name is Rares and I enjoy developing web apps by using Next.js, Node.js and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl text-justify-start",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
+    titleClassName: "justify-start text-justify-start font-bold text-xl",
+    img: "/22.png",
     spareImg: "",
   },
   {
     id: 3,
-    title: "",
-    description: "", // UPDATED
+    title: "SKILLS",
+    description: "Frontend & Backend Development", // UPDATED
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "opacity-100",
+    imgClassName: "",
     titleClassName: "justify-center text-center", // UPDATED
     img: "",
     spareImg: "",
   },
   {
     id: 4,
-    title: "",
-    description: "",
+    title: "PROJECTS",
+    description: "A collection of my work, showcasing a chronological timeline of my projects.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:row-span-1",
-    imgClassName: "", // Keep if /grid.svg is used, or remove if video replaces it
-    titleClassName: "justify-center text-center", // UPDATED for centering text over video
-    img: "", // This will render. Consider removing if video is main bg.
-    spareImg: "", // This will render. Consider removing if video is main bg.
+    imgClassName: "",
+    titleClassName: "justify-start",
+    img: "/grid.svg",
+    spareImg: "/b4.svg",
   },
   {
     id: 5,
-    title: "",
-    description: "", // Add a relevant description
+    title: "EXPERIENCE",
+    description: "My professional journey and contributions.", // Add a relevant description
     className: "md:col-span-3 md:row-span-1",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60", // Existing image
     titleClassName: "justify-center text-center", // UPDATED for centering text over video
-    img: "", // Existing image
-    spareImg: "", // Existing spare image
+    img: "/b5.svg", // Existing image
+    spareImg: "/grid.svg", // Existing spare image
   },
   {
     id: 6,
-    title: "Copy my email & schedule a call",
+    title: "",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-6 md:col-span-6 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center ",
+    titleClassName: "justify-center md:max-w-full max-w-60 text-center text-shadow:0_3px_5px_rgba(255, 0, 0, 0.8)",
     img: "",
     spareImg: "",
   },
 ];
+
 
 export const techstack = [
   // ——— existing testimonials ———

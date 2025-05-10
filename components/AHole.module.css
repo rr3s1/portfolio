@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 75vh; /* Or your desired height */
+  height: 100%;
+
   overflow: hidden;
-  background-color: #141414;
-  /* Add the mask properties here if you want to apply it by default */
-  /* or create a separate class like .fadeCircle and apply it conditionally */
+  background-color: bg-transparent;
+
 }
 
 .fadeCircle {
