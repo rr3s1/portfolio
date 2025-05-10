@@ -2,7 +2,6 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
-import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 import Story from "@/components/Story";
 import Footer from "@/components/Footer";
@@ -14,7 +13,8 @@ import type { Metadata } from "next";
 
 import { StarsCanvas } from "@/components/main/star-background";
 import CosmicFilaments from "@/components/CosmicFilaments";
-import AHoleComponent from "@/components/AHole";
+
+import Techstack from "@/components/TechStack";
 export const metadata: Metadata = {
   title: "RS Portfolio",
   keywords: ["Portfolio", "Web Development", "3D Visualization", "Next.js", "React"],
@@ -46,8 +46,7 @@ export default function Home() {
         <Experience />
         {/* <RecentProjects /> */}
         
-       
-        <TechStack />
+        <Techstack />
         <Footer />
       </div>
     </main>

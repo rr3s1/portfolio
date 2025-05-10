@@ -87,7 +87,7 @@ export function SplineSceneBasic() {
                     "Experiences",
                   ]}
                   interval={3000}
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text font-semibold"
                 />
               </h2>
             </div>

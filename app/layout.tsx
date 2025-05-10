@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { Martian_Mono } from "next/font/google";
-import { StarsCanvas } from "@/components/star-background";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Merienda:wght@300..900&family=Varela+Round&display=swap" rel="stylesheet" />
       </head>
       <body className={inter.className}>
-        {/* <StarsCanvas /> */}
+       
         <ThemeProvider
           attribute="class"
           forcedTheme="dark"     
