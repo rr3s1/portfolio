@@ -27,7 +27,7 @@ export function ContactForm() {
   return (
     <form action={handleSubmit} className="space-y-12">
       <div className="space-y-4 mt-10">
-        <label htmlFor="email" className="block text-xl text-gray-400">
+        <label htmlFor="email" className="block text-xl text-white-100">
           Email address
         </label>
         <input
@@ -41,8 +41,8 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-4">
-        <label htmlFor="message" className="block text-xl text-gray-400">
-          How can we help?
+        <label htmlFor="message" className="block text-xl text-white-100">
+          This 🌊 is yours, let's 🚀  
         </label>
         <textarea
           id="message"

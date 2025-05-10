@@ -16,10 +16,7 @@
     /* pointer-events: none; /* CRITICAL: If canvas is on top and blocks, this might be needed, BUT
                                then the click must be handled by the .container or .instructions */
   }
-  
-  .fadeCircle {
-    /* ... (unchanged) ... */
-  }
+ 
   
   .instructions {
     position: absolute;
