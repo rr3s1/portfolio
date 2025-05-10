@@ -23,15 +23,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Merienda:wght@300..900&family=Varela+Round&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className}>
-        {/* <StarsCanvas /> */}
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="dark"     
-          enableSystem={false} 
+      <body className={inter.className}><ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
           >
             {children}
           </ThemeProvider>
+          <StarsCanvas/>
           </body>
     </html>
   );
