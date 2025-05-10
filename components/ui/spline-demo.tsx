@@ -67,11 +67,33 @@ export function SplineSceneBasic() {
 
         {/* Right content - 50% width */}
         <div className="w-1/2 relative sm:w-full">
+        <div className={`w-1/2 relative sm:w-full ${
+                  isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[20px]"
+                }`}
+              >
+        <video
+        autoPlay
+        muted
+        loop
+        className="rotate-90 absolute fade-circle left-[120px] top-[10px] w-4.5/5 h-4.5/5 object-cover opacity-100 transition-all duration-[1200ms] ease-in-out -z-10"
+      >
+        <source src="/videos/vibedark.mp4" type="video/mp4" />
+      </video>
+          
+        </div>
+
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"
           />
+         
         </div>
+
+        
+
+
+
+
       </div>
     </Card>
   )

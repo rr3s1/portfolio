@@ -33,7 +33,7 @@ export const products = [
       "/banking.png",
   },
   {
-    title: " ",
+    title: "",
     link: "https://editrix.ai",
     thumbnail:
       "/gymOra.png",
@@ -67,13 +67,13 @@ export const products = [
     title: "",
     link: "https://smartbridgetech.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/orangeYT.png",
   },
   {
     title: " ",
     link: "https://renderwork.studio",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/orangeYT.png",
   },
 
   {
@@ -96,8 +96,8 @@ export const products = [
   },
   {
     title: "  ",
-    link: "https://efreeinvoice.com",
+    link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/orangeYT.png",
   },
 ]; 
