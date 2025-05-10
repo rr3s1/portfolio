@@ -30,8 +30,8 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 800;
     letter-spacing: 0.5px;
     user-select: none;
     z-index: 10; /* Ensure it's above the canvas if canvas isn't pointer-events: none */

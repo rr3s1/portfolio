@@ -9,94 +9,94 @@ export default function HeroParallaxDemo() {
 export const products = [
   {
     title: "",
-    link: "",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/banking.png",
   },
   {
     title: "",
-    link: "",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/nexus.png",
   },
   {
-    title: "Orange",
-    link: "",
+    title: "",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/sportcar.png",
   },
 
   {
     title: "",
-    link: "https://editorially.org",
+    link: "hhttps://github.com/rr3s1",
     thumbnail:
       "/banking.png",
   },
   {
     title: "",
-    link: "https://editrix.ai",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/gymOra.png",
   },
   {
     title: " ",
-    link: "/",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/gymOra.png",
   },
 
   {
     title: "",
-    link: "https://algochurn.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/oryy.png",
   },
   {
     title: " ",
-    link: "https://ui.aceternity.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/care.png",
   },
   {
     title: "  ",
-    link: "https://tailwindmasterkit.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/green.png",
   },
   {
     title: "",
-    link: "https://smartbridgetech.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/orangeYT.png",
   },
   {
     title: " ",
-    link: "https://renderwork.studio",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/orangeYT.png",
   },
 
   {
     title: " ",
-    link: "https://cremedigital.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/red.png",
   },
   {
     title: "  ",
-    link: "https://goldenbellsacademy.com",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/bluyy.png",
   },
   {
     title: " ",
-    link: "https://invoker.lol",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/gre2.png",
   },
   {
     title: "  ",
-    link: "",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/orangeYT.png",
   },

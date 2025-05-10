@@ -16,8 +16,9 @@ import { StarsCanvas } from "@/components/main/star-background";
 import CosmicFilaments from "@/components/CosmicFilaments";
 import AHoleComponent from "@/components/AHole";
 export const metadata: Metadata = {
-  title: "Cosmic Filaments",
-  description: "Interactive Three.js Cosmic Filaments Visualization",
+  title: "RS Portfolio",
+  keywords: ["Portfolio", "Web Development", "3D Visualization", "Next.js", "React"],
+  description: "Interactive portfolio showcasing web development and 3D visualization skills.",
 };
 
 export default function Home() {

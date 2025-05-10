@@ -1,22 +1,32 @@
 .aHole {
-  /* position: absolute; <--- REMOVE this or change to relative */
-  /* top: 0; <--- REMOVE */
-  /* left: 0; <--- REMOVE */
-  position: relative; /* ADD: To contain its absolutely positioned children */
-  
-  margin: 0; /* Can keep or adjust for section spacing */
-  padding: 0; /* Can keep */
-  width: 100%; /* This will make it take the full width of its container in page.tsx */
-  
-  /* height: 100%; <--- REMOVE this */
-  height: 100vh; /* ADD: Define a specific height for the section. Adjust as needed. */
-  /* Or you could use a fixed height like: height: 600px; */
-  
-  overflow: hidden; /* Keep this to clip internal elements if they exceed bounds */
-/* Optional: if you want this section to have the dark background.
-                                 Otherwise, it will inherit from the body or parent.
-                                 The original body style had this, so adding it here
-                                 ensures the 'hole' effect works against a dark base. */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 75vh; /* Or your desired height */
+  overflow: hidden;
+  background-color: #141414;
+  /* Add the mask properties here if you want to apply it by default */
+  /* or create a separate class like .fadeCircle and apply it conditionally */
+}
+
+.fadeCircle {
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%, /* Adjust this percentage to control the solid center size */
+    rgba(0, 0, 0, 0) 75%  /* Adjust this percentage to control the fade extent */
+  );
+  mask-mode: alpha;
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  /* No need for position: relative here unless specifically required
+     by complex child positioning that needs to be affected by the mask's bounds,
+     but the .aHole already has position: relative. */
 }
 
 .aHole:before {
@@ -108,23 +118,3 @@
   height: 100%;
 }
 
-.fadeCircle {
-  /* Make the element the mask’s “source” */
-  mask-image: radial-gradient(
-    circle at 50% 50%, /* centre */
-    rgba(0, 0, 0, 1) 0%, /* fully visible in the centre */
-    rgba(0, 0, 0, 1) 40%, /* stay visible for a bit */
-    rgba(0, 0, 0, 0) 75% /* fade to transparent by edge */
-  );
-  mask-mode: alpha; /* use the alpha channel */
-  -webkit-mask-image: radial-gradient(
-    circle at 50% 50%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 40%,
-    rgba(0, 0, 0, 0) 75%
-  );
-  /* Ensure the mask applies correctly to the content */
-  /* position: relative; might be needed if children are absolutely positioned
-     and need to be contained by the mask, but usually not for a direct canvas child.
-  */
-}

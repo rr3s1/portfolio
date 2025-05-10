@@ -29,10 +29,10 @@ export const gridItems = [
   {
     id: 3,
     title: "SKILLS",
-    description: "Frontend & Backend Development",
+    description: "Frontend & Backend Development", // UPDATED
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-center",
+    titleClassName: "justify-center text-center", // UPDATED
     img: "",
     spareImg: "",
   },
@@ -49,12 +49,12 @@ export const gridItems = [
   {
     id: 5,
     title: "EXPERIENCE",
-    description: "",
+    description: "My professional journey and contributions.", // Add a relevant description
     className: "md:col-span-3 md:row-span-1",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center lg:row-span-1 text-shadow:0_3px_5px_rgba(255, 0, 0, 0.8)",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60", // Existing image
+    titleClassName: "justify-center text-center", // UPDATED for centering text over video
+    img: "/b5.svg", // Existing image
+    spareImg: "/grid.svg", // Existing spare image
   },
   {
     id: 6,
