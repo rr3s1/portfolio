@@ -11,50 +11,50 @@ export const gridItems = [
     description: "",
 
     className: "row-span-3 sm:row-span-3 md:row-span-4  lg:col-span-3 md:col-span-6  min-h-[45vh] sm:min-h-[50vh] md:min-h-[35vh] lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    imgClassName: "w-full h-full opacity-100 ",
     titleClassName: "justify-end",
     img: "",
     spareImg: "",
   },
   {
     id: 2,
-    title: "ABOUT ME",
-    description: "Hi there! My name is Rares and I enjoy developing web apps by using Next.js, Node.js and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl text-justify-start",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
-    titleClassName: "justify-start text-justify-start font-bold text-xl",
-    img: "/22.png",
+    title: "",
+    description: "",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2", // Removed text alignment classes from here
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-100 blur-sm contrast-75", // Example: Reduced opacity if kept with video
+    titleClassName: "justify-center text-center", // UPDATED for centered text over video
+    img: "", // Keep, remove, or adjust based on visual preference with video
     spareImg: "",
   },
   {
     id: 3,
-    title: "SKILLS",
-    description: "Frontend & Backend Development", // UPDATED
+    title: "",
+    description: "", // UPDATED
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
+    imgClassName: "opacity-100",
     titleClassName: "justify-center text-center", // UPDATED
     img: "",
     spareImg: "",
   },
   {
     id: 4,
-    title: "PROJECTS",
-    description: "A collection of my work, showcasing a chronological timeline of my projects.",
+    title: "",
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    imgClassName: "", // Keep if /grid.svg is used, or remove if video replaces it
+    titleClassName: "justify-center text-center", // UPDATED for centering text over video
+    img: "", // This will render. Consider removing if video is main bg.
+    spareImg: "", // This will render. Consider removing if video is main bg.
   },
   {
     id: 5,
-    title: "EXPERIENCE",
-    description: "My professional journey and contributions.", // Add a relevant description
+    title: "",
+    description: "", // Add a relevant description
     className: "md:col-span-3 md:row-span-1",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60", // Existing image
     titleClassName: "justify-center text-center", // UPDATED for centering text over video
-    img: "/b5.svg", // Existing image
-    spareImg: "/grid.svg", // Existing spare image
+    img: "", // Existing image
+    spareImg: "", // Existing spare image
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center text-shadow:0_3px_5px_rgba(255, 0, 0, 0.8)",
+    titleClassName: "justify-center md:max-w-full max-w-60 text-center ",
     img: "",
     spareImg: "",
   },

@@ -27,10 +27,7 @@ const Hero = () => {
         
         <SplashCursor />
 
-
-        
-        <div className="container mx-auto relative z-10">
-      <video
+        <video
         autoPlay
         muted
         loop
@@ -40,6 +37,9 @@ const Hero = () => {
       >
         <source src="/videos/blackhole22.mp4" type="video/mp4" />
       </video>
+        
+        <div className="container mx-auto relative z-10">
+      
 
       <SplineSceneBasic />
     </div>
