@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 
 import { StarsCanvas } from "@/components/main/star-background";
 import CosmicFilaments from "@/components/CosmicFilaments";
+import AHoleComponent from "@/components/AHole";
 export const metadata: Metadata = {
   title: "Cosmic Filaments",
   description: "Interactive Three.js Cosmic Filaments Visualization",
@@ -43,6 +44,7 @@ export default function Home() {
         {/* <RecentProjects /> */}
         <Grid />
         <Story />
+        <AHoleComponent />
         <TechStack />
         <Footer />
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { Martian_Mono } from "next/font/google";
 import { StarsCanvas } from "@/components/star-background";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,6 +11,12 @@ export const metadata: Metadata = {
   title: "SR Portfolio",
   description: "Modern & Minimalist JS Mastery Portfolio",
 };
+
+const martianMono = Martian_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"], // Or use a variable font range if available and desired
+  // variable: '--font-martian-mono', // Optional: if you want to use it as a CSS variable
+});
 
 export default function RootLayout({
   children,
