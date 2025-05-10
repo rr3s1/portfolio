@@ -241,7 +241,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p className="varela-round-regular mb-8 text-xs font-normal text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
-            Clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models.
+            Clone of Apple&apos;s iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img

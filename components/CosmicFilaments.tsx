@@ -277,8 +277,8 @@ const CosmicFilaments: React.FC = () => {
 
     composerRef.current = new EffectComposer(rendererRef.current);
     composerRef.current.addPass(new RenderPass(sceneRef.current, cameraRef.current));
-    composerRef.current.addPass(new UnrealBloomPass(new THREE.Vector2(currentMount.clientWidth, currentMount.clientHeight), 0.46, 0.65, 0.9));
-    composerRef.current.addPass(new FilmPass(0.03, 0, 0, false));
+    composerRef.current.addPass(new UnrealBloomPass(new THREE.Vector2(currentMount.clientWidth, currentMount.clientHeight), +      0.46, 0.65, 0.9));  
+  
     composerRef.current.addPass(new OutputPass());
     
     const onPointerDown = () => {

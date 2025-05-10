@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SR Portfolio",
-  description: "Modern & Minimalist JS Mastery Portfolio",
+  description: "Web Dev Portfolio LP",
 };
 
 const martianMono = Martian_Mono({

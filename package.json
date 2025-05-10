@@ -14,7 +14,6 @@
     "@radix-ui/react-toast": "^1.2.11",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
-    "@react-three/postprocessing": "^3.0.4",
     "@sentry/nextjs": "^8.26.0",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.92",

@@ -4,28 +4,28 @@ import Image from "next/image"
 import { SubmitButton } from "./submit-button"
 
 import { toast } from "@/hooks/use-toast"
-import { sendEmail } from "../actions/send-email"
+// import { sendEmail } from "../actions/send-email"
 
 export function ContactForm() {
-  async function handleSubmit(formData: FormData) {
-    const result = await sendEmail(formData)
+  // async function handleSubmit(formData: FormData) {
+  //   // const result = await sendEmail(formData)
 
-    if (result.success) {
-      toast({
-        title: "Success",
-        description: result.success,
-      })
-    } else {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: result.error,
-      })
-    }
-  }
+  //   if (result.success) {
+  //     toast({
+  //       title: "Success",
+  //       description: result.success,
+  //     })
+  //   } else {
+  //     toast({
+  //       variant: "destructive",
+  //       title: "Error",
+  //       description: result.error,
+  //     })
+  //   }
+  // }
 
   return (
-    <form action={handleSubmit} className="space-y-12">
+    <form  className="space-y-12">
       <div className="space-y-4 mt-10">
         <label htmlFor="email" className="block text-xl text-white-100">
           Email address
