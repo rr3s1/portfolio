@@ -42,7 +42,7 @@ export function ContactForm() {
 
       <div className="space-y-4">
         <label htmlFor="message" className="block text-xl text-white-100">
-          This 🌊 is yours, let's 🚀  
+          This is your 🌊, let&apos;s 🚀 ‼️  
         </label>
         <textarea
           id="message"

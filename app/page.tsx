@@ -40,10 +40,11 @@ export default function Home() {
         {/* <HeroScrollDemo /> */}
         <HeroParallaxDemo />
         <TimelineDemo />
-        <Experience />
-        {/* <RecentProjects /> */}
         <Grid />
         <Story />
+        <Experience />
+        {/* <RecentProjects /> */}
+        
         <AHoleComponent />
         <TechStack />
         <Footer />
