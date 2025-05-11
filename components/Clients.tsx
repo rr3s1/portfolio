@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
 import {InfiniteLogoSlider} from "@/components/ui/InfiniteLogoSlider";
@@ -37,14 +38,18 @@ const Techstack = () => {
                             key={company.id} 
                             className="flex varela-round-regular md:max-w-60 max-w-32 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30"
                           >
-                            <img 
+                            <Image 
                               src={company.img}
                               alt={company.name}
+                              width={40}
+                              height={40}
                               className="md:w-10 w-5"
                             />
-                            <img 
+                            <Image 
                               src={company.nameImg}
                               alt={company.name}
+                              width={96}
+                              height={40}
                               className="md:w-24 w-20"
                             />
                           </div>

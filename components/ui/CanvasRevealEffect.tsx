@@ -1,7 +1,8 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import React, { useMemo, useRef } from "react";
+// Import useCallback
+import React, { useMemo, useRef, useCallback } from "react";
 import * as THREE from "three";
 
 export const CanvasRevealEffect = ({
@@ -12,10 +13,6 @@ export const CanvasRevealEffect = ({
                                        dotSize,
                                        showGradient = true,
                                    }: {
-    /**
-     * 0.1 - slower
-     * 1.0 - faster
-     */
     animationSpeed?: number;
     opacities?: number[];
     colors?: number[][];
@@ -181,19 +178,20 @@ type Uniforms = {
         type: string;
     };
 };
+
 const ShaderMaterial = ({
                             source,
                             uniforms,
                             maxFps = 60,
                         }: {
     source: string;
-    hovered?: boolean;
+    hovered?: boolean; // This prop is declared but not used in this component
     maxFps?: number;
     uniforms: Uniforms;
 }) => {
     const { size } = useThree();
     const ref = useRef<THREE.Mesh>();
-    let lastFrameTime = 0;
+    let lastFrameTime = 0; // Consider using useRef for lastFrameTime if it needs to persist across all re-renders
 
     useFrame(({ clock }) => {
         if (!ref.current) return;
@@ -208,7 +206,8 @@ const ShaderMaterial = ({
         timeLocation.value = timestamp;
     });
 
-    const getUniforms = () => {
+    // Memoize getUniforms with useCallback
+    const getUniforms = useCallback(() => {
         const preparedUniforms: any = {};
 
         for (const uniformName in uniforms) {
@@ -242,17 +241,19 @@ const ShaderMaterial = ({
                     };
                     break;
                 default:
+                    // It's good practice to avoid console.error in production library code,
+                    // consider a more robust error handling or warning mechanism if needed.
                     console.error(`Invalid uniform type for '${uniformName}'.`);
                     break;
             }
         }
 
-        preparedUniforms["u_time"] = { value: 0, type: "1f" };
+        preparedUniforms["u_time"] = { value: 0, type: "1f" }; // Initial time
         preparedUniforms["u_resolution"] = {
-            value: new THREE.Vector2(size.width * 2, size.height * 2),
-        }; // Initialize u_resolution
+            value: new THREE.Vector2(size.width * 2, size.height * 2), // Use current size
+        };
         return preparedUniforms;
-    };
+    }, [uniforms, size.width, size.height]); // Dependencies of getUniforms
 
     // Shader material
     const material = useMemo(() => {
@@ -271,7 +272,7 @@ const ShaderMaterial = ({
       }
       `,
             fragmentShader: source,
-            uniforms: getUniforms(),
+            uniforms: getUniforms(), // Call the memoized getUniforms
             glslVersion: THREE.GLSL3,
             blending: THREE.CustomBlending,
             blendSrc: THREE.SrcAlphaFactor,
@@ -279,7 +280,10 @@ const ShaderMaterial = ({
         });
 
         return materialObject;
-    }, [size.width, size.height, source]);
+    // Update dependency array for useMemo
+    // It now depends on `source` and the memoized `getUniforms` function.
+    // `size.width` and `size.height` are implicitly dependencies because `getUniforms` depends on them.
+    }, [source, getUniforms]);
 
     return (
         <mesh ref={ref as any}>

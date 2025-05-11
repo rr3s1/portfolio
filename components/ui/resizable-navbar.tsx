@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
   motion,
@@ -235,7 +236,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-xl font-normal text-black"
     >
-      <img
+      <Image
         src="/RS_logo.svg"
         alt="logo"
         width={70}

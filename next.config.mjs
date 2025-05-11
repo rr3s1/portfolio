@@ -2,7 +2,14 @@ import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com', // For your github user-attachment assets
+        // You might need to be more specific with pathname if possible
+      },
+
       {
         protocol: 'https',
         hostname: 'ui.aceternity.com',

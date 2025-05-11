@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Martian_Mono, Coda, Merienda, Varela_Round } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import { Martian_Mono } from "next/font/google";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +13,25 @@ export const metadata: Metadata = {
 const martianMono = Martian_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"], // Or use a variable font range if available and desired
-  // variable: '--font-martian-mono', // Optional: if you want to use it as a CSS variable
+  variable: '--font-martian-mono', // Optional: if you want to use it as a CSS variable
+});
+
+const coda = Coda({
+  subsets: ["latin"],
+  weight: ["400", "800"],
+  variable: '--font-coda',
+});
+
+const merienda = Merienda({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: '--font-merienda',
+});
+
+const varelaRound = Varela_Round({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: '--font-varela-round',
 });
 
 export default function RootLayout({
@@ -26,11 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Merienda:wght@300..900&family=Varela+Round&display=swap" rel="stylesheet" />
+        {/* Font links removed */}
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${coda.variable} ${merienda.variable} ${varelaRound.variable} ${martianMono.variable}`}>
        
         <ThemeProvider
           attribute="class"

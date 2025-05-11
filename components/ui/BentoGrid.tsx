@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "@/components/ui/GridGlobe";
@@ -103,8 +104,10 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && 'flex justify-center items-center'} h-full relative z-10`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
+              width={100}
+              height={100}
               alt={String(title || id)}
               className={cn(imgClassName, "object-cover object-center opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]")}
             />
@@ -116,8 +119,10 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
+              width={100}
+              height={100}
               alt={String(title || id) + " spare"}
               className={cn(
                 imgClassName,

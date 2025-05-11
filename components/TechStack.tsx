@@ -1,5 +1,6 @@
 // Your original layout.tsx, renamed or used as is
 import React from 'react';
+import Image from 'next/image';
 // We're removing InfiniteMovingCards for techstack, but keeping InfiniteLogoSlider for companies
 // import { InfiniteMovingCards } from "@/components/ui/InfiniteMovingCards"; 
 import { InfiniteLogoSlider } from "@/components/ui/InfiniteLogoSlider";
@@ -32,14 +33,18 @@ const Techstack = () => {
                                 key={company.id}
                                 className="flex flex-col items-center justify-center md:flex-row md:max-w-60 max-w-40 gap-2 p-4 hover:scale-105 transition-transform duration-300 relative z-30 rounded-2xl border border-slate-800 bg-gradient-to-r from-[#0c1225] via-[#0c243e] to-[#0b3557]"
                             >
-                                <img
+                                <Image
                                     src={company.img}
                                     alt={company.name}
+                                    width={40}
+                                    height={40}
                                     className="w-10 h-10 md:w-12 md:h-12 object-contain"
                                 />
-                                <img
+                                <Image
                                     src={company.nameImg}
                                     alt={company.name}
+                                    width={40}
+                                    height={40}
                                     className="h-10 w-20 md:h-8 object-contain max-w-[6rem]"
                                 />
                             </div>

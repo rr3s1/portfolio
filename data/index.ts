@@ -23,7 +23,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl text-justify-start",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
     titleClassName: "justify-start text-justify-start font-bold text-xl",
-    img: "/22.png",
+    img: "./",
     spareImg: "",
   },
   {
@@ -34,7 +34,7 @@ export const gridItems = [
     imgClassName: "absolute right-0 bottom-0 opacity-30 blur-sm contrast-75",
     titleClassName: "justify-start", // UPDATED
     img: "",
-    spareImg: "/public/22.png",
+    spareImg: "/22.png",
   },
   {
     id: 4,

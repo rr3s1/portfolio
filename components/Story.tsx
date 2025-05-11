@@ -1,6 +1,7 @@
 "use client";
 import gsap from "gsap";
 import { useRef } from "react";
+import Image from 'next/image';
 
 const Story = () => {
   const frameRef = useRef<HTMLImageElement>(null);
@@ -46,9 +47,11 @@ const Story = () => {
           <div className="story-img-container">
             <div className="story-img-mask">
               <div className="story-img-content">
-                <img
+                <Image
                   ref={frameRef}
                   onMouseMove={handleMouseMove}
+                  width={1250}
+                  height={650}
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
