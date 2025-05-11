@@ -9,7 +9,7 @@
 @layer base {
     :root {
         /* --background: 205 74% 14% / 0.76;  */
-        --background: 208 71% 4%;
+        --background: 210 100% 3.1%;
         --foreground: 0 0% 3.9%;
 
         --card: 0 0% 100%;
@@ -79,7 +79,7 @@
 
     .dark {
         /* --background: 205 74% 14% / 0.76; */
-        --background: 208 71% 4%;
+        --background: 210 100% 3.1%;
         --foreground: 0 0% 98%;
 
         --card: 0 0% 3.9%;
@@ -108,7 +108,7 @@
         --ring: 0 0% 83.1%;
         
         /* Override dark theme with our custom cosmic theme */
-        --background: 208 71% 4%;
+        --background: 210 100% 3.1%;
         --foreground: var(--navy-900);
         
         --card: var(--navy-800);
