@@ -31,12 +31,12 @@ export const BentoGrid = ({
 
 // Color palette for Bento Grid item titles, inspired by experience.tsx
 const GIRD_TITLE_COLORS = [
-  "text-yellow-300", // Similar to HSBC in experience.tsx
-  "text-pink-300",   // Similar to Greystar in experience.tsx
-  "text-purple-300", // Similar to Bournemouth University in experience.tsx
-  "text-orange-300", // Similar to Orange in experience.tsx
-  "text-sky-600",    // Similar to Capgemini in experience.tsx (note: -600 shade)
-  "text-teal-300",   // Added for variety if more than 5 cards
+  "text-yellow-300", 
+  "text-pink-300",   
+  "text-purple-300", 
+  "text-orange-300", 
+  "text-sky-600",    
+  "text-teal-300", 
 ];
 
 export const BentoGridItem = ({
@@ -68,7 +68,7 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const [isClient, setIsClient] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -83,138 +83,134 @@ export const BentoGridItem = ({
   };
 
   // Select title color based on card ID
-  const selectedTitleColor = GIRD_TITLE_COLORS[(id - 1) % GIRD_TITLE_COLORS.length];
+  const selectedTitleColor = GIRD_TITLE_COLORS[(id - 2) % GIRD_TITLE_COLORS.length];
 
   return (
     <div
-      className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl h-full transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col ",
-        className
-      )}
-      style={{
-        background: `linear-gradient(to right, #0c1225, #0c243e, #0b3557)`
-      }}
-    >
-      {id !== 1 && ( // Conditional gradient border for cards other than ID 1
-        <div className="absolute inset-0 p-[2px] rounded-3xl bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" style={{
-          background: `linear-gradient(to right, ${from}, ${to})`
-        }} />
+    className={cn(
+      "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl h-full transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col",
+      className
+    )}
+    style={
+      id === 1
+        ? { background: "transparent" } // Make ID 1 transparent to show page background
+        : { background: `linear-gradient(to right, #0c1225, #0c243e, #0b3557)` } // Original background for others
+    }
+  >
+    {id !== 1 && ( // Conditional gradient border for cards other than ID 1
+      <div className="absolute inset-0 p-[2px] rounded-3xl bg-gradient-to-r from-red-400 via-sky-500 to-purple-700 opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300" style={{
+        background: `linear-gradient(to right, ${from}, ${to})`
+      }} />
+    )}
+
+    <div className={`${id === 6 && 'flex justify-center items-center'} h-full relative z-10`}>
+      <div className="w-full h-full absolute">
+        {img && (
+          <Image
+            src={img}
+            width={100} // These are placeholders, Next/Image will use intrinsic or layout="fill"
+            height={100}
+            alt={String(title || id)}
+            className={cn(imgClassName, "object-cover object-center opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]")}
+            // Consider layout="fill" if you want images to fill their container
+            // layout="fill"
+            // objectFit="cover" // or "contain"
+          />
+        )}
+      </div>
+      <div
+        className={`absolute right-0 -bottom-5 ${
+          id === 5 && "w-full h-1/2 opacity-80" // Check if this should be h-full
+        }`}
+      >
+        {spareImg && (
+          <Image
+            src={spareImg}
+            width={100} // Placeholder
+            height={100} // Placeholder
+            alt={String(title || id) + " spare"}
+            className={cn(
+              imgClassName, // Reusing imgClassName, ensure it's appropriate for spareImg
+              "object-cover object-center w-full h-full opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]"
+            )}
+            // layout="fill"
+            // objectFit="cover"
+          />
+        )}
+      </div>
+      {id === 6 && isClient && ( // Added isClient check for BackgroundGradientAnimation if it has client-side dependencies
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+        </BackgroundGradientAnimation>
       )}
 
-      <div className={`${id === 6 && 'flex justify-center items-center'} h-full relative z-10`}>
-        <div className="w-full h-full absolute">
-          {img && (
-            <Image
-              src={img}
-              width={100}
-              height={100}
-              alt={String(title || id)}
-              className={cn(imgClassName, "object-cover object-center opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]")}
-            />
-          )}
-        </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full h-1/2 opacity-80"
-          }`}
-        >
-          {spareImg && (
-            <Image
-              src={spareImg}
-              width={100}
-              height={100}
-              alt={String(title || id) + " spare"}
-              className={cn(
-                imgClassName,
-                "object-cover object-center w-full h-full opacity-90 drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]"
-              )}
-            />
-          )}
-        </div>
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            {/* This inner div was empty, content here would be within the gradient animation */}
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
-          </BackgroundGradientAnimation>
+      <div
+        className={cn(
+          titleClassName,
+          "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full flex flex-col px-5 p-5 lg:p-10"
+        )}
+      >
+        {/* Specific background elements for IDs 3, 4, 5 - these might need adjustment if they have opaque backgrounds */}
+        {id === 3 && (
+          <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
+          </div>
+        )}
+        {id === 4 && (
+          <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
+          </div>
+        )}
+        {id === 5 && (
+          <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
+          </div>
         )}
 
-        <div
-          className={cn(
-            titleClassName, // Applied to this container div
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full flex flex-col px-5 p-5 lg:p-10"
-          )}
-        >
-          {id === 3 && (
-            <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
-            </div>
-          )}
-
-          {id === 4 && (
-            <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
-              {/* Placeholder for ID 4 background content if any */}
-            </div>
-          )}
-
-          {id === 5 && (
-            <div className="absolute inset-0 flex justify-center items-center -z-10 overflow-hidden rounded-[calc(1.5rem-2px)] pointer-events-none">
-              {/* Placeholder for ID 5 background content if any */}
-            </div>
-          )}
-
-          {/* --- MODIFIED TITLE --- */}
-          {/* Applied varela-round-regular font, dynamic color, and text shadow */}
+        {title && (
           <div
             className={cn(
-              "varela-round-regular font-bold text-lg lg:text-3xl max-w-96 z-20",
+              "varela-round-regular font-bold text-3xl md:text-lg lg:text-3xl max-w-96 z-20",
               selectedTitleColor,
               "[text-shadow:1px_1px_3px_rgba(0,0,0,0.5)]"
-              // Removed: text-white, group-hover/bento:text-black, transition-colors, duration-200
             )}
           >
             {title}
           </div>
+        )}
 
-          {/* --- MODIFIED DESCRIPTION --- */}
-          {/* Applied font-sans, text-neutral-300, adjusted size, and text shadow */}
-          {description && (
-            <div
-              className={cn(
-                "font-sans text-xs md:text-sm lg:text-2xl text-neutral-300 z-20 py-0 mt-5", // py-0 and mt-5 were part of original styling
-                "[text-shadow:1px_1px_2px_rgba(0,0,0,0.4)]"
-                // Removed: font-merienda, text-[#e5e5eb], group-hover/bento:text-black, transition-colors, duration-400
-              )}
+        {description && (
+          <div
+            className={cn(
+              "font-sans text-2xl md:text-sm lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
+              "[text-shadow:2px_2px_2px_rgba(0,0,0,0.4)]"
+            )}
+          >
+            {description}
+          </div>
+        )}
+
+        {id === 1 && isClient && ( // Added isClient check for GlobeDemo if it has client-side dependencies
+          <div className="flex items-center justify-center w-full h-full z-20"> {/* Ensure GlobeDemo is above any potential background component */}
+            <div className="w-full max-w-[700px] aspect-square md:aspect-auto md:w-full md:h-full">
+              <GlobeDemo />
+            </div>
+          </div>
+        )}
+
+        {id === 6 && (
+          <div className="z-20 relative w-full flex justify-center items-center mt-auto"> {/* mt-auto to push to bottom if container is flex-col */}
+            <HoverButton
+              onClick={handleCopy}
+              className="h-28 w-full max-w-[75rem] rounded-3xl !bg-background text-xl md:text-2xl font-medium"
             >
-              {description}
-            </div>
-          )}
-
-          {id === 1 && (
-            <div className="flex items-center justify-center w-full h-full z-20">
-              <div className="w-full max-w-[700px] aspect-square md:aspect-auto md:w-full md:h-full">
-                <GlobeDemo />
-              </div>
-            </div>
-          )}
-
-          {id === 6 && (
-            // Parent div of the button, ensures it's centered and takes full width to center the button itself
-            <div className="z-20 relative w-full flex justify-center items-center">
-              <HoverButton
-                onClick={handleCopy}
-                // Increased size (2x height, 2x max-width, 2x rounding, ~2x text size)
-                // Centered by its parent div and the overall grid item structure
-                className="h-28 w-full max-w-[75rem] rounded-3xl !bg-background text-xl md:text-2xl font-medium"
-              >
-                <span className="flex items-center justify-center gap-6 h-full"> {/* Increased gap */}
-                  <IoCopyOutline size={44} /> {/* Increased icon size */}
-                  {copied ? 'Email copied' : 'Copy my email'}
-                </span>
-              </HoverButton>
-            </div>
-          )}
-        </div>
+              <span className="flex items-center justify-center gap-6 h-full">
+                <IoCopyOutline size={44} />
+                {copied ? 'Email copied' : 'Copy my email'}
+              </span>
+            </HoverButton>
+          </div>
+        )}
       </div>
-      {children}
     </div>
-  );
+    {children} {/* Render children if any are passed */}
+  </div>
+);
 };

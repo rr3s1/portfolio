@@ -4,15 +4,12 @@ import AHoleComponent from './AHole'
 const Experience = () => {
   return (
     <div className="py-20 text-white relative" id="experience">
-      <div className="absolute inset-0 z-0 opacity-55">
+      <div className="absolute inset-0 z-0 opacity-35">
         <AHoleComponent /> 
-        {/* Ensure AHoleComponent's root div itself is styled to be width: 100%; height: 100%; */}
-        {/* This is typically done in its own CSS, e.g., styles.aHole in AHole.module.css */}
+   
       </div>
 
-      {/* 3. Content wrapper. */}
-      {/* 'relative' is needed for z-index to work correctly in this new stacking context. */}
-      {/* 'z-10' (or any value > 0) places this content above the AHoleComponent. */}
+   
       <div className="relative z-10 mt-20">
         <h1 className="text-center text-5xl font-bold mb-20">
         Work<span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Experience</span>

@@ -19,7 +19,7 @@ export const gridItems = [
   {
     id: 2,
     title: "ABOUT ME",
-    description: "Hi there! My name is Rares and I enjoy developing web apps by using Next.js, Node.js, TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
+    description: "Hi there! I enjoy developing web apps by using Next.js, Node.js, TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start text-2xl text-justify-start",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
     titleClassName: "justify-start text-justify-start font-bold text-2xl",
@@ -63,10 +63,11 @@ export const gridItems = [
     className: "lg:col-span-6 md:col-span-6 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center items-center w-full h-full text-center",
-    img: "", // Existing image
+    img: "", // Existing image  
     spareImg: "",
   },
 ];
+
 
 
 export const techstack = [
@@ -75,8 +76,8 @@ export const techstack = [
       "Leveraging its component-based architecture...",
     name: "React.js",
     title: "Declarative Component Framework",
-    icon: "/public/arrow.svg", // This 'icon' seems to be a generic arrow, not the tech logo
-    logo: "/logos/react.svg" // <<< ADD THIS
+    icon: "/public/arrow.svg", 
+    logo: "/logos/react.svg"
   },
   {
     quote:
@@ -84,7 +85,7 @@ export const techstack = [
     name: "Next.js",
     title: "Server Rendering Framework",
     icon: "/public/arrow.svg",
-    logo: "/logos/next.svg" // <<< ADD THIS
+    logo: "/logos/next.svg" 
   },
   {
     quote:
@@ -92,7 +93,7 @@ export const techstack = [
     name: "TypeScript",
     title: "Static Typed JavaScript",
     icon: "/public/arrow.svg",
-    logo: "/logos/ts.svg" // <<< ADD THIS
+    logo: "/logos/ts.svg" 
   },
   {
     quote:
@@ -100,7 +101,7 @@ export const techstack = [
     name: "Tailwind CSS",
     title: "Utility First CSS",
     icon: "/public/arrow.svg",
-    logo: "/logos/tailwind.svg" // <<< ADD THIS
+    logo: "/logos/tailwind.svg" 
   },
   {
     quote:
@@ -108,7 +109,7 @@ export const techstack = [
     name: "Three.js",
     title: "WebGL 3D Graphics",
     icon: "/public/arrow.svg",
-    logo: "/logos/react.svg" // <<< ADD THIS
+    logo: "/logos/react.svg" 
   },
   {
     quote:
@@ -116,7 +117,7 @@ export const techstack = [
     name: "React Three Fiber & Drei",
     title: "React Three Abstraction",
     icon: "/public/arrow.svg",
-    logo: "/logos/react.svg" // <<< ADD THIS (or .svg if you have it)
+    logo: "/logos/react.svg" 
   },
   {
     quote:
@@ -124,7 +125,7 @@ export const techstack = [
     name: "GSAP (GreenSock)",
     title: "High Performance Animations",
     icon: "/public/arrow.svg",
-    logo: "/logos/gsap.svg" // <<< ADD THIS
+    logo: "/logos/gsap.svg" 
   },
   {
     quote:
@@ -132,7 +133,7 @@ export const techstack = [
     name: "Framer Motion",
     title: "Declarative Motion Library",
     icon: "/public/arrow.svg",
-    logo: "/logos/react.svg" // <<< ADD THIS
+    logo: "/logos/react.svg" 
   },
   {
     quote:
@@ -140,7 +141,7 @@ export const techstack = [
     name: "GitHub",
     title: "Collaborative Code Platform",
     icon: "/public/arrow.svg",
-    logo: "/logos/github.svg" // <<< ADD THIS
+    logo: "/logos/github.svg" 
   },
   {
     quote:
@@ -148,7 +149,7 @@ export const techstack = [
     name: "NPM",
     title: "JavaScript Dependency Manager",
     icon: "/public/arrow.svg",
-    logo: "/logos/npm.svg" // <<< ADD THIS
+    logo: "/logos/npm.svg" 
   },
   {
     quote:
@@ -156,9 +157,8 @@ export const techstack = [
     name: "Webpack",
     title: "Static Module Bundler",
     icon: "/public/arrow.svg",
-    logo: "/logos/webpack.svg" // <<< ADD THIS
+    logo: "/logos/webpack.svg" 
   }
-  // ... add logo paths for all your tech stack items
 ];
 
 
