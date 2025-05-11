@@ -56,7 +56,7 @@ export function SplineSceneBasic() {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full p-8 z-10 flex flex-col justify-center items-center bg-transparent md:static md:top-auto md:translate-y-0 md:left-auto md:w-1/2 md:items-start lg:w-1/3">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center"> {/* items-center here will center the text content */}
             <h2
-              className={`uppercase tracking-widest text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center text-white-100 max-w-120 font-black transition-all duration-500 ease-in-out ${
+              className={`uppercase tracking-widest text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center text-white-100 transition-all duration-500 ease-in-out ${
                 isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
               }`}
             >
@@ -64,18 +64,18 @@ export function SplineSceneBasic() {
             </h2>
 
             {/* Title */}
-            <div className={`text-center text-white-100 bg-background font-semibold transition-all duration-750 ease-in-out ${
+            <div className={`text-center text-white-100 bg-background font-semibold transition-all duration-750 ease-in-ou [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)] ${
                 isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
               }`}>
             <GradientTextDemo/>
             </div>
             <div className="w-full flex justify-center">
               <h1
-                className={`text-xl  sm:text-2xl md:text-3xl lg:text-4xl mt-2 font-light text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out ${
+                className={`text-xl  sm:text-2xl md:text-3xl lg:text-4xl mt-2 font-light text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out  ${
                   isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
                 }`}
               >
- <span style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+ <span style={{ textShadow: '2px 2px 3px rgba(0,0,0,0.7)' }}>
  Designing & crafting 
                 </span>
                 <br />
@@ -90,7 +90,7 @@ export function SplineSceneBasic() {
                     "Experiences",
                   ]}
                   interval={3000}
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-bold [text-shadow:1px_1px_1px_rgba(0,0,0,0.1)]"
                 />
               </h1>
             </div>
