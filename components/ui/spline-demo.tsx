@@ -38,7 +38,7 @@ export function SplineSceneBasic() {
         loop
         className="rotate-90 absolute fade-circle   w-4.5/5 h-4.5/5 object-cover left-1 opacity-100 transition-all  ease-in-out -z-10"
       >
-        <source src="/videos/vibedark.mp4" type="video/mp4" />
+        <source src="/videos/seawon.mp4" type="video/mp4" />
       </video>
           
         </div>

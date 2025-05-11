@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
-import { useEffect, useState } from "react";
-import { SplashCursor } from './ui/SplashCursor'
+
+
 import { AuroraBackground } from './ui/aurora-background'
 
 import { SplineSceneBasic } from './ui/spline-demo'
@@ -16,8 +16,7 @@ const Hero = () => {
       <AuroraBackground className=" pt-36 relative">
       
         <Spotlight />
-        
-        {/* <SplashCursor /> */}
+   
 
 
         
