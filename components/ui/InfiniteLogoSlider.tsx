@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 
 export const InfiniteLogoSlider = ({
     items,
@@ -16,30 +16,11 @@ export const InfiniteLogoSlider = ({
     pauseOnHover?: boolean;
     className?: string;
 }) => {
-    const containerRef = React.useRef<HTMLDivElement>(null);
-    const scrollerRef = React.useRef<HTMLUListElement>(null);
-
-    useEffect(() => {
-        addAnimation();
-    }, []);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const scrollerRef = useRef<HTMLUListElement>(null);
     const [start, setStart] = useState(false);
-    function addAnimation() {
-        if (containerRef.current && scrollerRef.current) {
-            const scrollerContent = Array.from(scrollerRef.current.children);
 
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                if (scrollerRef.current) {
-                    scrollerRef.current.appendChild(duplicatedItem);
-                }
-            });
-
-            getDirection();
-            getSpeed();
-            setStart(true);
-        }
-    }
-    const getDirection = () => {
+    const getDirection = useCallback(() => {
         if (containerRef.current) {
             if (direction === "left") {
                 containerRef.current.style.setProperty(
@@ -53,8 +34,9 @@ export const InfiniteLogoSlider = ({
                 );
             }
         }
-    };
-    const getSpeed = () => {
+    }, [direction]);
+
+    const getSpeed = useCallback(() => {
         if (containerRef.current) {
             if (speed === "fast") {
                 containerRef.current.style.setProperty("--animation-duration", "20s");
@@ -64,7 +46,36 @@ export const InfiniteLogoSlider = ({
                 containerRef.current.style.setProperty("--animation-duration", "80s");
             }
         }
-    };
+    }, [speed]);
+
+    const addAnimation = useCallback(() => {
+        if (containerRef.current && scrollerRef.current) {
+            const existingClones = scrollerRef.current.querySelectorAll('[data-cloned="true"]');
+            existingClones.forEach(node => node.remove());
+
+            const scrollerContent = Array.from(scrollerRef.current.children);
+
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true) as HTMLElement;
+                duplicatedItem.setAttribute('data-cloned', 'true');
+                duplicatedItem.setAttribute('aria-hidden', 'true');
+                if (scrollerRef.current) {
+                    scrollerRef.current.appendChild(duplicatedItem);
+                }
+            });
+
+            getDirection();
+            getSpeed();
+            setStart(true); // setStart is stable, no need to add to deps
+        }
+    }, [getDirection, getSpeed]); // `items` removed from here
+
+    useEffect(() => {
+        // Run addAnimation if the `items` prop changes, or if `addAnimation` itself changes
+        // (which happens if `direction` or `speed` props change, causing `getDirection`/`getSpeed` to change)
+        addAnimation();
+    }, [addAnimation, items]); // `items` added here
+
     return (
         <div
             ref={containerRef}
@@ -83,7 +94,7 @@ export const InfiniteLogoSlider = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        key={idx}
+                        key={typeof item === 'string' ? item + idx : idx}
                         className="flex-shrink-0"
                     >
                         {item}
@@ -92,4 +103,4 @@ export const InfiniteLogoSlider = ({
             </ul>
         </div>
     );
-}; 
+};

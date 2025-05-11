@@ -15,8 +15,12 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  // wordsArray is re-calculated on every render if 'words' changes.
+  // This is fine for this use case as split isn't too expensive.
+  const wordsArray = words.split(" ");
+
   useEffect(() => {
+    // The effect will now re-run if 'animate', 'words', 'filter', or 'duration' changes.
     animate(
       "span",
       {
@@ -24,11 +28,11 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 2,
+        duration: duration ? duration : 2, // Uses the 'duration' prop, with a fallback to 2 if duration is falsy (e.g., 0)
         delay: stagger(0.4),
       }
     );
-  }, [scope.current]);
+  }, [animate, words, filter, duration]); // <-- CORRECTED dependency array
 
   const renderWords = () => {
     return (
@@ -38,9 +42,7 @@ export const TextGenerateEffect = ({
             <motion.span
               key={word + idx}
               className={`${idx > 3 ? 'text-purple':'dark:text-white text-black' } opacity-0`}
-          >
-              
-            
+            >
               {word}{" "}
             </motion.span>
           );
@@ -59,4 +61,3 @@ export const TextGenerateEffect = ({
     </div>
   );
 };
-              

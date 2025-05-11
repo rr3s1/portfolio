@@ -1,15 +1,15 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 
 export const InfiniteMovingCards = ({
-                                        items = [],
-                                        direction = "left",
-                                        speed = "fast",
-                                        pauseOnHover = true,
-                                        className,
-                                    }: {
+    items = [],
+    direction = "left",
+    speed = "fast",
+    pauseOnHover = true,
+    className,
+}: {
     items: {
         quote: string;
         icon?: string;
@@ -21,30 +21,11 @@ export const InfiniteMovingCards = ({
     pauseOnHover?: boolean;
     className?: string;
 }) => {
-    const containerRef = React.useRef<HTMLDivElement>(null);
-    const scrollerRef = React.useRef<HTMLUListElement>(null);
-
-    useEffect(() => {
-        addAnimation();
-    }, []);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const scrollerRef = useRef<HTMLUListElement>(null);
     const [start, setStart] = useState(false);
-    function addAnimation() {
-        if (containerRef.current && scrollerRef.current) {
-            const scrollerContent = Array.from(scrollerRef.current.children);
 
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                if (scrollerRef.current) {
-                    scrollerRef.current.appendChild(duplicatedItem);
-                }
-            });
-
-            getDirection();
-            getSpeed();
-            setStart(true);
-        }
-    }
-    const getDirection = () => {
+    const getDirection = useCallback(() => {
         if (containerRef.current) {
             if (direction === "left") {
                 containerRef.current.style.setProperty(
@@ -58,8 +39,9 @@ export const InfiniteMovingCards = ({
                 );
             }
         }
-    };
-    const getSpeed = () => {
+    }, [direction]);
+
+    const getSpeed = useCallback(() => {
         if (containerRef.current) {
             if (speed === "fast") {
                 containerRef.current.style.setProperty("--animation-duration", "20s");
@@ -69,15 +51,36 @@ export const InfiniteMovingCards = ({
                 containerRef.current.style.setProperty("--animation-duration", "80s");
             }
         }
-    };
+    }, [speed]);
 
-    const cosmicNeonStyles = [
-        { from: "#0C1023", to: "#062A4C" },
-        { from: "#0C1023", to: "#0B3A5E" },
-        { from: "#0C1023", to: "#0E4971" },
-        { from: "#0C1023", to: "#0F5785" },
-        { from: "#0C1023", to: "#11679A" },
-    ];
+    const addAnimation = useCallback(() => {
+        if (containerRef.current && scrollerRef.current) {
+            const existingClones = scrollerRef.current.querySelectorAll('[data-cloned="true"]');
+            existingClones.forEach(node => node.remove());
+            
+            const scrollerContent = Array.from(scrollerRef.current.children);
+
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true) as HTMLElement;
+                duplicatedItem.setAttribute('data-cloned', 'true');
+                duplicatedItem.setAttribute('aria-hidden', 'true');
+                if (scrollerRef.current) {
+                    scrollerRef.current.appendChild(duplicatedItem);
+                }
+            });
+
+            getDirection();
+            getSpeed();
+            setStart(true); // setStart is stable, no need to add to deps
+        }
+    }, [getDirection, getSpeed]); // `items` removed from here
+
+    useEffect(() => {
+        // Run addAnimation if the `items` prop changes, or if `addAnimation` itself changes
+        addAnimation();
+    }, [addAnimation, items]); // `items` added here
+
+    // const cosmicNeonStyles = [ ... ]; // This was unused. Removed for clarity or can be kept if planned for future use.
 
     return (
         <div
@@ -102,7 +105,7 @@ export const InfiniteMovingCards = ({
                             style={{
                                 background: "linear-gradient(to right, #0c1225, #0c243e, #0b3557)"
                             }}
-                            key={idx}
+                            key={item.name + idx}
                         >
                             <blockquote>
                                 <div
