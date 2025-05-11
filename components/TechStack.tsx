@@ -4,10 +4,11 @@ import Image from 'next/image';
 // We're removing InfiniteMovingCards for techstack, but keeping InfiniteLogoSlider for companies
 // import { InfiniteMovingCards } from "@/components/ui/InfiniteMovingCards"; 
 import { InfiniteLogoSlider } from "@/components/ui/InfiniteLogoSlider";
-import { techstack, companies } from "@/data"; // Make sure techstack has the 'logo' property
+import { techstack, companies, techstackV2 } from "@/data"; // Make sure techstack has the 'logo' property
 
 // Import the new 3D component
 import TechSphereCanvas from '@/components/TechSphere'; // Adjust path if needed
+import { InfiniteMovingCards } from './ui/InfiniteMovingCards';
 
 const Techstack = () => {
     return (
@@ -17,7 +18,16 @@ const Techstack = () => {
             </h1>
 
             {/* Section for the 3D Tech Sphere */}
-            <div className="flex flex-col items-center w-full max-lg:mt-10 mt-10 mb-20 pointer-events-none">
+            <div className="flex flex-col items-center w-full max-lg:mt-10 mt-10 mb-20 ">
+                
+                 <InfiniteMovingCards
+                      items={techstackV2}
+                      direction="right"
+                      speed="slow"
+                  />
+                
+                
+                
                 {/* Ensure techstack data is passed correctly */}
                 <TechSphereCanvas techItems={techstack.map(item => ({ name: item.name, logo: item.logo }))} />
             </div>

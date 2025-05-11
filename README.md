@@ -16,8 +16,8 @@
   </p>
 </div>
 
+![Demo animation](public/demo.gif)
 
-![Hero](https://github.com/user-attachments/assets/aa5ab4fe-fe86-423f-918a-0da890f4ca96)
 
 > **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
 
@@ -191,7 +191,7 @@ MIT License - see LICENSE.md for details.
 
 ## 10. Screenshots <a id="screenshots"></a>
 
-
+![Hero](https://github.com/user-attachments/assets/aa5ab4fe-fe86-423f-918a-0da890f4ca96)
 ![Core](https://github.com/user-attachments/assets/5bffda05-6031-4199-9de3-c8e0f16610b1)
 ![image](https://github.com/user-attachments/assets/1df84138-1fb2-4dbc-9800-ea0132ab1051)
 ![image](https://github.com/user-attachments/assets/47318a47-55d9-4af9-ba3d-2065683939fe)

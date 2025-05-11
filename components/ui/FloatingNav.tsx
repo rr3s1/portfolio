@@ -41,7 +41,7 @@ export const FloatingNav = ({
             variant="primary"
             // className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
           >
-            SEND EMAIL
+            CONTACT
           </NavbarButton>
           
         </div>
@@ -72,7 +72,13 @@ export const FloatingNav = ({
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
-           
+            <NavbarButton
+              onClick={() => setIsMobileMenuOpen(false)}
+              variant="primary"
+              className="w-full"
+            >
+              Login
+            </NavbarButton>
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               as="a"
@@ -80,7 +86,7 @@ export const FloatingNav = ({
               variant="primary"
               className="w-full"
             >
-              Send Email
+              Book a call
             </NavbarButton>
           </div>
         </MobileNavMenu>
