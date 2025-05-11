@@ -19,20 +19,20 @@ export const gridItems = [
   {
     id: 2,
     title: "ABOUT ME",
-    description: "Hi there! My name is Rares and I enjoy developing web apps by using Next.js, Node.js and TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start font-bold text-xl text-justify-start",
+    description: "Hi there! My name is Rares and I enjoy developing web apps by using Next.js, Node.js, TypeScript with a keen eye for visually captivating UI/UX design. Experienced in delivering high performing, scalable applications that integrate advanced animation libraries (GSAP, Framer Motion) and cutting-edge 3D frameworks (Three.js, React Three Fiber). I prioritize clean design, strong security practices and efficiency in every project.",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 justify-start text-justify-start text-2xl text-justify-start",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-30 blur-sm contrast-75 ",
-    titleClassName: "justify-start text-justify-start font-bold text-xl",
-    img: "./",
+    titleClassName: "justify-start text-justify-start font-bold text-2xl",
+    img: "/DataRef.png",
     spareImg: "",
   },
   {
     id: 3,
     title: "BACK-END",
-    description: "Node.js, AWS, Appwrite, Firebase", // UPDATED
+    description: "Node.js, AWS, Appwrite, Firebase",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 opacity-30 blur-sm contrast-75",
-    titleClassName: "justify-start", // UPDATED
+    titleClassName: "justify-start text-justify-start font-bold text-2xl", 
     img: "",
     spareImg: "/22.png",
   },
@@ -42,19 +42,19 @@ export const gridItems = [
     description: "React.js, Next.js, Vite, TypeScript, JavaScript (ES6+), React Native",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "justify-start text-justify-start font-bold text-2xl",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
   {
     id: 5,
     title: "3D & ANIMATION",
-    description: "Three.js, React Three Fiber & Drei, GSAP, Framer Motion", // Add a relevant description
+    description: "Three.js, React Three Fiber & Drei, GSAP, Framer Motion", 
     className: "md:col-span-3 md:row-span-1",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60", // Existing image
-    titleClassName: "justify-start", // UPDATED for centering text over video
-    img: "/b5.svg", // Existing image
-    spareImg: "/grid.svg", // Existing spare image
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60", 
+    titleClassName: "justify-start text-justify-start font-bold text-2xl", 
+    img: "/b5.svg", 
+    spareImg: "/grid.svg", 
   },
   {
     id: 6,

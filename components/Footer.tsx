@@ -18,9 +18,9 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-center z-10 relative ">
-                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Ready </span>
-                 <span className="text-gradient-gold"> to </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> elevate your next project
-                     </span> ?
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Let&apos;s </span>
+                 <span className="text-gradient-gold"> Build </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Something Great Together
+                     </span>
                 </h1>
 
                 <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center varela-round-regular  max-w-xl">
