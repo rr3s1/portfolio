@@ -179,7 +179,7 @@ export const BentoGridItem = ({
         {description && (
           <div
             className={cn(
-              "quantico-regular text-2xl md:text-sm lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
+              "quantico-regular text-2xl md:text-2xl lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
               "[text-shadow:1px_1px_2px_rgba(0,0,0,0.4)]"
             )}
           >
