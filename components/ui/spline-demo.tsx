@@ -35,7 +35,7 @@ export function SplineSceneBasic() {
         autoPlay
         muted
         loop
-        className="rotate-20 absolute fade-circle left-[120px] w-4.5/5 h-4.5/5 object-cover opacity-100 transition-all bottom-100 ease-in-out -z-10"
+        className="rotate-20 absolute fade-circle left-[110px] w-4.5/5 h-4.5/5 object-cover opacity-100 transition-all bottom-100 ease-in-out -z-10"
       >
         <source src="/videos/seawon.mp4" type="video/mp4" />
       </video>
