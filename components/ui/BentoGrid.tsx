@@ -180,7 +180,7 @@ export const BentoGridItem = ({
           <div
             className={cn(
               "font-sans text-2xl md:text-sm lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
-              "[text-shadow:2px_2px_2px_rgba(0,0,0,0.4)]"
+              "[text-shadow:1px_1px_2px_rgba(0,0,0,0.4)]"
             )}
           >
             {description}
@@ -189,7 +189,7 @@ export const BentoGridItem = ({
 
         {id === 1 && isClient && ( // Added isClient check for GlobeDemo if it has client-side dependencies
           <div className="flex items-center justify-center w-full h-full z-20"> {/* Ensure GlobeDemo is above any potential background component */}
-            <div className="w-full max-w-[700px] aspect-square md:aspect-auto md:w-full md:h-full">
+            <div className="w-full h-full aspect-square md:aspect-auto md:w-full md:h-full">
               <GlobeDemo />
             </div>
           </div>
