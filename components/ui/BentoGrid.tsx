@@ -167,7 +167,7 @@ export const BentoGridItem = ({
         {title && (
           <div
             className={cn(
-              "varela-round-regular font-bold text-3xl md:text-lg lg:text-3xl max-w-96 z-20",
+              "quantico-regular  font-bold text-3xl md:text-lg lg:text-3xl max-w-96 z-20",
               selectedTitleColor,
               "[text-shadow:1px_1px_3px_rgba(0,0,0,0.5)]"
             )}
@@ -179,7 +179,7 @@ export const BentoGridItem = ({
         {description && (
           <div
             className={cn(
-              "font-sans text-2xl md:text-sm lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
+              "quantico-regular  text-2xl md:text-sm lg:text-2xl text-neutral-300 group-hover/bento:text-black-200 transition-colors duration-300 z-20 py-0 mt-5",
               "[text-shadow:1px_1px_2px_rgba(0,0,0,0.4)]"
             )}
           >

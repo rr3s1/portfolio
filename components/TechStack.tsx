@@ -1,19 +1,17 @@
-// Your original layout.tsx, renamed or used as is
+
 import React from 'react';
 import Image from 'next/image';
-// We're removing InfiniteMovingCards for techstack, but keeping InfiniteLogoSlider for companies
-// import { InfiniteMovingCards } from "@/components/ui/InfiniteMovingCards"; 
-import { InfiniteLogoSlider } from "@/components/ui/InfiniteLogoSlider";
-import { techstack, companies, techstackV2 } from "@/data"; // Make sure techstack has the 'logo' property
 
-// Import the new 3D component
-import TechSphereCanvas from '@/components/TechSphere'; // Adjust path if needed
+import { InfiniteLogoSlider } from "@/components/ui/InfiniteLogoSlider";
+import { techstack, companies, techstackV2 } from "@/data"; 
+
+import TechSphereCanvas from '@/components/TechSphere'; 
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards';
 
 const Techstack = () => {
     return (
         <div className="py-20" id="techstack">
-            <h1 className="text-center text-5xl font-bold mb-10 ">
+            <h1 className="text-center text-5xl md:text-6xl font-bold mb-10 ">
                 Tech <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span>
             </h1>
 
@@ -28,12 +26,11 @@ const Techstack = () => {
                 
                 
                 
-                {/* Ensure techstack data is passed correctly */}
+        
                 <TechSphereCanvas techItems={techstack.map(item => ({ name: item.name, logo: item.logo }))} />
             </div>
 
-            {/* You can keep the company logos slider if you wish, or integrate them into another 3D object */}
-            {/* For this example, I'm keeping it separate as requested */}
+          
             <div className="flex flex-col items-center max-lg:mt-10 mt-20">
             
                 <div className="relative w-full [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">

@@ -117,10 +117,10 @@ export const Header = () => {
         p:  md:text-2xl (1.5rem / 24px)
         Ratio: 3 / 1.5 = 2x
     */}
-    <h1 className="text-4xl md:text-5xl font-bold text-gradient-magenta dark:text-white">
+    <h1 className="text-5xl md:text-6xl font-bold text-gradient-magenta dark:text-white">
        Design
     </h1>
-    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent">
+    <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent">
       Exploration
     </h1>
     <p className="max-w-2xl text-lg md:text-2xl font-bold mt-8 dark:text-sky-400">

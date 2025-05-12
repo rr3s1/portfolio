@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Martian_Mono, Coda, Merienda, Varela_Round } from "next/font/google";
+import { Inter, Martian_Mono, Coda, Merienda, Varela_Round, Quantico } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
@@ -34,6 +34,13 @@ const varelaRound = Varela_Round({
   variable: '--font-varela-round',
 });
 
+const quantico = Quantico({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-quantico",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,12 +51,12 @@ export default function RootLayout({
       <head>
         {/* Font links removed */}
       </head>
-      <body className={`${inter.className} ${coda.variable} ${merienda.variable} ${varelaRound.variable} ${martianMono.variable}`}>
+      <body className={`${inter.className} ${coda.variable} ${merienda.variable} ${varelaRound.variable} ${martianMono.variable} ${quantico.variable}`}>
        
         <ThemeProvider
           attribute="class"
-          forcedTheme="dark"     
-          enableSystem={false} 
+          defaultTheme="dark"     
+          enableSystem={true} 
           >
             {children}
           </ThemeProvider>

@@ -5,6 +5,7 @@ const svgToDataUri = require("mini-svg-data-uri");
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
+  
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
@@ -130,6 +131,11 @@ const config = {
 			"color-4": "hsl(var(--color-4))",
 			"color-5": "hsl(var(--color-5))",
   		},
+      fontFamily: {
+        title: ["var(--font-title)", "cursive"],
+        body: ["var(--font-body)", "sans-serif"],
+        quantico: ["var(--font-quantico)", "sans-serif"],
+      },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

@@ -31,7 +31,7 @@ export default function Home() {
     <main className="relative bg-gradient-to-br from-deepIndigo via-darkPurple to-darkIndigo flex justify-center items-center flex-col
     overflow-hidden mx-auto sm:px-10 px-5"> {/* overflow-hidden on main is fine */}
       
-      <StarsCanvas /> {/* This is likely position: fixed or absolute, acting as a general background */}
+      {/* <StarsCanvas /> This is likely position: fixed or absolute, acting as a general background */}
      
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems}/>
