@@ -5,6 +5,13 @@ import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const quantico = Quantico({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-quantico",
+});
+
 export const metadata: Metadata = {
   title: "SR Portfolio",
   description: "Web Dev Portfolio LP",
@@ -34,13 +41,6 @@ const varelaRound = Varela_Round({
   variable: '--font-varela-round',
 });
 
-const quantico = Quantico({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-quantico",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,12 +51,12 @@ export default function RootLayout({
       <head>
         {/* Font links removed */}
       </head>
-      <body className={`${inter.className} ${coda.variable} ${merienda.variable} ${varelaRound.variable} ${martianMono.variable} ${quantico.variable}`}>
+      <body className={`${inter.className} ${coda.variable} ${merienda.variable} ${varelaRound.variable} ${martianMono.variable}  ${quantico.variable}`}>
        
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"     
-          enableSystem={true} 
+          forcedTheme="dark"     
+          enableSystem={false} 
           >
             {children}
           </ThemeProvider>

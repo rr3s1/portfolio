@@ -10,7 +10,7 @@ interface AnimatedTextCycleProps {
 
 export default function AnimatedTextCycle({
   words,
-  interval = 3000,
+  interval = 5000,
   className = "",
 }: AnimatedTextCycleProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,7 +70,7 @@ export default function AnimatedTextCycle({
       <div 
         ref={measureRef} 
         aria-hidden="true"
-        className="absolute opacity-0 pointer-events-none "
+        className="absolute opacity-0 pointer-events-none min-h-10"
         style={{ visibility: "hidden",  }}
       >
         {words.map((word, i) => (

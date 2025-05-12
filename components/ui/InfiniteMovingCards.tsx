@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
                 {items?.map((item, idx) => {
                     return (
                         <li
-                            className="w-[90vw] max-w-full quantico-regular relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
+                            className="w-[90vw] max-w-full quantico-regular  relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:py-6 md:w-[60vh]"
                             style={{
                                 background: "linear-gradient(to right, #0c1225, #0c243e, #0b3557)"
                             }}
@@ -110,9 +110,9 @@ export const InfiniteMovingCards = ({
                             <blockquote>
                                 <div
                                     aria-hidden="true"
-                                    className="user-select-none quantico-regular -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                                    className="user-select-none quantico-regular  -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
                                 ></div>
-                                <span className=" quantico-regular relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
+                                <span className=" quantico-regular  relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
                                     {item.quote}
                                 </span>
                                 <div className="relative z-20 mt-6 flex flex-row items-center">

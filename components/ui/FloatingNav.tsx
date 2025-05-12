@@ -32,8 +32,8 @@ export const FloatingNav = ({
       <NavBody>
      
         <NavbarLogo />
-        <NavItems className="text-xl text-white-100 font-quantico" items={navItems} />
-        <div className="flex items-center gap-4">
+        <NavItems className="text-xl text-white-100" items={navItems} />
+        <div className="flex items-center gap-4 quantico-regular">
         
           <NavbarButton
             as="a"
@@ -66,7 +66,7 @@ export const FloatingNav = ({
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-600 font-quantico dark:text-neutral-300"
+              className="relative text-neutral-600 dark:text-neutral-300"
             >
               <span className="block">{item.name}</span>
             </a>

@@ -10,8 +10,8 @@ const Techstack = () => {
     return (
         <div className="py-20" id="techstack">
            
-            <h1 className="text-center bg-black-100 text-5xl md:text-6xl font-bold mb-10">
-        Tech <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
+            <h1 className="text-center text-5xl font-bold mb-10">
+        Tech <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
       </h1>
 
             <div className="flex flex-col items-center max-lg:mt-10 mt-20">

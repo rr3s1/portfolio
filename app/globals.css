@@ -1,5 +1,7 @@
 /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Manrope:wght@400;500&family=Merienda:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Manrope:wght@400;500&family=Merienda:wght@800&family=Quantico:wght@400;700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +11,7 @@
 @layer base {
     :root {
         /* --background: 205 74% 14% / 0.76;  */
-        --background: 210 100% 3.1%;
+        --background: 207 95% 4.3% / 0.79;
         --foreground: 0 0% 3.9%;
 
         --card: 0 0% 100%;
@@ -68,7 +70,7 @@
         /* Font families */
         --font-title: 'Merienda', cursive;
         --font-body: 'Manrope', Arial, sans-serif;
-        --font-quantico: 'Quantico', sans-serif;
+         --font-quantico: 'Quantico', sans-serif;
         
         --color-1: 330 100% 40%; /* Dark Neon Pink */
         --color-2: 140 100% 55%; /* Bright Electric Green */
@@ -80,7 +82,7 @@
 
     .dark {
         /* --background: 205 74% 14% / 0.76; */
-        --background: 210 100% 3.1%;
+        --background: 207 95% 4.3% / 0.79;
         --foreground: 0 0% 98%;
 
         --card: 0 0% 3.9%;
@@ -109,7 +111,7 @@
         --ring: 0 0% 83.1%;
         
         /* Override dark theme with our custom cosmic theme */
-        --background: 210 100% 3.1%;
+        --background: 207, 95%, 8%;
         --foreground: var(--navy-900);
         
         --card: var(--navy-800);
@@ -179,30 +181,14 @@ p.varela-round-regular {
     mask-image: radial-gradient(
         circle at 50% 50%,          /* centre */
         rgba(0,0,0,1)   0%,         /* fully visible in the centre   */
-        rgba(0,0,0,1)  70%,         /* stay visible for a bit        */
-        rgba(0,0,0,0)  100%          /* fade to transparent by edge   */
+        rgba(0,0,0,1)  40%,         /* stay visible for a bit        */
+        rgba(0,0,0,0)  75%          /* fade to transparent by edge   */
     );
     mask-mode: alpha;               /* use the alpha channel         */
-    -webkit-mask-image: radial-gradient(circle at 48% 47%,
-        rgb(0, 0, 0) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 65%);
+    -webkit-mask-image: radial-gradient(circle at 48% 48%,
+        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 65%);
   }
 @layer utilities {
-    .deep-indigo-purple-gradient {
-        background: linear-gradient(135deg, #120026 0%, #2C003E 50%, #0A001F 100%);
-      }
-    .teal-cyan-gradient {
-        /* 135° gives a subtle diagonal; tweak as desired */
-        background: linear-gradient(135deg, #0B3D91 0%, #1CA3A6 100%);}
-    .aurora-bg {
-        @apply before:content-[''] before:fixed before:inset-0 before:-z-50
-               before:bg-aurora before:bg-no-repeat before:bg-cover;
-    
-        /* Uncomment the next line if you enabled the animation above */
-        /* @apply before:animate-aurora-move before:bg-[length:200%_200%]; */
-      }
-    .cosmic-bg {
-        @apply before:content-[''] before:fixed before:inset-0 before:-z-50 before:bg-cosmic;
-      }
     .heading {
         @apply font-bold text-4xl md:text-5xl text-center;
     }

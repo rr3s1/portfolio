@@ -167,7 +167,7 @@ export const techstackV2 = [
       "Builds interactive UIs using component architecture and Virtual DOM for performance. Declarative logic and hooks simplify state management. Its vast ecosystem and community support make it ideal for complex SPAs.",
     name: "React.js",
     title: "Declarative Component Framework",
-    icon: "/logos/react.svg"
+    icon: "/logos/react.svg" // Keeping original as no direct 'react.png' or similar in TECHLIST
   },
   {
     quote:

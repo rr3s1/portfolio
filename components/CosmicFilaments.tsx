@@ -395,20 +395,16 @@ const CosmicFilaments: React.FC = () => {
   }, [makeFilaments, makeStarfield, applyPattern, queueNext]);
 
   return (
-    <section        // ⭐ new semantic wrapper (optional)
-    className="relative w-full min-h-[120vh] mt-32 /* pull up so fade overlaps Techstack a bit */"
-  >
-    <div
-      ref={mountRef}
-      className={`
-        w-full h-full                  /* canvas fills the whole section */
-        ${styles.container}
-        ${styles.fadeCircle}
-      `}
-    >
-      <div className={styles.instructions}>Tap / click to morph</div>
-    </div>
-  </section>
+    <>
+      <div
+        ref={mountRef}
+        className={`${styles.container} ${styles.fadeCircle}`}
+      >
+        <div className={styles.instructions}>
+          Tap / click to morph
+        </div>
+      </div>
+    </>
   );
 };
 

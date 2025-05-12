@@ -63,7 +63,7 @@ export function SplineSceneBasic() {
             </h2>
 
             {/* Title */}
-            <div className={`text-center text-white-100 bg-background font-semibold transition-all duration-750 ease-in-ou [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)] ${
+            <div className={`text-center text-white-100 tracking-widest bg-background font-bold transition-all duration-750 ease-in-out [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)] ${
                 isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
               }`}>
             <GradientTextDemo/>

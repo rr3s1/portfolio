@@ -67,7 +67,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn("sticky inset-x-0 top-5 z-40 w-full", className)}
+      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -121,7 +121,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
-      style={{ fontFamily: "var(--font-quantico)", fontWeight: 800 }}
+      style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
     >
       {items.map((item, idx) => (
         <a
@@ -130,7 +130,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
-          style={{ fontFamily: "var(--font-quantico)", fontWeight: 800 }}
+          style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
         >
           {hovered === idx && (
             <motion.div
@@ -166,7 +166,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/100 quantico-regular dark:bg-neutral-950/80",
+        visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
     >
@@ -239,8 +239,8 @@ export const NavbarLogo = () => {
       <Image
         src="/RS_logo.svg"
         alt="logo"
-        width={60}
-        height={60}
+        width={70}
+        height={70}
       />
       
     </a>
