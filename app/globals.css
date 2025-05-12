@@ -179,13 +179,29 @@ p.varela-round-regular {
         circle at 50% 50%,          /* centre */
         rgba(0,0,0,1)   0%,         /* fully visible in the centre   */
         rgba(0,0,0,1)  40%,         /* stay visible for a bit        */
-        rgba(0,0,0,0)  75%          /* fade to transparent by edge   */
+        rgba(0,0,0,0)  100%          /* fade to transparent by edge   */
     );
     mask-mode: alpha;               /* use the alpha channel         */
-    -webkit-mask-image: radial-gradient(circle at 50% 50%,
-        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 75%);
+    -webkit-mask-image: radial-gradient(circle at 48% 47%,
+        rgb(0, 0, 0) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 62%);
   }
 @layer utilities {
+    .deep-indigo-purple-gradient {
+        background: linear-gradient(135deg, #120026 0%, #2C003E 50%, #0A001F 100%);
+      }
+    .teal-cyan-gradient {
+        /* 135° gives a subtle diagonal; tweak as desired */
+        background: linear-gradient(135deg, #0B3D91 0%, #1CA3A6 100%);}
+    .aurora-bg {
+        @apply before:content-[''] before:fixed before:inset-0 before:-z-50
+               before:bg-aurora before:bg-no-repeat before:bg-cover;
+    
+        /* Uncomment the next line if you enabled the animation above */
+        /* @apply before:animate-aurora-move before:bg-[length:200%_200%]; */
+      }
+    .cosmic-bg {
+        @apply before:content-[''] before:fixed before:inset-0 before:-z-50 before:bg-cosmic;
+      }
     .heading {
         @apply font-bold text-4xl md:text-5xl text-center;
     }

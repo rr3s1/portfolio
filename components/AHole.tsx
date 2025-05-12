@@ -377,7 +377,7 @@ const AHoleComponent = () => {
   return (
     <div
     ref={componentRootRef}
-    className={`${styles.aHole} ${styles.fadeCircle}`} // <--- MODIFIED HERE
+    className={`${styles.aHole} ${styles.fadeCircle}`  } // <--- MODIFIED HERE
   >
       <canvas ref={canvasRef} className={styles.jsCanvas}></canvas>
       <div className={styles.aura}></div>

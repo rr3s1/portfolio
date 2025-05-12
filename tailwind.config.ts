@@ -26,12 +26,21 @@ const config = {
   		}
   	},
   	extend: {
+		backgroundImage: {
+			aurora: 'linear-gradient(135deg, #28A745 0%, #17A2B8 50%, #6610F2 100%)',
+			  cosmic: 'linear-gradient(135deg,#4B0082 0%,#4169E1 100%)',
+			},
 		boxShadow: {
 			neon: '0 0 8px rgba(222,60,191,0.6), 0 0 16px rgba(83,191,200,0.5)',
 			neonHover: '0 0 8px rgba(222,60,191,0.8), 0 0 16px rgba(83,191,200,0.7), 0 0 24px rgba(228,173,104,0.6)',
 			neonCard: '0 0 10px rgba(139, 92, 246, 0.6)',
 		  },
   		colors: {
+			deepIndigo: '#120026',
+			darkPurple: '#2C003E',
+			darkIndigo: '#0A001F',
+			darkCyan:  '#0B3D91',
+			teal:      '#1CA3A6',
 			neonPink: '#DE3CBF',
 			neonOrange: '#f97316',
 			neonPurple: '#8b5cf6',
@@ -127,6 +136,10 @@ const config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+			'aurora-shift': {
+          '0%,100%': { backgroundPosition: '0% 50%' },
+          '50%':     { backgroundPosition: '100% 50%' },
+        },
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -261,6 +274,7 @@ const config = {
   			'tilt-beam': 'tiltBeam 10s ease-in-out infinite',
   			first: 'moveVertical 30s ease infinite',
   			second: 'moveInCircle 20s reverse infinite',
+			'aurora-move': 'aurora-shift 12s ease-in-out infinite',
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',

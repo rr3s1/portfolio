@@ -39,7 +39,7 @@ const Story = () => {
   };
 
   return (
-    <div id="story" className="container mx-auto w-full h-full bg-background text-blue-50 ">
+    <div id="story" className="container mx-auto w-full h-full aurora-bg text-blue-50 ">
       <div className="flex w-full h-full flex-col items-center pt-10 ">
         
         <div className="relative size-full">

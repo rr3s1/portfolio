@@ -396,15 +396,17 @@ const CosmicFilaments: React.FC = () => {
 
   return (
     <>
-      <div
-        ref={mountRef}
-        className={`${styles.container} ${styles.fadeCircle}`}
-      >
-        <div className={styles.instructions}>
-          Tap / click to morph
-        </div>
-      </div>
-    </>
+    <div
+      ref={mountRef}
+      className={`
+        ${styles.container}      /* local CSS-module classes          */
+        ${styles.fadeCircle}
+        aurora-bg                /* ⬅️ global Tailwind utility        */
+      `}
+    >
+      <div className={styles.instructions}>Tap / click to morph</div>
+    </div>
+  </>
   );
 };
 

@@ -2,8 +2,7 @@
 
 import { SplineScene } from "@/components/ui/spline"
 import { Card } from "@/components/ui/card"
-
-import AnimatedTextCycle from "./animated-text-cycle"
+import  TextRotator from "./classy-hero"
 
 import React, { useState, useEffect } from "react"
 // import { GradientText } from "./gradient-text" // Assuming this might be unused or part of GradientTextDemo
@@ -28,7 +27,7 @@ export function SplineSceneBasic() {
 
   return (
     <Card className="w-full h-[750px] relative overflow-hidden border-0 bg-transparent shadow-none">
-       <div className={`w-1/2 relative sm:w-full ${ // This container's width might be less relevant if video is absolute to Card
+       <div className={`w-full sm:w-full ${ // This container's width might be less relevant if video is absolute to Card
                   isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[20px]"
                 }`}
               >
@@ -36,7 +35,7 @@ export function SplineSceneBasic() {
         autoPlay
         muted
         loop
-        className="rotate-90 absolute fade-circle   w-4.5/5 h-4.5/5 object-cover left-1 opacity-100 transition-all  ease-in-out -z-10"
+        className="rotate-20 absolute fade-circle left-[130px] w-4.5/5 h-4.5/5 object-cover opacity-100 transition-all bottom-100 ease-in-out -z-10"
       >
         <source src="/videos/seawon.mp4" type="video/mp4" />
       </video>
@@ -56,7 +55,7 @@ export function SplineSceneBasic() {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full p-8 z-10 flex flex-col justify-center items-center bg-transparent md:static md:top-auto md:translate-y-0 md:left-auto md:w-1/2 md:items-start lg:w-1/3">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center"> {/* items-center here will center the text content */}
             <h2
-              className={`uppercase tracking-widest text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center text-white-100 transition-all duration-500 ease-in-out ${
+              className={`uppercase tracking-widest mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white-100 transition-all duration-500 ease-in-out ${
                 isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
               }`}
             >
@@ -71,15 +70,15 @@ export function SplineSceneBasic() {
             </div>
             <div className="w-full flex justify-center">
               <h1
-                className={`text-xl  sm:text-2xl md:text-3xl lg:text-4xl mt-2 font-light text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out  ${
+                className={`text-xs  sm:text-xl md:text-2xl lg:text-3xl mt-2 text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out  ${
                   isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
                 }`}
               >
- <span style={{ textShadow: '2px 2px 3px rgba(0,0,0,0.7)' }}>
- Designing & crafting 
-                </span>
-                <br />
-                <AnimatedTextCycle
+ <h3 className="mb-2" style={{ textShadow: '2px 2px 3px rgba(0,0,0,0.7)' }}>
+ Designing & Crafting
+                </h3>
+              
+                <TextRotator
                   words={[
                     "Apps",
                     "Dashboards",
@@ -90,7 +89,7 @@ export function SplineSceneBasic() {
                     "Experiences",
                   ]}
                   interval={3000}
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-bold [text-shadow:1px_1px_1px_rgba(0,0,0,0.1)]"
+                  className="text-xl md:text-2xl lg:text-5xl font-bold "
                 />
               </h1>
             </div>

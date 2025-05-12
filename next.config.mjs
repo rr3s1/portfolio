@@ -15,6 +15,12 @@ const nextConfig = {
         hostname: 'ui.aceternity.com',
         pathname: '/**',
       },
+
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
     ],
   },
 };

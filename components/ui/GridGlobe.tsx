@@ -398,7 +398,7 @@ export function GlobeDemo() {
     <div className="absolute inset-0 flex items-center justify-center w-full h-full">
       <div className="relative w-full h-full flex items-center justify-center">
        {/* NEW wrapper ↓ */}
-       <div className="w-full h-full md:w-1/2 md:h-1/2 lg:w-4/5 lg:h-4/5">
+       <div className="w-full h-full md:w-1/2 md:h-1/2 lg:w-full lg:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

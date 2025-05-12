@@ -67,7 +67,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
+      className={cn("sticky inset-x-0 top-5 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -239,8 +239,8 @@ export const NavbarLogo = () => {
       <Image
         src="/RS_logo.svg"
         alt="logo"
-        width={70}
-        height={70}
+        width={60}
+        height={60}
       />
       
     </a>
