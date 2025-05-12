@@ -16,10 +16,6 @@
   </p>
 </div>
 
-![Demo animation](public/demo.gif)
-
-
-> **Deployment is still in progress** – while I'm wiring up the production build, you can run the project locally in just a few steps.  
 
 
 ## 📦 Table of Contents
@@ -33,7 +29,6 @@
 7. [Core Technologies](#core-technologies)   
 8. [Acknowledgments](#acknowledgments)  
 9. [License](#license)
-10. [Screenshots](#screenshots)
 
 ---
 ## 1. 🚀 Features <a id="features"></a>
@@ -144,10 +139,10 @@ Open http://localhost:3000 in your browser – the app will hot-reload on change
 - Comprehensive documentation and Storybook
 
 - Advanced build optimizations
-<br />
-<br />
 
-## 7.  🧩 Component Highlights<a id="component-highlights"></a>
+<br />
+<br />
+## 7. 🧩 Component Highlights<a id="component-highlights"></a>
 
 **Hero Component**
 
@@ -188,15 +183,3 @@ Built primarily by me, but inspired by:
 MIT License - see LICENSE.md for details.
 <br />
 <br />
-
-## 10. Screenshots <a id="screenshots"></a>
-
-![Hero](https://github.com/user-attachments/assets/aa5ab4fe-fe86-423f-918a-0da890f4ca96)
-![Core](https://github.com/user-attachments/assets/5bffda05-6031-4199-9de3-c8e0f16610b1)
-![image](https://github.com/user-attachments/assets/1df84138-1fb2-4dbc-9800-ea0132ab1051)
-![image](https://github.com/user-attachments/assets/47318a47-55d9-4af9-ba3d-2065683939fe)
-![image](https://github.com/user-attachments/assets/1a87d481-537d-4b8a-be2a-ccdcc29a14f2)
-![image](https://github.com/user-attachments/assets/89e4a933-c54e-4701-bc0a-291fd4788747)
-![image](https://github.com/user-attachments/assets/1a37fe7f-e705-4896-a2f1-365797b97197)
-![image](https://github.com/user-attachments/assets/9f121bbd-015f-4ed2-bf45-354c4b8a157d)
-![image](https://github.com/user-attachments/assets/328a13ce-9b4d-4332-91e0-130e3742d542)

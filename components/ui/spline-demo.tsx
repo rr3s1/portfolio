@@ -68,30 +68,30 @@ export function SplineSceneBasic() {
               }`}>
             <GradientTextDemo/>
             </div>
-            <div className="w-full flex justify-center">
-              <h1
-                className={`text-xs  sm:text-xl md:text-2xl lg:text-3xl mt-2 text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out  ${
-                  isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
-                }`}
+            <div
+              className={`text-xs sm:text-xl md:text-2xl lg:text-3xl mt-2 text-center font-semibold text-sky-400 transition-all duration-1000 ease-in-out ${
+                isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[2px]"
+              }`}
+            >
+              <span
+                className="block mb-2"
+                style={{ textShadow: "2px 2px 3px rgba(0,0,0,0.7)" }}
               >
- <h3 className="mb-2" style={{ textShadow: '2px 2px 3px rgba(0,0,0,0.7)' }}>
- Designing & Crafting
-                </h3>
-              
-                <TextRotator
-                  words={[
-                    "Apps",
-                    "Dashboards",
-                    "Platforms",
-                    "Interfaces",
-                    "Animations",
-                    "Features",
-                    "Experiences",
-                  ]}
-                  interval={3000}
-                  className="text-xl md:text-2xl lg:text-5xl font-bold "
-                />
-              </h1>
+                Designing&nbsp;&amp;&nbsp;Crafting
+              </span>
+              <TextRotator
+                words={[
+                  "Apps",
+                  "Dashboards",
+                  "Platforms",
+                  "Interfaces",
+                  "Animations",
+                  "Features",
+                  "Experiences",
+                ]}
+                interval={3000}
+                className="text-xl md:text-2xl lg:text-5xl font-bold"
+              />
             </div>
           </div>
         </div>
