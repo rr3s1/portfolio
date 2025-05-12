@@ -224,9 +224,9 @@ export const MobileNavToggle = ({
   onClick: () => void;
 }) => {
   return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
+    <IconX className="text-black size={48} stroke={2.5} dark:text-white" onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    <IconMenu2 className="text-black size={48} stroke={2.5} dark:text-white" onClick={onClick} />
   );
 };
 
@@ -234,15 +234,16 @@ export const NavbarLogo = () => {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-xl font-normal text-black"
+      className="relative z-20 mr-4 flex items-center px-2 py-1 text-xl font-normal text-black"
     >
       <Image
         src="/RS_logo.svg"
         alt="logo"
         width={70}
         height={70}
+        priority
+        className="h-auto w-[70px] md:w-[70px] lg:w-[80px] xl:w-[90px] object-contain"
       />
-      
     </a>
   );
 };

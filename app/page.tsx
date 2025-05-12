@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 export default function Home() {
 
   return (
-    <main className="relative flex justify-center items-center flex-col
-    overflow-hidden mx-auto sm:px-10 px-5"> {/* overflow-hidden on main is fine */}
+    <main className="relative flex justify-center p-0 md:p-5 items-center flex-col
+    overflow-hidden mx-auto  "> {/* overflow-hidden on main is fine */}
       
       <StarsCanvas /> {/* This is likely position: fixed or absolute, acting as a general background */}
      

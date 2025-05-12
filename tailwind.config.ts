@@ -20,9 +20,13 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: {
+      DEFAULT: '0rem',  // <640 px — no side padding
+      sm: '1rem',       // you can choose any value you like
+      md: '2rem',
+    },
       screens: {
-        '2xl': '1400px'
+        '2xl': '1536px'
       }
     },
     extend: { // <-- Start of extend

@@ -15,7 +15,7 @@ const Hero = () => {
       
         <Spotlight />
         
-        <div className="container mx-auto relative z-10">
+        <div className="w-full px-0 sm:container sm:mx-auto sm:px-8 relative z-10">
       <SplineSceneBasic />
     </div>
       </AuroraBackground>
