@@ -50,7 +50,12 @@ const Footer = () => {
                         <Image src="/link.svg" alt="LinkedIn" width={20} height={20} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
                     </a>
                 </div>
-                <p className="text-xs text-white-200 font-light text-center tracking-wide">
+                
+                <a href="https://www.linkedin.com/in/raressilviulazar/" target="_blank" rel="noopener noreferrer"
+                        className="w-25 h-20 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
+                        <Image src="/rs-concept.png" alt="RSHome" width={100} height={100} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
+                    </a>
+                    <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide">
                     Copyright © {new Date().getFullYear()} Rares Silviu
                 </p>
             </div>

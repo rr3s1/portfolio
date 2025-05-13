@@ -247,7 +247,7 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center "
     >
       <Image
-        src="/RS-logo2.svg"
+        src="/rs-logopng.png"
         alt="logo"
         width={70}
         height={70}
