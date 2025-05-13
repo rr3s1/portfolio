@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react'; // Added useState, useEffect
+import React, { useRef, useMemo, Suspense, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useTexture } from '@react-three/drei';
+import { OrbitControls, useTexture, Loader, ScrollControls, useScroll } from '@react-three/drei';
 import * as THREE from 'three';
-import { useSpring, animated, config as springConfig } from '@react-spring/three'; // react-spring imports
+import { useSpring, animated, config as springConfig } from '@react-spring/three';
 
 // --- Interfaces (TechItem) ---
 interface TechItem {
@@ -13,60 +13,70 @@ interface TechItem {
   quote?: string;
 }
 
-// --- Global or passed radius ---
-const SPHERE_RADIUS = 3; // Define it once, accessible to components
+const SPHERE_RADIUS = 3;
 
-// --- LogoPlane Component (Handles individual logo rendering and animation) ---
+// --- Enhanced LogoPlane Component ---
 interface LogoPlaneProps {
-  targetPosition: [number, number, number]; // The position it should animate to
+  targetPosition: [number, number, number];
   logoUrl: string;
   name: string;
   size?: number;
-  initialDelay?: number; // For staggered initial animation
+  initialDelay?: number;
 }
 
-const LogoPlane: React.FC<LogoPlaneProps> = ({ targetPosition, logoUrl, name, size = 0.8, initialDelay = 0 }) => {
+const LogoPlane: React.FC<LogoPlaneProps> = ({
+  targetPosition,
+  logoUrl,
+  name,
+  size = 0.8,
+  initialDelay = 0
+}) => {
   const texture = useTexture(logoUrl);
-  texture.minFilter = THREE.LinearMipmapLinearFilter;
-  texture.magFilter = THREE.LinearFilter;
-
   const meshRef = useRef<THREE.Mesh>(null!);
 
-  // Billboarding: Make the plane always face the camera and stay upright
   useFrame(({ camera }) => {
     if (meshRef.current) {
       meshRef.current.quaternion.copy(camera.quaternion);
+      // Subtle float animation
+      meshRef.current.position.y += Math.sin(Date.now() * 0.0015 + initialDelay * 0.1) * 0.005;
     }
   });
 
-  // Spring for animating the position
   const { animatedPos } = useSpring({
     to: { animatedPos: targetPosition },
-    from: { animatedPos: [targetPosition[0], targetPosition[1] + SPHERE_RADIUS * 1.5, targetPosition[2]] }, // Initial animation from above
-    config: springConfig.gentle, // Animation physics
-    delay: initialDelay, // Stagger initial animations
-    reset: false, // Important: false means 'from' is only for initial mount or when 'from' itself changes.
-                  // When 'to' (targetPosition) changes, it animates from current value.
+    from: { animatedPos: [targetPosition[0], targetPosition[1] + SPHERE_RADIUS * 0.5, targetPosition[2]] },
+    config: springConfig.gentle,
+    delay: initialDelay,
+    reset: false
   });
 
-  // Spring for initial opacity fade-in
-  const { opacity } = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    delay: initialDelay + 100, // Stagger opacity after position starts
+  const { opacity, emissiveIntensitySpring } = useSpring({
+    to: { opacity: 1, emissiveIntensitySpring: 0.3 },
+    from: { opacity: 0, emissiveIntensitySpring: 0 },
+    delay: initialDelay + 200,
     config: springConfig.slow,
   });
 
   return (
-    <animated.mesh ref={meshRef} position={animatedPos as any} scale={opacity}> {/* Apply animated scale for fade-in */}
+    <animated.mesh
+      ref={meshRef}
+      position={animatedPos as any}
+      scale={[size * 1.2, size * 1.2, size * 1.2]}
+      castShadow  // Logo planes can cast shadows
+      receiveShadow // Logo planes can receive shadows
+    >
       <planeGeometry args={[size, size]} />
       <animated.meshStandardMaterial
         map={texture}
+        color="white" // Ensures texture colors are visible, not turned black by material
         transparent
         side={THREE.DoubleSide}
         alphaTest={0.5} // For sharp edges on transparent PNGs
-        depthWrite={false} // Helps with transparency sorting
+        depthWrite={false} // Helps with transparency sorting; can be tricky
         opacity={opacity}
+        emissive="white" // Base color for emission
+        emissiveMap={texture} // Use texture's alpha to mask emissive area (logo shape glows)
+        emissiveIntensity={emissiveIntensitySpring} // Control glow strength
       />
     </animated.mesh>
   );
@@ -77,57 +87,43 @@ function calculateSymmetricalPositions(numItems: number, radius: number): Array<
   const positions: Array<[number, number, number]> = [];
   if (numItems === 0) return positions;
 
-  const numRings = numItems <= 2 ? 1 : numItems <= 7 ? 2 : 3; // 1, 2 or 3 rings
+  const numRings = Math.min(3, Math.ceil(Math.sqrt(numItems)));
   let itemsPlaced = 0;
 
   for (let i = 0; i < numRings; i++) {
-    let y: number;
-    if (numRings === 1) { // Single ring (equator)
-      y = 0;
-    } else if (numRings === 2) { // Two rings
-      y = radius * (i === 0 ? 0.55 : -0.55);
-    } else { // Three rings
-      if (i === 0) y = radius * 0.65;      // Top ring
-      else if (i === 1) y = 0;            // Middle ring (equator)
-      else y = -radius * -0.65;     // Bottom ring
-    }
-
+    const y = radius * ((i - numRings/2 + 1) / numRings);
     const ringRadius = Math.sqrt(Math.max(0, radius * radius - y * y));
-    const ringsLeft = numRings - i;
-    const itemsForThisRing = Math.ceil((numItems - itemsPlaced) / ringsLeft);
-
+    
+    const itemsForThisRing = Math.ceil((numItems - itemsPlaced) / (numRings - i));
+    
     if (itemsForThisRing <= 0) continue;
 
-    for (let k = 0; k < itemsForThisRing; k++) {
-      if (itemsPlaced >= numItems) break;
-      // Stagger alternate rings slightly
-      const angleOffset = (numRings > 1 && i % 2 !== 0) ? Math.PI / itemsForThisRing : 0;
-      const angle = (k / itemsForThisRing) * 2 * Math.PI + angleOffset;
+    for (let k = 0; k < itemsForThisRing && itemsPlaced < numItems; k++) {
+      const angle = (k / itemsForThisRing) * 2 * Math.PI;
       
       const x = ringRadius * Math.cos(angle);
       const z = ringRadius * Math.sin(angle);
       positions.push([x, y, z]);
       itemsPlaced++;
     }
-    if (itemsPlaced >= numItems) break;
   }
-   // Fallback if not all items are placed (should be rare with Math.ceil)
-   while (itemsPlaced < numItems && positions.length < numItems && itemsPlaced < 100) {
+
+  while (itemsPlaced < numItems && positions.length < numItems) {
     const fallbackY = radius * (0.9 - (itemsPlaced / numItems) * 1.8);
     const fallbackRingRadius = Math.sqrt(Math.max(0, radius*radius - fallbackY*fallbackY));
-    positions.push([fallbackRingRadius * (itemsPlaced % 2 === 0 ? 1: -1) , fallbackY, 0]);
+    positions.push([fallbackRingRadius * (itemsPlaced % 2 === 0 ? 1: -1), fallbackY, 0]);
     itemsPlaced++;
   }
+  
   return positions;
 }
 
-
-// --- TechItemsSphere Component (Manages the group of logos) ---
+// --- TechItemsSphere Component ---
 interface TechSphereProps {
   techItems: TechItem[];
   radius?: number;
   rotationSpeed?: number;
-  isSymmetricalLayout: boolean; // To control layout type
+  isSymmetricalLayout: boolean;
 }
 
 const TechItemsSphere: React.FC<TechSphereProps> = ({
@@ -137,13 +133,16 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({
   isSymmetricalLayout,
 }) => {
   const groupRef = useRef<THREE.Group>(null!);
+  const scroll = useScroll(); // Hook for scroll-based animations
 
   useFrame((_state, delta) => {
     if (groupRef.current) {
-      // Slow down rotation slightly when symmetrical for a calmer view
-      const speedMultiplier = isSymmetricalLayout ? 0.3 : 1;
-      groupRef.current.rotation.y += delta * rotationSpeed * speedMultiplier;
-      groupRef.current.rotation.x += delta * rotationSpeed * 0.2 * speedMultiplier;
+      if (isSymmetricalLayout) {
+        groupRef.current.rotation.y += delta * rotationSpeed;
+        groupRef.current.rotation.x += delta * rotationSpeed * 0.2;
+      }
+      // Parallax scrolling effect: move the sphere group based on scroll offset
+      groupRef.current.position.y = (scroll.offset - 0.5) * radius * 0.6; // Adjust multiplier for effect strength
     }
   });
 
@@ -152,12 +151,12 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({
     if (isSymmetricalLayout) {
       return calculateSymmetricalPositions(numItems, radius);
     } else {
-      // Fibonacci sphere (normal layout)
       const points: Array<[number, number, number]> = [];
       if (numItems === 0) return points;
-      const phi = Math.PI * (3.0 - Math.sqrt(5.0)); // Golden angle
+      
+      const phi = Math.PI * (3.0 - Math.sqrt(5.0)); 
       for (let i = 0; i < numItems; i++) {
-        const yRatio = 1 - (i / (numItems - 1)) * 2; // y goes from 1 to -1
+        const yRatio = 1 - (i / (numItems - 1)) * 2; 
         const rCurrent = Math.sqrt(1 - yRatio * yRatio);
         const theta = phi * i;
         const x = Math.cos(theta) * rCurrent;
@@ -176,8 +175,8 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({
             targetPosition={targetPositions[index] || [0, 0, 0]}
             logoUrl={item.logo}
             name={item.name}
-            size={radius / 3.9} // Adjust logo size
-            initialDelay={index * 50} // Stagger initial appearance
+            size={radius / 4.2} 
+            initialDelay={index * 60}
           />
         </Suspense>
       ))}
@@ -185,58 +184,106 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({
   );
 };
 
-
-// --- TechSphereCanvas Component (Main canvas and interaction logic) ---
+// --- TechSphereCanvas Component ---
 const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) => {
   const [isSymmetricalLayout, setIsSymmetricalLayout] = useState(false);
 
-  const handleCanvasClick = () => {
+  const handleCanvasClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    // Prevent click if it's on a loader UI element
+    if ((event.target as HTMLElement).closest('.r3f-loader')) return;
     setIsSymmetricalLayout(prev => !prev);
   };
 
   if (!techItems || techItems.length === 0) {
     return (
       <div style={{ width: '100%', height: '60vh', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        Loading tech sphere...
+        Preparing tech sphere...
       </div>
     );
   }
 
   return (
-    <div
-      style={{ width: '100%', height: '60vh', minHeight: '400px', maxHeight:'700px', cursor: 'pointer', touchAction: 'pan-y' }} // Allow vertical scroll on touch, pan-y
-      onClick={handleCanvasClick}
-      title={isSymmetricalLayout ? "Click to switch to dynamic layout" : "Click to switch to symmetrical layout"}
-    >
-      <Canvas
-        camera={{ position: [0, 0, SPHERE_RADIUS * 2.9], fov: 50 }} // Slightly further camera
-        gl={{ antialias: true, alpha: true }} // Enable antialiasing and alpha
+    <>
+      {/* 1. Loading Spinner */}
+      <Loader 
+        containerStyles={{ background: 'rgba(0, 0, 0, 0.85)', zIndex: 1000 }} // Ensure loader is on top
+        dataStyles={{ color: 'white', fontSize: '16px' }}
+        innerStyles={{ backgroundColor: 'dodgerblue', width: 'calc(100% - 20px)' }}
+        barStyles={{ backgroundColor: 'lightblue', height: '5px' }}
+      />
+      <div
+        style={{ 
+          width: '100%', 
+          height: '60vh', // Or use '100vh' for full viewport height
+          minHeight: '400px', 
+          maxHeight:'700px', 
+          cursor: 'pointer',
+          position: 'relative', // For positioning loader or other absolute elements if needed
+          overflow: 'hidden', // Hides scrollbars from ScrollControls
+        }}
+        onClick={handleCanvasClick}
+        title={isSymmetricalLayout ? "Click to switch to dynamic layout" : "Click to switch to symmetrical layout"}
       >
-        <ambientLight intensity={Math.PI / 1.8} />
-        <pointLight position={[SPHERE_RADIUS * 2, SPHERE_RADIUS * 2, SPHERE_RADIUS * 2]} decay={0.3} intensity={Math.PI * 0.7} />
-        <pointLight position={[-SPHERE_RADIUS*2, -SPHERE_RADIUS, SPHERE_RADIUS*2]} decay={0.5} intensity={Math.PI*0.4} color="#aaaaff" />
-
-
-        <Suspense fallback={null}>
-          <TechItemsSphere
-            techItems={techItems}
-            radius={SPHERE_RADIUS}
-            isSymmetricalLayout={isSymmetricalLayout}
+        <Canvas
+          shadows // 2. Enable shadows
+          camera={{ position: [0, 0, SPHERE_RADIUS * 3.1], fov: 50 }}
+          gl={{ 
+            antialias: true, 
+            alpha: true, 
+            shadowMap: { enabled: true, type: THREE.PCFSoftShadowMap }, // 2. Soft shadows
+            powerPreference: "high-performance"
+          }}
+          dpr={[1, 1.5]} // Balances performance and quality on high-res displays
+        >
+          <ambientLight intensity={Math.PI / 2.2} /> 
+          
+          <pointLight
+            castShadow // 2. Light casts shadow
+            position={[SPHERE_RADIUS * 1.5, SPHERE_RADIUS * 1.5, SPHERE_RADIUS * 1.5]}
+            intensity={Math.PI * 1.3} 
+            color="#ffffff"
+            decay={1.5} 
+            distance={SPHERE_RADIUS * 5} 
+            shadow-mapSize-width={1024} 
+            shadow-mapSize-height={1024}
+            shadow-camera-far={SPHERE_RADIUS * 6}
+            shadow-bias={-0.0005} // Adjust to prevent shadow acne
           />
-        </Suspense>
+          <pointLight
+            position={[-SPHERE_RADIUS * 2, -SPHERE_RADIUS * 1, -SPHERE_RADIUS * 2]}
+            intensity={Math.PI * 0.6}
+            color="#a0a0ff" // Blueish fill light
+            decay={2}
+            distance={SPHERE_RADIUS * 8}
+          />
 
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          enableRotate={true} // User can still rotate
-          autoRotate
-          autoRotateSpeed={isSymmetricalLayout ? 0.15 : 0.5} // Slower auto-rotate in symmetrical
-          minPolarAngle={Math.PI / 4} // Don't look too far up/down
-          maxPolarAngle={Math.PI - Math.PI / 4}
-          target={[0,0,0]} // Orbit around the center
-        />
-      </Canvas>
-    </div>
+          {/* 4. Scroll Controls Wrapper for Parallax */}
+          <ScrollControls pages={3} damping={0.25}> {/* Adjust pages and damping as needed */}
+            <Suspense fallback={null}> 
+              <TechItemsSphere
+                techItems={techItems}
+                radius={SPHERE_RADIUS}
+                isSymmetricalLayout={isSymmetricalLayout}
+              />
+            </Suspense>
+            {/* You can add <Scroll html> content here to scroll along with the 3D scene */}
+          </ScrollControls>
+
+          <OrbitControls
+            enableZoom={false}
+            enablePan={true} // 3. Enable pan for touch/mouse
+            enableRotate={true}
+            autoRotate
+            autoRotateSpeed={isSymmetricalLayout ? 0.1 : 0.4}
+            minPolarAngle={Math.PI / 3.5} 
+            maxPolarAngle={Math.PI - Math.PI / 3.5}
+            target={[0,0,0]}
+            enableDamping // Makes rotation smoother if autoRotate is off
+            dampingFactor={0.05}
+          />
+        </Canvas>
+      </div>
+    </>
   );
 };
 
