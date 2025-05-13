@@ -14,7 +14,7 @@ const Footer = () => {
         >
             {/* Aurora/gradient overlay for extra depth */}
             <div className="pointer-events-none absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#FF8A38]/20 via-[#14D5FF]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#6366F1]/20 via-[#8B5CF6]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
             </div>
 
             <div className="flex flex-col items-center z-10 relative ">

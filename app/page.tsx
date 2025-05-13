@@ -36,13 +36,13 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems}/>
         <Hero />
+         <Techstack />
          <Grid />
         <Story />
         <Approach />
         <HeroParallaxDemo />
         <TimelineDemo />
         <Experience />
-        <Techstack />
         <CosmicFilaments />
         <Footer />
       </div>

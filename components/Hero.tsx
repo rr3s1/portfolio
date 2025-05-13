@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <>
-      <AuroraBackground className=" pt-36 relative">
+      <AuroraBackground className="relative min-h-screen flex flex-col justify-center items-center pt-20 md:pt-36">
       
         <Spotlight />
         

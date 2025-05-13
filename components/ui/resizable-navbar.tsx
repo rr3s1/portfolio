@@ -179,10 +179,10 @@ export const MobileNavHeader = ({
   children,
   className,
 }: MobileNavHeaderProps) => {
-  return (
+ return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-between",
+        "flex w-full flex-row items-center justify-between px-4", // Added px-4 for consistent padding
         className,
       )}
     >
@@ -224,9 +224,19 @@ export const MobileNavToggle = ({
   onClick: () => void;
 }) => {
   return isOpen ? (
-    <IconX className="text-black size={48} stroke={2.5} dark:text-white" onClick={onClick} />
+    <IconX
+      className="text-black dark:text-white" // Tailwind classes for color
+      size={60}                             // Prop for icon size
+      stroke={2}                          // Prop for stroke width (Tabler Icons use 'stroke')
+      onClick={onClick}
+    />
   ) : (
-    <IconMenu2 className="text-black size={48} stroke={2.5} dark:text-white" onClick={onClick} />
+    <IconMenu2
+      className="text-black dark:text-white" // Tailwind classes for color
+      size={60}                             // Prop for icon size
+      stroke={2}                          // Prop for stroke width (Tabler Icons use 'stroke')
+      onClick={onClick}
+    />
   );
 };
 
