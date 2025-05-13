@@ -82,14 +82,15 @@ export function SplineSceneBasic() {
               <TextRotator
                 words={[
                   "Apps",
-                  "Dashboards",
                   "Platforms",
                   "Interfaces",
+                  "Vibes",
+                  "Websites",
                   "Animations",
                   "Features",
                   "Experiences",
                 ]}
-                interval={3000}
+                interval={2000}
                 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
               />
             </div>
