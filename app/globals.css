@@ -8,6 +8,10 @@
 @tailwind utilities;
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
     :root {
         /* --background: 205 74% 14% / 0.76;  */
@@ -280,3 +284,8 @@ p.varela-round-regular {
 div.Scrollcontrols::-webkit-scrollbar {
     display: none;
   }
+
+
+  #Hero {
+  scroll-margin-top: 80px; /* Adjust this value to your navbar's height */
+}
