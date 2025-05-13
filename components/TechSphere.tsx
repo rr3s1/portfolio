@@ -205,14 +205,15 @@ const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) =>
           minHeight: '400px', 
           maxHeight:'700px', 
           cursor: 'pointer',
-          position: 'relative', // Good for containing absolutely positioned children if any
-          overflow: 'hidden', // Kept for general good practice, though not solving this specific scrollbar
+          position: 'relative',
+          overflow: 'hidden',
         }}
         onClick={handleCanvasClick}
         title={isSymmetricalLayout ? "Click to switch to dynamic layout" : "Click to switch to symmetrical layout"}
       >
         <Canvas
-          shadows={THREE.PCFSoftShadowMap}
+          // CORRECTED LINE: Use the string alias "soft"
+          shadows="soft" 
           camera={{ position: [0, 0, SPHERE_RADIUS * 3.1], fov: 50 }}
           gl={{ 
             antialias: true, 
@@ -246,12 +247,10 @@ const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) =>
           <ScrollControls
             pages={3}
             damping={0.25}
-            // Apply styles directly to the scrollable div created by ScrollControls
             style={{
               scrollbarWidth: 'none', /* For Firefox */
               msOverflowStyle: 'none', /* For Internet Explorer and Edge (pre-Chromium) */
             }}
-            // The className "Scrollcontrols" is targeted by global CSS for Webkit
           >
             <Suspense fallback={null}> 
               <TechItemsSphere
