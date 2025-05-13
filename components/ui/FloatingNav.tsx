@@ -32,7 +32,7 @@ export const FloatingNav = ({
       <NavBody>
      
         <NavbarLogo />
-        <NavItems className="text-xl text-white-100" items={navItems} />
+        <NavItems className="text-xl font-regular quantico-regular text-white-100" items={navItems} />
         <div className="flex items-center gap-4 quantico-regular">
         
           <NavbarButton
@@ -72,13 +72,7 @@ export const FloatingNav = ({
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
-            <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
-              variant="primary"
-              className="w-full"
-            >
-              Login
-            </NavbarButton>
+           
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               as="a"
@@ -86,7 +80,7 @@ export const FloatingNav = ({
               variant="primary"
               className="w-full"
             >
-              Book a call
+              Send Email
             </NavbarButton>
           </div>
         </MobileNavMenu>

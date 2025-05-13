@@ -118,10 +118,10 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-regular text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
-      style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
+      style={{ fontFamily: "var(--font-title)", fontWeight: 400 }}
     >
       {items.map((item, idx) => (
         <a
@@ -130,15 +130,15 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
-          style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}
+          style={{ fontFamily: "var(--font-title)", fontWeight: 400 }}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-full bg-white-100 dark:bg-neutral-800"
             />
           )}
-          <span className="relative z-20" style={{ fontFamily: "var(--font-title)", fontWeight: 800 }}>{item.name}</span>
+          <span className="relative z-20" style={{ fontFamily: "var(--font-title)", fontWeight: 400 }}>{item.name}</span>
         </a>
       ))}
     </motion.div>
@@ -234,10 +234,10 @@ export const NavbarLogo = () => {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center px-2 py-1 text-xl font-normal text-black"
+      className="relative z-20 mr-4 flex items-center "
     >
       <Image
-        src="/RS_logo.svg"
+        src="/RS-logo2.svg"
         alt="logo"
         width={70}
         height={70}
