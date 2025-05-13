@@ -276,3 +276,7 @@ p.varela-round-regular {
   font-weight: 700;
   font-style: italic;
 }
+
+div.Scrollcontrols::-webkit-scrollbar {
+    display: none;
+  }
