@@ -11,6 +11,7 @@ const Hero = () => {
 
   return (
     <>
+    <section id="Hero">
       <AuroraBackground className="relative min-h-screen flex flex-col justify-center items-center pt-20 md:pt-36">
       
         <Spotlight />
@@ -19,7 +20,7 @@ const Hero = () => {
       <SplineSceneBasic />
     </div>
       </AuroraBackground>
- 
+ </section>
       
     </>
   )

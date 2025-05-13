@@ -9,7 +9,7 @@ import { ContactForm } from "@/components/ui/contact-form";
 const Footer = () => {
     return (
         <footer
-            className="relative w-full overflow-hidden px-4 py-10 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
+            className="relative w-full overflow-hidden px-4 pt-10 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
             id="contact"
         >
             {/* Aurora/gradient overlay for extra depth */}
@@ -51,10 +51,11 @@ const Footer = () => {
                     </a>
                 </div>
                 
-                <a href="https://www.linkedin.com/in/raressilviulazar/" target="_blank" rel="noopener noreferrer"
-                        className="w-25 h-20 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
-                        <Image src="/rs-concept.png" alt="RSHome" width={100} height={100} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
-                    </a>
+                <a href="#Hero" 
+   
+    className="w-15 h-15 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
+    <Image src="/rs-concept.png" alt="RSHome" width={50} height={50} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
+</a>
                     <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide">
                     Copyright © {new Date().getFullYear()} Rares Silviu
                 </p>

@@ -37,7 +37,8 @@ export const FloatingNav = ({
         
           <NavbarButton
             as="a"
-            href="mailto:raressilviulazar@gmail.com?subject=Book%20a%20Call"
+            href="#contact"
+           
             variant="primary"
             // className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
           >
@@ -76,11 +77,11 @@ export const FloatingNav = ({
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               as="a"
-              href="mailto:raressilviulazar@gmail.com?subject=Book%20a%20Call"
+              href="#contact"
               variant="primary"
               className="w-full"
             >
-              Send Email
+              Contact
             </NavbarButton>
           </div>
         </MobileNavMenu>
