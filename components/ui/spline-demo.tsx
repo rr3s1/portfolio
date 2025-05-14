@@ -77,7 +77,7 @@ export function SplineSceneBasic() {
                 className="block mb-2"
                 style={{ textShadow: "2px 2px 3px rgba(0,0,0,0.7)" }}
               >
-                Designing&nbsp;&amp;&nbsp;Crafting
+                Designing&nbsp;&amp;&nbsp;crafting
               </span>
               <TextRotator
                 words={[
