@@ -188,9 +188,9 @@ p.varela-round-regular {
         rgba(0,0,0,1)  40%,         /* stay visible for a bit        */
         rgba(0,0,0,0)  75%          /* fade to transparent by edge   */
     );
-    mask-mode: alpha;               /* use the alpha channel         */
-    -webkit-mask-image: radial-gradient(circle at 46% 47%,
-        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 60%);
+   mask-mode: alpha;               /* use the alpha channel         */
+    -webkit-mask-image: radial-gradient(circle at 46% 46%,
+        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(0,0,0,0) 60%);
   }
 @layer utilities {
     .heading {
