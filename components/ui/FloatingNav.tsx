@@ -40,7 +40,7 @@ export const FloatingNav = ({
             href="#contact"
            
             variant="primary"
-            // className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold"
+            className="bg-slate-300 font-semibold tracking-wider"
           >
             CONTACT
           </NavbarButton>

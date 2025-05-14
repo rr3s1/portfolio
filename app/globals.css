@@ -289,3 +289,8 @@ div.Scrollcontrols::-webkit-scrollbar {
   #Hero {
   scroll-margin-top: 80px; /* Adjust this value to your navbar's height */
 }
+
+  
+  #Contact {
+    scroll-margin-bottom: 80px; /* Adjust this value to your navbar's height */
+  }

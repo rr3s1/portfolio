@@ -108,7 +108,7 @@ export const techstack = [
     name: "Three.js",
     title: "WebGL 3D Graphics",
     icon: "/public/arrow.svg",
-    logo: "/logos/ts.svg" // Assuming this was a typo and should be threejs.svg, or if it truly reuses react.svg, keep as is. For this solution, I'll assume it should be specific to Three.js
+    logo: "/logos/threejs.svg" // Assuming this was a typo and should be threejs.svg, or if it truly reuses react.svg, keep as is. For this solution, I'll assume it should be specific to Three.js
   },
   {
     quote:
@@ -116,7 +116,7 @@ export const techstack = [
     name: "React Three Fiber & Drei",
     title: "React Three Abstraction",
     icon: "/public/arrow.svg",
-    logo: "/logos/ts.svg" // Assuming a logo for R3F, or reuse react.svg if intended. For this solution, I'll assume it should be specific.
+    logo: "/logos/expo-1.svg" // Assuming a logo for R3F, or reuse react.svg if intended. For this solution, I'll assume it should be specific.
   },
   {
     quote:
@@ -132,7 +132,15 @@ export const techstack = [
     name: "Framer Motion",
     title: "Declarative Motion Library",
     icon: "/public/arrow.svg",
-    logo: "/logos/gsap.svg" // Assuming a logo for Framer Motion, or reuse react.svg if intended. For this solution, I'll assume it should be specific.
+    logo: "/logos/framer-motion.svg" // Assuming a logo for Framer Motion, or reuse react.svg if intended. For this solution, I'll assume it should be specific.
+  },
+   {
+    quote:
+      "Integrating production-ready animations...",
+    name: "Framer Motion",
+    title: "Declarative Motion Library",
+    icon: "/public/arrow.svg",
+    logo: "/logos/Framer.svg" // Assuming a logo for Framer Motion, or reuse react.svg if intended. For this solution, I'll assume it should be specific.
   },
   {
     quote:

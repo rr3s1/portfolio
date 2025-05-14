@@ -1,16 +1,15 @@
 import * as React from "react";
-import { FaLocationArrow } from "react-icons/fa6";
+
 import Image from "next/image";
 
-import MagicButton from "../components/ui/MagicButton";
-import BackgroundBeamsDemo from "./ui/background-beams-demo";
+
 import { ContactForm } from "@/components/ui/contact-form";
 
 const Footer = () => {
     return (
-        <footer
-            className="relative w-full overflow-hidden px-4 pt-10 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
-            id="contact"
+        <footer 
+            className=" relative w-full overflow-hidden px-4 pt-10 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
+            
         >
             {/* Aurora/gradient overlay for extra depth */}
             <div className="pointer-events-none absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
@@ -19,7 +18,7 @@ const Footer = () => {
 
             <div className="flex flex-col items-center z-10 relative ">
                 <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Let&apos;s </span>
-                 <span className="text-gradient-gold"> Build </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Something Great Together
+                 <span className="text-gradient-gold"> Craft </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> an Amazing Experience
                      </span>
                 </h1>
 
@@ -35,7 +34,7 @@ const Footer = () => {
             
             </div>
             
-            <ContactForm/>
+            <ContactForm />
 
             <div className="flex flex-col items-center mt-16 z-10 relative">
                 <div className="flex items-center gap-6 mb-4">
@@ -51,12 +50,10 @@ const Footer = () => {
                     </a>
                 </div>
                 
-                <a href="#Hero" 
-   
-    className="w-15 h-15 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
+                <a href="#Hero" className="w-15 h-15 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
     <Image src="/rs-concept.png" alt="RSHome" width={50} height={50} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
 </a>
-                    <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide">
+                    <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide" id="contact">
                     Copyright © {new Date().getFullYear()} Rares Silviu
                 </p>
             </div>

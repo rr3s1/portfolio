@@ -84,7 +84,6 @@ export function SplineSceneBasic() {
                   "Apps",
                   "Platforms",
                   "Interfaces",
-                  "Vibes",
                   "Websites",
                   "Animations",
                   "Features",
