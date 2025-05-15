@@ -37,9 +37,9 @@ export default function Home() {
         <FloatingNav navItems={navItems}/>
         <Hero />
         <Approach />
-         <Grid />
+        <Grid />
         <Story />
-         <Techstack />
+        <Techstack />
         <HeroParallaxDemo />
         <TimelineDemo />
         <Experience />
