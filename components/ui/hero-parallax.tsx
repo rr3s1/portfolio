@@ -118,11 +118,11 @@ export const Header = () => {
         Ratio: 3 / 1.5 = 2x
     */}
     <h1 className="text-5xl md:text-6xl font-bold font-quantico bg-gradient-to-r bg:text-white">
-       Exploring
-    </h1>
-    <h1 className="text-5xl md:text-6xl font-bold font-quantico bg-gradient-to-r from-[#a855f7] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
+       Exploring   <br />  <span className="text-5xl md:text-6xl font-bold bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
       Designs
+    </span>
     </h1>
+
 
     <p className="max-w-2xl text-lg md:text-2xl font-bold font-quantico mt-8 dark:text-sky-400">
       To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations

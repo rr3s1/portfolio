@@ -13,9 +13,9 @@ import { InfiniteMovingCards } from './ui/InfiniteMovingCards';
 const Techstack = () => {
     return (
         <div className="py-20" id="techstack">
-            <h1 className="text-center text-5xl md:text-6xl font-bold mb-10 ">
+            <h1 className="text-center text-5xl md:text-6xl font-bold mb-10 font-quantico">
 
-        Tech <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
+        Tech <span className="font-quantico text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Stack </span> 
              </h1>
 
             {/* Section for the 3D Tech Sphere */}

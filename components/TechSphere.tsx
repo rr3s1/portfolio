@@ -132,7 +132,6 @@ const TechItemsSphere: React.FC<TechSphereProps> = ({
         groupRef.current.rotation.y += delta * rotationSpeed;
         groupRef.current.rotation.x += delta * rotationSpeed * 0.2;
       }
-      groupRef.current.position.y = (scroll.offset - 0.5) * radius * 0.6;
     }
   });
 
@@ -212,7 +211,6 @@ const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) =>
         title={isSymmetricalLayout ? "Click to switch to dynamic layout" : "Click to switch to symmetrical layout"}
       >
         <Canvas
-          // CORRECTED LINE: Use the string alias "soft"
           shadows="soft" 
           camera={{ position: [0, 0, SPHERE_RADIUS * 3.1], fov: 50 }}
           gl={{ 
@@ -244,22 +242,13 @@ const TechSphereCanvas: React.FC<{ techItems: TechItem[] }> = ({ techItems }) =>
             distance={SPHERE_RADIUS * 8}
           />
 
-          <ScrollControls
-            pages={3}
-            damping={0.25}
-            style={{
-              scrollbarWidth: 'none', /* For Firefox */
-              msOverflowStyle: 'none', /* For Internet Explorer and Edge (pre-Chromium) */
-            }}
-          >
-            <Suspense fallback={null}> 
-              <TechItemsSphere
-                techItems={techItems}
-                radius={SPHERE_RADIUS}
-                isSymmetricalLayout={isSymmetricalLayout}
-              />
-            </Suspense>
-          </ScrollControls>
+          <Suspense fallback={null}> 
+            <TechItemsSphere
+              techItems={techItems}
+              radius={SPHERE_RADIUS}
+              isSymmetricalLayout={isSymmetricalLayout}
+            />
+          </Suspense>
 
           <OrbitControls
             enableZoom={false}

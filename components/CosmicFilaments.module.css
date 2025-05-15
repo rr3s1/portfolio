@@ -65,16 +65,16 @@
   .fadeCircle {
     /* Make the element the mask's "source" */
     mask-image: radial-gradient(
-      circle at 50% 50%, /* centre */
+      circle at 55% 55%, /* centre */
       rgba(0, 0, 0, 1) 0%, /* fully visible in the centre */
       rgba(0, 0, 0, 1) 40%, /* stay visible for a bit */
       rgba(0, 0, 0, 0) 65% /* fade to transparent by edge */
     );
     mask-mode: alpha; /* use the alpha channel */
     -webkit-mask-image: radial-gradient(
-      circle at 50% 60%,
+      circle at 50% 55%,
       rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 20%,
       rgba(0, 0, 0, 0) 65%
     );
     /* Ensure the mask applies correctly to the content */

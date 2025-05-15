@@ -16,9 +16,9 @@ const Approach = () => {
             */}
             <section className="container mx-auto py-16 md:py-24 lg:h-[100vh] lg:py-0 lg:flex lg:flex-col lg:justify-center mt-20 md:mt-0">
 
-            <h1 className="text-center text-5xl md:text-6xl font-bold mb-10 ">
+            <h1 className="text-center font-quantico text-5xl md:text-6xl font-bold mb-10 ">
 
-            Core <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Values </span> 
+            Core <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> Values </span> 
      </h1>
 
                 
