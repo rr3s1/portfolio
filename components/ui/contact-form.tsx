@@ -68,23 +68,23 @@ export function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="space-y-12">
       <div className="space-y-4 mt-10">
-        <label htmlFor="email" className="block text-xl text-white-100">
-          Email address
+        <label htmlFor="email" className="block text-xl font-quantico text-white-100">
+          Your Email
         </label>
         <input
           type="email"
           id="email"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Enter email"
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full bg-[#111] rounded-xl p-4 text-xl border-0 focus:ring-1 focus:ring-gray-400 placeholder:text-gray-600"
+          className="w-full bg-[#111] rounded-xl p-4 text-xl border-0 focus:ring-1 focus:ring-gray-400 font-quantico placeholder:text-gray-600"
         />
       </div>
 
       <div className="space-y-4">
-        <label htmlFor="message" className="block text-xl text-white-100">
+        <label htmlFor="message" className="block text-xl font-quantico text-white-100">
           Message 
         </label>
         <textarea
@@ -95,11 +95,11 @@ export function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className="w-full bg-[#111] rounded-xl p-4 text-xl border-0 focus:ring-1 focus:ring-gray-400 placeholder:text-gray-600 resize-none"
+          className="w-full bg-[#111] rounded-xl font-quantico p-4 text-xl border-0 focus:ring-1 focus:ring-gray-400 placeholder:text-gray-600 resize-none"
         />
       </div>
 
-      <div className="flex w-full justify-center sm:flex-row items-center space-y-4 sm:space-y-0">
+      <div className="flex w-full justify-center sm:flex-row font-quantico items-center space-y-4 sm:space-y-0">
         <SubmitButton isLoading={isLoading} /> 
       </div>
 

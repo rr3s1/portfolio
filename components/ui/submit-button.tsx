@@ -20,7 +20,7 @@ export function SubmitButton({ isLoading }: SubmitButtonProps) {
         <Loader2 className="w-6 h-6 animate-spin" />
       ) : (
         <>
-          <span>Send Message</span>
+          <span className="font-quantico">Send Message</span>
           <ArrowRight className="w-6 h-6" />
         </>
       )}

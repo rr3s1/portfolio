@@ -21,11 +21,11 @@ const Footer = () => {
                 
                 <span className="text-sky-400 font-quantico"> YOUR
                 </span>
-                 <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS
+                 <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> BUSINESS
                      </span>
                 </h1>
 
-                <p className="text-sky-300 md:mt-10 text-2xl font-bold my-5 text-center varela-round-regular  max-w-xl">
+                <p className="text-sky-300 md:mt-10 text-2xl font-normal my-5 text-center font-quantico max-w-xl">
            
                     Whether you need a blazing-fast landing page,<br /> a secure full-stack app
     or a 3D interactive demo 
@@ -54,7 +54,7 @@ const Footer = () => {
                 <a href="#Hero" className="w-15 h-15 flex justify-center items-center rounded-lg border border-white/10 bg-black-200/80 hover:shadow-neon transition-all duration-200">
     <Image src="/rs-concept.png" alt="RSHome" width={50} height={50} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
 </a>
-                    <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide" id="contact">
+                    <p className="text-xs text-white-200 font-light mt-5 text-center font-quantico tracking-wide" id="contact">
                     Copyright © {new Date().getFullYear()} Rares Silviu Lazar
                 </p>
             </div>

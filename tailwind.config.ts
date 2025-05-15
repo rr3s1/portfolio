@@ -139,6 +139,10 @@ const config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+        'spin-video-continuously': 'moveInCircle 20s linear infinite',
+      },
       keyframes: {
         'accordion-down': {
           from: {
@@ -189,6 +193,7 @@ const config = {
             transform: 'translateX(-50%) translateY(-10%)'
           }
         },
+        
         moveInCircle: {
           '0%': {
             transform: 'rotate(0deg)'

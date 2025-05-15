@@ -117,7 +117,7 @@ export const Header = () => {
         p:  md:text-2xl (1.5rem / 24px)
         Ratio: 3 / 1.5 = 2x
     */}
-    <h1 className="text-5xl md:text-6xl font-bold font-quantico bg-gradient-to-r bg:text-white">
+    <h1 className="text-4xl md:text-6xl font-bold font-quantico bg-gradient-to-r bg:text-white">
        EXPLORE  <br />  <span className="text-5xl md:text-6xl font-bold bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
       Designs
     </span>
@@ -125,7 +125,7 @@ export const Header = () => {
 
 
     <p className="max-w-2xl text-xl md:text-2xl font-bold font-quantico mt-8 dark:text-sky-400">
-      To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations
+      I regularly collect modern UI/UX inspirations to keep my creative edge
     </p>
   </div>
   );

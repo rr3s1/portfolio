@@ -11,7 +11,7 @@ const Experience = () => {
 
    
       <div className="relative z-10 mt-20">
-      <h1 className="text-center text-5xl md:text-6xl font-quantico font-bold mb-20 ">
+      <h1 className="text-center text-4xl md:text-5xl font-quantico font-bold mb-20 ">
       WORK <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Experience </span> 
      </h1>
         <div className="w-full max-w-4xl mx-auto flex flex-col gap-10 px-4">

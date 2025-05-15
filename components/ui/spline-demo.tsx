@@ -31,15 +31,17 @@ export function SplineSceneBasic() {
                   isVisible ? "opacity-100 blur-none" : "opacity-0 blur-[20px]"
                 }`}
               >
-         <video
+               
+                <video
         autoPlay
         muted
         loop
-        className="rotate-20 absolute fade-circle left-0 md:left-[110px] w-4.5/5 h-4.5/5  object-cover opacity-100 transition-all bottom-100 ease-in-out -z-10"
+        className="rotate-20 absolute fade-circle left-0 top-10 md:left-[110px] w-4.5/5 h-4.5/5  object-cover opacity-100 transition-all bottom-100 ease-in-out -z-10"
       >
         <source src="/videos/seawon.mp4" type="video/mp4" />
       </video>
           
+     
         </div>
       <div className="absolute h-full pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]" />
      

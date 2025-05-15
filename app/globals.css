@@ -293,3 +293,6 @@ div.Scrollcontrols::-webkit-scrollbar {
   #Contact {
     scroll-margin-bottom: 80px; /* Adjust this value to your navbar's height */
   }
+
+
+  .origin-center { transform-origin: center center; }
