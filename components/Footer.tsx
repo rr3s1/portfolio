@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/ui/contact-form";
 const Footer = () => {
     return (
         <footer 
-            className=" relative w-full overflow-hidden px-4 pt-10 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
+            className=" relative w-full overflow-hidden px-4 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
             
         >
             {/* Aurora/gradient overlay for extra depth */}
@@ -16,9 +16,9 @@ const Footer = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#6366F1]/20 via-[#8B5CF6]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
             </div>
 
-            <div className="flex flex-col items-center z-10 relative ">
-                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Let&apos;s </span>
-                 <span className="text-gradient-gold"> Craft </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> an Amazing Experience
+            <div className="flex flex-col items-center z-10 relative mt-20 ">
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Ready </span>
+                 <span className="text-gradient-gold"> to </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Elevate Your Projects?
                      </span>
                 </h1>
 
@@ -54,7 +54,7 @@ const Footer = () => {
     <Image src="/rs-concept.png" alt="RSHome" width={50} height={50} className="drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]" />
 </a>
                     <p className="text-xs text-white-200 font-light mt-5 text-center tracking-wide" id="contact">
-                    Copyright © {new Date().getFullYear()} Rares Silviu
+                    Copyright © {new Date().getFullYear()} Rares Silviu Lazar
                 </p>
             </div>
         </footer>

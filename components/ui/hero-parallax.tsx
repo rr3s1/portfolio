@@ -56,7 +56,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[2500px] pb-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[1500px] md:h-[2000px] lg:h-[2500px] pb-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -117,13 +117,14 @@ export const Header = () => {
         p:  md:text-2xl (1.5rem / 24px)
         Ratio: 3 / 1.5 = 2x
     */}
-    <h1 className="text-5xl md:text-6xl font-bold text-gradient-magenta dark:text-white">
-       Design
+    <h1 className="text-5xl md:text-6xl font-bold font-quantico bg-gradient-to-r bg:text-white">
+       Exploring
     </h1>
-    <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent">
-      Exploration
+    <h1 className="text-5xl md:text-6xl font-bold font-quantico bg-gradient-to-r from-[#a855f7] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
+      Designs
     </h1>
-    <p className="max-w-2xl text-lg md:text-2xl font-bold mt-8 dark:text-sky-400">
+
+    <p className="max-w-2xl text-lg md:text-2xl font-bold font-quantico mt-8 dark:text-sky-400">
       To keep my creative edge, I regularly prototype and collect modern UI/UX inspirations
     </p>
   </div>
@@ -177,9 +178,9 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      className="group/product h-32 w-[11rem] md:h-67 md:w-[22rem] lg:h-96 lg:w-[30rem]  relative shrink-0"
     >
-      <div className={`p-[6px] rounded-xl bg-gradient-to-r ${gradient} ${neonShadow} h-full w-full`}>
+      <div className={`p-[2px] md:p-[6px] rounded-xl bg-gradient-to-r ${gradient} ${neonShadow} h-full w-full`}>
         <a
           href={product.link}
           className="block group-hover/product:shadow-2xl rounded-xl bg-black overflow-hidden h-full w-full"

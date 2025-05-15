@@ -3,7 +3,7 @@
 .container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-color: hsl(var(--background));
     overflow: hidden;
     /* cursor: pointer; /* Add this if you want the whole area to show pointer cursor */
@@ -23,53 +23,59 @@
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(145deg, rgba(70, 78, 120, 0.6), rgba(40, 45, 75, 0.8));
-    padding: 15px 30px;
-    border-radius: 30px;
-    border: 2px solid rgba(170, 180, 255, 0.5);
+    background: linear-gradient(145deg, rgba(90, 98, 145, 0.98), rgba(60, 65, 100, 1));
+    padding: 12px 22px;
+    border-radius: 20px;
+    border: 4px solid #fff;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Quantico', sans-serif;
+    letter-spacing: 1px;
     user-select: none;
-    z-index: 10; /* Ensure it's above the canvas if canvas isn't pointer-events: none */
-    cursor: pointer; /* Explicitly set cursor for the button */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(120, 100, 255, 0.3);
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* IMPORTANT: Ensure NO 'pointer-events: none;' here */
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(120, 100, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
   .instructions:hover {
-    background: linear-gradient(145deg, rgba(80, 88, 135, 0.7), rgba(50, 55, 90, 0.9));
-    border-color: rgba(200, 210, 255, 0.8);
-    transform: translateX(-50%) translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25), 0 0 30px rgba(150, 130, 255, 0.4);
-    color: #fff;
+    background: linear-gradient(145deg, rgba(90, 98, 145, 1), rgba(60, 65, 100, 1));
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateX(-50%) translateY(-8px) scale(1.08);
+    box-shadow: 
+        0 12px 35px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(150, 130, 255, 0.7),
+        0 0 100px rgba(150, 130, 255, 0.4);
+    color: #ffffff;
   }
   
   .instructions:active {
-    background: linear-gradient(145deg, rgba(60, 68, 110, 0.65), rgba(30, 35, 65, 0.85));
-    transform: translateX(-50%) translateY(-2px) scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(120, 100, 255, 0.3);
+    background: linear-gradient(145deg, rgba(80, 88, 135, 1), rgba(50, 55, 90, 1));
+    transform: translateX(-50%) translateY(-4px) scale(1.04);
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(120, 100, 255, 0.6),
+        0 0 80px rgba(120, 100, 255, 0.3);
   }
 
   .fadeCircle {
-    /* Make the element the mask’s “source” */
+    /* Make the element the mask's "source" */
     mask-image: radial-gradient(
       circle at 50% 50%, /* centre */
       rgba(0, 0, 0, 1) 0%, /* fully visible in the centre */
       rgba(0, 0, 0, 1) 40%, /* stay visible for a bit */
-      rgba(0, 0, 0, 0) 75% /* fade to transparent by edge */
+      rgba(0, 0, 0, 0) 65% /* fade to transparent by edge */
     );
     mask-mode: alpha; /* use the alpha channel */
     -webkit-mask-image: radial-gradient(
-      circle at 50% 50%,
+      circle at 50% 60%,
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 0) 75%
+      rgba(0, 0, 0, 0) 65%
     );
     /* Ensure the mask applies correctly to the content */
     /* position: relative; might be needed if children are absolutely positioned

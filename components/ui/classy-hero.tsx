@@ -73,28 +73,33 @@ const TextRotator = ({
 
     return (
         <span className={cn(
-            "relative inline-block min-w-[250px] min-h-[1.5em]",
+            "relative inline-block min-w-[250px] min-h-[1.5em] font-quantico font-bold",
             !letterAnimation && textGradient && "bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
             className
-        )}>
+        )}
+        style={{ fontFamily: "var(--font-quantico) !important" }}
+        >
             <AnimatePresence mode="wait">
                 {letterAnimation ? (
                     <motion.span
                         key={currentIndex}
-                        className="absolute inset-0 flex items-center justify-center w-full -mt-3"
+                        className="absolute inset-0 flex items-center justify-center w-full -mt-3 font-quantico font-bold"
                         initial="hidden"
                         animate="visible"
                         exit="exit"
+                        style={{ fontFamily: "var(--font-quantico) !important" }}
                     >
                         {words[currentIndex].split('').map((letter, i, array) => (
                             <motion.span
                                 key={`${currentIndex}-${i}`}
                                 custom={i}
                                 variants={letterVariants}
+                                
                                 style={textGradient ? {
                                     color: getGradientColors(i, array.length),
                                     display: 'inline-block',
                                     textShadow: '0 0 15px rgba(100, 100, 200, 0.15)',
+                                    fontFamily: "var(--font-quantico) !important",
                                     fontWeight: 'inherit'
                                 } : {}}
                                 className={letter === ' ' ? 'ml-2' : ''}
@@ -106,7 +111,7 @@ const TextRotator = ({
                 ) : (
                     <motion.span
                         key={currentIndex}
-                        className="absolute inset-0 flex items-center justify-center w-full"
+                        className="absolute inset-0 font-quantico flex items-center justify-center w-full"
                         initial={{
                             y: 40,
                             opacity: 0,

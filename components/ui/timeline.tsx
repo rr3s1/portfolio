@@ -38,11 +38,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-5xl md:text-6xl text-center text-red-400 font-bold mb-20"> <span className="text-yellow-400">
-          </span> Recent <br />
-        
-        <h2 className="text-5xl md:text-6xl mt-5 text-sky-400 text-center">PROJECTS</h2>
-        </h2>
+
+      <h1 className="text-center text-5xl md:text-6xl font-quantico font-bold mb-10 ">
+
+      Recent <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS </span> 
+     </h1>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

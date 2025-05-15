@@ -28,7 +28,7 @@ export const products = [
 
   {
     title: "",
-    link: "hhttps://github.com/rr3s1",
+    link: "https://github.com/rr3s1",
     thumbnail:
       "/banking.png",
   },

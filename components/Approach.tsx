@@ -14,12 +14,14 @@ const Approach = () => {
               - lg:py-0: Remove vertical padding on large screens as flex centering will be used.
               - lg:flex lg:flex-col lg:justify-center: Vertically center content on large screens.
             */}
-            <section className="container mx-auto py-16 md:py-24 lg:h-[100vh] lg:py-0 lg:flex lg:flex-col lg:justify-center">
-                <h1 className="heading text-center mb-12 md:mb-16 lg:mb-20">
-                    <span className="bg-gradient-to-r from-red-400 via-rose-500 to-purple-700 bg-clip-text text-transparent font-semibold">
-                        Core values
-                    </span>
-                </h1>
+            <section className="container mx-auto py-16 md:py-24 lg:h-[100vh] lg:py-0 lg:flex lg:flex-col lg:justify-center mt-20 md:mt-0">
+
+            <h1 className="text-center text-5xl md:text-6xl font-bold mb-10 ">
+
+            Core <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Values </span> 
+     </h1>
+
+                
                 {/*
                   - flex flex-col lg:flex-row: Stack cards vertically on small/medium, horizontally on large.
                   - items-stretch: Make cards equal height if they are in a row and their content differs,
@@ -91,7 +93,7 @@ const Card = ({
             // - h-auto: Allow content to define height on smaller screens.
             // - lg:h-[35rem]: Fixed height for cards on large screens.
             // - lg:flex-1: Allows cards in a row to share space if needed (works well with items-stretch on parent).
-            className="border border-black/[0.2] group/canvas-card quantico-regular flex items-center justify-center dark:border-white/[0.2] max-w-sm w-full mx-auto lg:mx-0 p-4 md:p-6 h-auto min-h-[28rem] sm:min-h-[30rem] lg:min-h-0 lg:h-[35rem] relative rounded-3xl lg:flex-1"
+            className="border sm:mt-10 border-black/[0.2] group/canvas-card quantico-regular flex items-center justify-center dark:border-white/[0.2] max-w-sm w-full mx-auto lg:mx-0 p-4 md:p-6 h-auto min-h-[28rem] sm:min-h-[30rem] lg:min-h-0 lg:h-[35rem] relative rounded-3xl lg:flex-1"
         >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -125,7 +127,7 @@ const Card = ({
                     {title}
                 </h2>
                 {/* Added text-balance for better text wrapping on multiple lines */}
-                <p className="text-sm quantico-regular md:text-lg dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-balance"
+                <p className="text-lg quantico-regular md:text-lg lg:text-2xl dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-balance"
                     style={{ color: '#e4ecff' }}>
                     {description}
                 </p>

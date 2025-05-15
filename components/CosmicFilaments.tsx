@@ -398,7 +398,7 @@ const CosmicFilaments: React.FC = () => {
     <>
       <div
         ref={mountRef}
-        className={`${styles.container} ${styles.fadeCircle}`}
+        className={`${styles.container} ${styles.fadeCircle} mb-32`}
       >
         <div className={styles.instructions}>
           Tap / click to morph

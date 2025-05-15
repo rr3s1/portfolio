@@ -4,16 +4,16 @@ import AHoleComponent from './AHole'
 const Experience = () => {
   return (
     <div className="py-20 text-white relative" id="experience">
-      <div className="absolute inset-0 z-0 opacity-35">
+      <div className="absolute inset-0 z-0 opacity-35 top-[135px]">
         <AHoleComponent /> 
    
       </div>
 
    
       <div className="relative z-10 mt-20">
-        <h1 className="text-center text-5xl font-bold mb-20">
-        Work<span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Experience</span>
-        </h1>
+      <h1 className="text-center text-5xl md:text-6xl font-quantico font-bold mb-20 ">
+      Work <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Experience </span> 
+     </h1>
         <div className="w-full max-w-4xl mx-auto flex flex-col gap-10 px-4">
           {/* HSBC */}
           <div className="bg-[rgba(18,18,28,0.8)] border-2 border-[#a855f740] rounded-lg p-6 shadow-lg">
