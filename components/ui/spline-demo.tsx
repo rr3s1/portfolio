@@ -109,10 +109,19 @@ export function SplineSceneBasic() {
             - Changed w-1/2 sm:w-full to w-full md:w-1/2
             - This makes it w-full by default (xs, sm screens) and w-1/2 from md upwards.
         */}
-        <div className="w-full md:w-1/2 lg:w-2/3  h-full relative"> {/* Added h-full to ensure Spline takes up space */}
+        <div className="w-full md:w-1/2 lg:w-2/3 h-full relative"> {/* Added h-full to ensure Spline takes up space */}
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"
+          />
+          {/* Gradient mask overlay */}
+          <div
+            className="absolute left-0 bottom-0 w-full"
+            style={{
+              height: '70px', // Adjust height to cover the legs
+              background: 'linear-gradient(to top, #06172a 50%, transparent 100%)', // #06172a is your bg color
+              pointerEvents: 'none', // Allows clicks to pass through
+            }}
           />
         </div>
       </div>

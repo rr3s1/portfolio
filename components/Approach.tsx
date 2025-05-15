@@ -14,11 +14,11 @@ const Approach = () => {
               - lg:py-0: Remove vertical padding on large screens as flex centering will be used.
               - lg:flex lg:flex-col lg:justify-center: Vertically center content on large screens.
             */}
-            <section className="container mx-auto py-16 md:py-24 lg:h-[100vh] lg:py-0 lg:flex lg:flex-col lg:justify-center mt-20 md:mt-0">
+            <section className="container mx-auto py-16 md:py-24 lg:py-32 mt-20 md:mt-0">
 
             <h1 className="text-center font-quantico text-5xl md:text-6xl font-bold mb-10 ">
 
-            Core <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> Values </span> 
+            CORE <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> Values </span> 
      </h1>
 
                 
@@ -146,7 +146,7 @@ export const AceternityIcon = ({ order }: { order?: string }) => { /* ... as bef
                 <span
                     className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"/>
                 <span
-                    className=" text-2xl font-bold  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl">
+                    className=" text-2xl font-bold font-quantico inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl">
    {order}
   </span>
             </button>

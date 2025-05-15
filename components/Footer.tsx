@@ -17,8 +17,11 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-center z-10 relative mt-20 ">
-                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="text-gradient-gold"> Ready </span>
-                 <span className="text-gradient-gold"> to </span><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> Elevate Your Projects?
+                <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> UPGRADE </span>
+                
+                <span className="text-sky-400 font-quantico"> YOUR
+                </span>
+                 <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS
                      </span>
                 </h1>
 
@@ -27,9 +30,7 @@ const Footer = () => {
                     Whether you need a blazing-fast landing page,<br /> a secure full-stack app
     or a 3D interactive demo 
                 </p>
-                <p className="varela-round-regular font-normal text-center text-neutral-800 md:text-sm lg:text-xl dark:text-neutral-200">
-           I can help turn ideas into shipped features.
-                </p>
+                
                 
             
             </div>

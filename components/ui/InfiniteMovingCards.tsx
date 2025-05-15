@@ -112,17 +112,17 @@ export const InfiniteMovingCards = ({
                                     aria-hidden="true"
                                     className="user-select-none quantico-regular  -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
                                 ></div>
-                                <span className=" quantico-regular  relative z-20 md:text-lg text-sm leading-[1.6] text-white font-normal">
+                                <span className=" quantico-regular  relative z-20 md:text-2xl text-lg leading-[1.6] text-white font-normal">
                                     {item.quote}
                                 </span>
                                 <div className="relative z-20 mt-6 flex flex-row items-center">
                                     <div className="flex flex-col">
                                         <span className="flex flex-col gap-1">
-                                            <span className="text-xl leading-[1.6] text-white font-bold ">
+                                            <span className="text-2xl leading-[1.6] text-white font-bold ">
                                                 {item.name}
                                             </span>
                                         </span>
-                                        <span className=" text-xl leading-[1.6] bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-normal">
+                                        <span className=" text-2xl leading-[1.6] bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-normal">
                                             {item.title}
                                         </span>
                                     </div>

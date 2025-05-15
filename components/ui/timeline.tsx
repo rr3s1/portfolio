@@ -41,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
       <h1 className="text-center text-5xl md:text-6xl font-quantico font-bold mb-10 ">
 
-      Recent <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS </span> 
+      RECENT <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS </span> 
      </h1>
       </div>
 
