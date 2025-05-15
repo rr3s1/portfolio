@@ -2,7 +2,6 @@ import * as React from "react";
 
 import Image from "next/image";
 
-
 import { ContactForm } from "@/components/ui/contact-form";
 
 const Footer = () => {
@@ -11,8 +10,8 @@ const Footer = () => {
             className=" relative w-full overflow-hidden px-4 pb-1 rounded-3xl shadow-lg border border-white/10 bg-gradient-to-br from-black-200/80 via-black-100/60 to-black-200/80 backdrop-blur-xl mx-auto max-w-5xl"
             
         >
-            {/* Aurora/gradient overlay for extra depth */}
             <div className="pointer-events-none absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
+            
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#6366F1]/20 via-[#8B5CF6]/10 to-[#FF2AA9]/20 blur-2xl opacity-60" />
             </div>
 

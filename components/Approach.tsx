@@ -18,7 +18,7 @@ const Approach = () => {
 
             <h1 className="text-center font-quantico text-4xl md:text-5xl font-bold mb-10 ">
 
-            CORE <br /> <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> Values </span> 
+            CORE <br /> <span className="text-6xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> Values </span> 
      </h1>
 
                 
