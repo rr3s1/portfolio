@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Martian_Mono, Coda, Merienda, Varela_Round, Quantico } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
           enableSystem={false} 
           >
             {children}
+            <Analytics />
           </ThemeProvider>
           </body>
     </html>

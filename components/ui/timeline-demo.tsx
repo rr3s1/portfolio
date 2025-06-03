@@ -319,6 +319,63 @@ export default function TimelineDemo() {
         </div>
       ),
     },
+    {
+    
+      title: <span className="text-gradient-magenta bg-clip-text text-transparent">AURA Aesthetics Clinic</span>,
+      content: (
+        <div>
+          <p className="quantico-regular mb-8  font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+          A management system for an aesthetics clinic built with using Next.js, Appwrite, TypeScript, and TailwindCSS. Key features include patient registration, appointment booking, admin management of appointments, SMS notifications, file uploads.
+          </p>
+          
+          <div className="mb-6">
+            <a 
+              href="https://auraaesthetics.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Live Demo
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="https://github.com/user-attachments/assets/70421f92-6ce6-4a13-8c91-14932e286d40"
+              alt="AURA Aesthetics Clinic"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <Image
+              src="https://github.com/user-attachments/assets/6bc6654b-f195-4375-9d0b-02ba2a613ade"
+                alt="AURA Aesthetics Clinic"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <Image
+              src="https://github.com/user-attachments/assets/4eefe733-04ab-41bc-b204-8ae7a62c474f"
+              alt="AURA Aesthetics Clinic"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <Image
+              src="https://github.com/user-attachments/assets/079cf308-3db5-4566-aa08-4b41304520a0"
+              alt="AURA Aesthetics Clinic"  
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            
+          </div>
+        </div>
+      ),
+    },
   ];
   return (
     <div className="relative w-full h-full overflow-clip">
