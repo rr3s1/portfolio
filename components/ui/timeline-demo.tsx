@@ -344,34 +344,44 @@ export default function TimelineDemo() {
 
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="https://github.com/user-attachments/assets/70421f92-6ce6-4a13-8c91-14932e286d40"
+              src="https://github.com/user-attachments/assets/9d8fb39d-f412-4a08-9621-06e55b9d2eff"
               alt="AURA Aesthetics Clinic"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://github.com/user-attachments/assets/6bc6654b-f195-4375-9d0b-02ba2a613ade"
+              src="https://github.com/user-attachments/assets/8a934eae-ab19-4250-94de-214362cf657d"
                 alt="AURA Aesthetics Clinic"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://github.com/user-attachments/assets/4eefe733-04ab-41bc-b204-8ae7a62c474f"
+              src="https://github.com/user-attachments/assets/614b3a40-8340-4f6d-af3b-6957823ab71f"
               alt="AURA Aesthetics Clinic"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
-            <Image
-              src="https://github.com/user-attachments/assets/079cf308-3db5-4566-aa08-4b41304520a0"
+             <Image
+              src="https://github.com/user-attachments/assets/5ae92d28-1583-40c2-b2e0-63cf7873f94f"
               alt="AURA Aesthetics Clinic"  
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
-            
+          </div>
+          
+          {/* Full width centered image */}
+          <div className="flex justify-center mt-4">
+            <Image
+              src="https://github.com/user-attachments/assets/0577f8ba-d2ab-4733-ae89-2c0f43cf3425"
+              alt="AURA Aesthetics Clinic"  
+              width={1000}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
           </div>
         </div>
       ),

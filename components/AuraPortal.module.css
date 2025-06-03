@@ -1,4 +1,4 @@
-.aHole {
+.auraPortal {
   position: relative;
   margin: 0;
   padding: 0;
@@ -26,10 +26,10 @@
   );
   /* No need for position: relative here unless specifically required
      by complex child positioning that needs to be affected by the mask's bounds,
-     but the .aHole already has position: relative. */
+     but the .auraPortal already has position: relative. */
 }
 
-.aHole:before {
+.auraPortal:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +42,7 @@
   content: "";
 }
 
-.aHole:after {
+.auraPortal:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -116,5 +116,4 @@
   display: block;
   width: 100%;
   height: 100%;
-}
-
+} 

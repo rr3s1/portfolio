@@ -4,7 +4,7 @@ import AHoleComponent from './AHole'
 const Experience = () => {
   return (
     <div className="py-20 text-white relative" id="experience">
-      <div className="absolute inset-0 z-0 opacity-35 top-[135px]">
+      <div className="absolute inset-0 z-0 h-3/4 opacity-35 top-[165px]">
         <AHoleComponent /> 
    
       </div>
