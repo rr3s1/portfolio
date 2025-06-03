@@ -20,7 +20,7 @@ const Footer = () => {
                 
                 <span className="text-sky-400 font-quantico"> YOUR
                 </span>
-                 <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> BUSINESS
+                 <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS
                      </span>
                 </h1>
 
