@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: "SR Portfolio",
   description: "Web Dev Portfolio LP",
   icons: {
-    icon: "C:\\000 AppsProjs\\009   PortfolioRoast\\craft\\public\\favicon.png",
-    shortcut: "C:\\000 AppsProjs\\009   PortfolioRoast\\craft\\public\\favicon.png",
-    apple: "C:\\000 AppsProjs\\009   PortfolioRoast\\craft\\public\\favicon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
